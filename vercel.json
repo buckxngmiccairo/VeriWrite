@@ -29,6 +29,282 @@
       "source": "/user-detail.html",
       "destination": "/under-construction.html",
       "permanent": false
+    },
+
+    {
+      "source": "/activity-logs.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/admins.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/ai-detection-report.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/ai-humanizer.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-ai-detection.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-contact-support.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-create-class.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-file-types.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-read-report.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-reset-password.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-similarity-scores.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/article-submit-document.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/audit-logs.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/billing-help.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/careers.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/citation-generator.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/citation-report.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/classes.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/contact-support.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/departments.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/feature-guides.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/features.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/feedback.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/grammar-checker.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/guidelines.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-articles.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-account-settings.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-ai-detection.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-classes.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-getting-started.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-reports.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-category-submissions.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/help-support.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/how-it-works.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/institutions.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/invite-lecturers.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/invoices.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/knowledge-base.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/lecturers.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/members.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/news.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/notifications.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/payment-methods.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/profile.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/reports.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/report-viewer.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/review-student-report.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/security.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/similarity-report.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/technical-support.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms-conditions.html",
+      "permanent": false
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/video-tutorials.html",
+      "destination": "/under-construction.html",
+      "permanent": false
     }
   ]
 }
