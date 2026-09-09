@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | VeriWrite</title>
+  <link rel="stylesheet" href="student-dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="student-dashboard.html" class="nav-link active">
+          <img src="assets/dashboard-icon-blue.png" alt=""> Dashboard
+        </a>
+
+        <p class="nav-label">Analyze</p>
+
+        <a href="upload-assignment.html" class="nav-link">
+          <img src="assets/new-submission-icon.png" alt=""> New Submission
+        </a>
+
+        <a href="my-submissions.html" class="nav-link">
+          <img src="assets/my-submissions-icon.png" alt=""> My Submissions
+        </a>
+
+        <a href="integrity-report.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt=""> Reports
+        </a>
+
+        <p class="nav-label">Learn</p>
+
+        <a href="ai-humanizer.html" class="nav-link">
+          <img src="assets/ai-humanizer-icon.png" alt=""> AI Humanizer
+        </a>
+
+        <a href="citation-generator.html" class="nav-link">
+          <img src="assets/citation-icon.png" alt=""> Citation Generator
+        </a>
+
+        <a href="grammar-checker.html" class="nav-link">
+          <img src="assets/grammar-icon.png" alt=""> Grammar Checker
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-link">
+          <img src="assets/profile-icon.png" alt=""> Profile
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt=""> Settings
+        </a>
+
+        <a href="help-center.html" class="nav-link">
+          <img src="assets/help-icon-navy-blue.png" alt=""> Help & Support
+        </a>
+      </nav>
+
+      <a href="pricing.html" class="premium-card">
+        <div>
+          <img src="assets/crown-icon.png" alt="">
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock more features and submission limits.</p>
+        </div>
+        <span>›</span>
+      </a>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div>
+          <p class="welcome-small">Welcome back,</p>
+          <h1 id="studentName">— 👋</h1>
+          <p class="welcome-text">Here’s what’s happening with your academic integrity journey.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="notifications.html" class="notification-btn">
+            <img src="assets/notification-icon.png" alt="Notifications">
+            <span>0</span>
+          </a>
+
+          <div class="user-profile">
+            <div class="avatar">UP</div>
+            <div>
+              <h4>user-profile</h4>
+              <p>Student</p>
+            </div>
+            <button type="button">⌄</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="dashboard-body">
+
+        <!-- STATS -->
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon blue">
+              <img src="assets/document-icon.png" alt="">
+            </div>
+            <div>
+              <p>Total Submissions</p>
+              <h2>0</h2>
+              <small>No submissions yet</small>
+            </div>
+            <img src="assets/blue-trend.png" class="trend" alt="">
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon green">
+              <img src="assets/shield-icon-green.png" alt="">
+            </div>
+            <div>
+              <p>Average Similarity</p>
+              <h2>0%</h2>
+              <small>Keep it original!</small>
+            </div>
+            <img src="assets/green-trend.png" class="trend" alt="">
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon purple">
+              <img src="assets/check-circle-icon.png" alt="">
+            </div>
+            <div>
+              <p>Documents Cleared</p>
+              <h2>0</h2>
+              <small>You’re off to a great start!</small>
+            </div>
+            <img src="assets/purple-trend.png" class="trend" alt="">
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon orange">
+              <img src="assets/clock-icon.png" alt="">
+            </div>
+            <div>
+              <p>Credits Remaining</p>
+              <h2>5</h2>
+              <small>of 5 credits</small>
+            </div>
+            <img src="assets/orange-trend.png" class="trend" alt="">
+          </article>
+        </section>
+
+        <!-- CONTENT GRID -->
+        <section class="content-grid">
+
+          <!-- RECENT SUBMISSIONS -->
+          <article class="panel recent-panel">
+            <div class="panel-header">
+              <h3>Your Recent Submissions</h3>
+              <a href="my-submissions.html">View all</a>
+            </div>
+
+            <div class="empty-state">
+              <img src="assets/empty-submissions.png" alt="No submissions">
+              <h2>No submissions yet</h2>
+              <p>You haven’t uploaded any documents.</p>
+              <p>Get started by submitting your first document for analysis.</p>
+
+              <a href="upload-assignment.html" class="primary-btn">
+                <span>+</span> New Submission
+              </a>
+            </div>
+          </article>
+
+          <!-- STEPS -->
+          <article class="panel steps-panel">
+            <h3>Get Started in 3 Simple Steps</h3>
+
+            <div class="steps">
+              <div class="step">
+                <span class="step-number one">1</span>
+                <div class="step-icon blue">
+                  <img src="assets/document-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>Upload Your Document</h4>
+                  <p>Upload your essay, report, or any document in PDF, DOCX, or TXT format.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <span class="step-number two">2</span>
+                <div class="step-icon green">
+                  <img src="assets/ai-analysis-icon-green.png" alt="">
+                </div>
+                <div>
+                  <h4>AI Analysis</h4>
+                  <p>Our AI will scan for plagiarism, AI content, and provide a detailed report.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <span class="step-number three">3</span>
+                <div class="step-icon purple">
+                  <img src="assets/review-improve-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>Review & Improve</h4>
+                  <p>Review your results, make improvements, and maintain academic integrity.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <img src="assets/private-shield-icon.png" alt="">
+              <div>
+                <h4>Academic Integrity Matters</h4>
+                <p>VeriWrite helps you learn, improve, and submit with confidence.</p>
+                <p>Let’s keep your work 100% original!</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- BOTTOM INFO -->
+        <section class="bottom-info">
+          <div class="file-types">
+            <h4>Supported File Types</h4>
+
+            <div class="file-row">
+              <div>
+                <img src="assets/pdf-icon.png" alt="">
+                <strong>PDF</strong>
+                <span>(.pdf)</span>
+              </div>
+
+              <div>
+                <img src="assets/docx-icon.png" alt="">
+                <strong>DOCX</strong>
+                <span>(.docx)</span>
+              </div>
+
+              <div>
+                <img src="assets/txt-icon.png" alt="">
+                <strong>TXT</strong>
+                <span>(.txt)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-divider"></div>
+
+          <div class="max-size">
+            <h4>Max File Size</h4>
+            <div class="size-row">
+              <img src="assets/file-size-icon.png" alt="">
+              <div>
+                <strong>25 MB</strong>
+                <span>per file</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-divider"></div>
+
+          <div class="need-help">
+            <h4>Need Help?</h4>
+            <p>Visit our Help Center or contact support if you have any questions.</p>
+            <a href="help-center.html">Help Center ↗</a>
+          </div>
+
+          <div class="new-card">
+            <img src="assets/star-icon.png" alt="">
+            <div>
+              <h4>New to VeriWrite?</h4>
+              <p>Check out our How It Works guide to understand the platform better.</p>
+              <a href="how-it-works.html">How It Works ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="dashboard-footer">
+          <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+          <div>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </footer>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

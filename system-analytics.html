@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>System Analytics | VeriWrite</title>
+
+  <link rel="stylesheet" href="system-analytics.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" />
+        <div>
+          <h1>VeriWrite</h1>
+          <p>AI-Powered Academic Integrity</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main</span>
+
+        <a href="super-admin-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          Dashboard
+        </a>
+
+        <span class="nav-label">User Management</span>
+
+        <a href="institutions.html" class="nav-link">
+          <img src="assets/institution-icon.png" alt="" />
+          Institutions
+        </a>
+
+        <a href="admins.html" class="nav-link">
+          <img src="assets/admins-icon.png" alt="" />
+          Admins
+        </a>
+
+        <a href="lecturers.html" class="nav-link">
+          <img src="assets/lecturers-icon.png" alt="" />
+          Lecturers
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="" />
+          Students
+        </a>
+
+        <span class="nav-label">Platform</span>
+
+        <a href="platform-monitoring.html" class="nav-link">
+          <img src="assets/monitoring-icon.png" alt="" />
+          Monitoring
+        </a>
+
+        <a href="system-analytics.html" class="nav-link active">
+          <img src="assets/system-analytics-icon.png" alt="" />
+          System Analytics
+        </a>
+
+        <a href="subscription-management.html" class="nav-link">
+          <img src="assets/subscription-icon.png" alt="" />
+          Subscription Management
+        </a>
+
+        <span class="nav-label">Support</span>
+
+        <a href="support-center.html" class="nav-link">
+          <img src="assets/support-center-icon.png" alt="" />
+          Support Center
+        </a>
+
+        <a href="ticket-management.html" class="nav-link">
+          <img src="assets/ticket-management-icon.png" alt="" />
+          Ticket Management
+        </a>
+
+        <span class="nav-label">System</span>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          Settings
+        </a>
+
+        <a href="audit-logs.html" class="nav-link">
+          <img src="assets/audit-logs-icon.png" alt="" />
+          Audit Logs
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♕</div>
+        <div>
+          <h3>Upgrade to Premium</h3>
+          <p>Unlock advanced analytics and full platform insights.</p>
+        </div>
+        <a href="subscription-management.html">›</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <h2>System Analytics <span>ⓘ</span></h2>
+          <p>Analyze platform usage, trends, and performance metrics.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </button>
+
+          <div class="admin-profile">
+            <div class="admin-avatar super-admin-avatar">
+              <span>SA</span>
+            </div>
+            <p>Super Admin</p>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TOOLS -->
+      <section class="dashboard-tools">
+        <button class="date-filter" type="button" data-backend-filter="date_range">
+          <img src="assets/calendar-icon.png" alt="" />
+          May 1 – May 31, 2024
+          <span>⌄</span>
+        </button>
+
+        <button class="export-btn" type="button" data-export="system_analytics_report">
+          <img src="assets/download-icon.png" alt="" />
+          Export Report
+        </button>
+      </section>
+
+      <!-- TOP METRICS -->
+      <section class="analytics-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-users-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Users</p>
+            <h3>18,450</h3>
+            <span class="growth positive">↑ 8.7%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/total-institutions-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Institutions</p>
+            <h3>128</h3>
+            <span class="growth positive">↑ 12.5%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/total-submissions-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Submissions</p>
+            <h3>245,780</h3>
+            <span class="growth positive">↑ 15.3%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/ai-detections-icon.png" alt="" />
+          </div>
+          <div>
+            <p>AI Detections</p>
+            <h3>456,210</h3>
+            <span class="growth positive">↑ 14.1%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon teal">
+            <img src="assets/similarity-index-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Avg. Similarity Index</p>
+            <h3>23%</h3>
+            <span class="growth negative">↓ 2.6%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/avg-response-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Avg. Response Time</p>
+            <h3>128ms</h3>
+            <span class="growth positive">↓ 9.8%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="filter-panel" aria-label="System analytics filters">
+        <div class="filter-group">
+          <label for="dateRange">Date Range</label>
+          <button class="date-filter input-filter" id="dateRange" type="button">
+            <img src="assets/calendar-icon.png" alt="" />
+            May 1 – May 31, 2024
+            <span>⌄</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label for="groupBy">Group By</label>
+          <select id="groupBy" name="group_by" data-backend-filter="group_by">
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="region">Region</label>
+          <select id="region" name="region" data-backend-filter="region">
+            <option value="">All Regions</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="institutionType">Institution Type</label>
+          <select id="institutionType" name="institution_type" data-backend-filter="institution_type">
+            <option value="">All Types</option>
+          </select>
+        </div>
+
+        <button class="reset-btn" type="button" data-reset-filters="true">
+          <img src="assets/reset-icon.png" alt="" />
+          Reset Filters
+        </button>
+      </section>
+
+      <!-- ANALYTICS GRID -->
+      <section class="analytics-grid">
+
+        <!-- SUBMISSION TREND -->
+        <article class="panel submission-trend">
+          <div class="panel-header">
+            <h3>Submission Trend <span>ⓘ</span></h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="line-chart submission-chart">
+            <div class="submission-line"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="blue-dot">Submissions</span>
+          </div>
+        </article>
+
+        <!-- USER GROWTH -->
+        <article class="panel user-growth">
+          <div class="panel-header">
+            <h3>User Growth <span>ⓘ</span></h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="line-chart user-chart">
+            <div class="user-line"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="green-dot">Total Users</span>
+          </div>
+        </article>
+
+        <!-- SIMILARITY DISTRIBUTION -->
+        <article class="panel similarity-distribution">
+          <div class="panel-header">
+            <h3>Similarity Index Distribution <span>ⓘ</span></h3>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart similarity-donut">
+              <div class="donut-center">
+                <strong>245,780</strong>
+                <span>Total</span>
+              </div>
+            </div>
+
+            <ul class="legend-list">
+              <li><span class="dot red-bg"></span>High Risk (70% - 100%) <b>19%</b></li>
+              <li><span class="dot orange-bg"></span>Medium Risk (40% - 69%) <b>31%</b></li>
+              <li><span class="dot green-bg"></span>Low Risk (10% - 39%) <b>30%</b></li>
+              <li><span class="dot blue-bg"></span>Very Low Risk (0% - 9%) <b>20%</b></li>
+            </ul>
+          </div>
+
+          <div class="panel-total">
+            <span>vs Apr 1 – Apr 30, 2024</span>
+            <b class="positive">↑ 4.2%</b>
+          </div>
+        </article>
+
+        <!-- TOP INSTITUTIONS -->
+        <article class="panel top-institutions">
+          <div class="panel-header">
+            <h3>Top Performing Institutions <span>ⓘ</span></h3>
+            <a href="institutions.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Submissions</th>
+                  <th>AI Detections</th>
+                  <th>Avg. Similarity</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1&nbsp;&nbsp; City University</td>
+                  <td>12,450</td>
+                  <td>24,630</td>
+                  <td>18%</td>
+                </tr>
+                <tr>
+                  <td>2&nbsp;&nbsp; State College</td>
+                  <td>8,760</td>
+                  <td>16,890</td>
+                  <td>22%</td>
+                </tr>
+                <tr>
+                  <td>3&nbsp;&nbsp; Tech Institute</td>
+                  <td>7,890</td>
+                  <td>15,210</td>
+                  <td>24%</td>
+                </tr>
+                <tr>
+                  <td>4&nbsp;&nbsp; Global University</td>
+                  <td>6,540</td>
+                  <td>11,780</td>
+                  <td>20%</td>
+                </tr>
+                <tr>
+                  <td>5&nbsp;&nbsp; West Academy</td>
+                  <td>5,320</td>
+                  <td>9,430</td>
+                  <td>17%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a href="institutions.html" class="panel-link">View All Institutions →</a>
+        </article>
+
+        <!-- PLATFORM USAGE -->
+        <article class="panel platform-usage">
+          <div class="panel-header">
+            <h3>Platform Usage by Feature <span>ⓘ</span></h3>
+          </div>
+
+          <div class="usage-layout">
+            <div class="donut-chart usage-donut"></div>
+
+            <div class="usage-table">
+              <div class="usage-head">
+                <span>Feature</span>
+                <span>Usage</span>
+              </div>
+
+              <ul class="legend-list">
+                <li><span class="dot blue-bg"></span>Submissions Scanned <b>62%</b></li>
+                <li><span class="dot green-bg"></span>AI Detections <b>18%</b></li>
+                <li><span class="dot orange-bg"></span>Reports Generated <b>10%</b></li>
+                <li><span class="dot purple-bg"></span>Similarity Checks <b>7%</b></li>
+                <li><span class="dot gray-bg"></span>Other Actions <b>3%</b></li>
+              </ul>
+
+              <div class="panel-total">
+                <span>Total</span>
+                <b>100%</b>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACTIVITY BY REGION -->
+        <article class="panel activity-region">
+          <div class="panel-header">
+            <h3>Activity by Region <span>ⓘ</span></h3>
+            <a href="system-analytics.html">View All</a>
+          </div>
+
+          <div class="map-placeholder">
+            <img src="assets/world-map-analytics.png" alt="Activity by Region Map" />
+          </div>
+
+          <div class="map-scale">
+            <span>Low</span>
+            <div>
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span>High</span>
+          </div>
+        </article>
+
+        <!-- SYSTEM EVENTS -->
+        <article class="panel system-events">
+          <div class="panel-header">
+            <h3>System Events <span>ⓘ</span></h3>
+            <a href="platform-monitoring.html">View All</a>
+          </div>
+
+          <ul class="event-list">
+            <li>
+              <span class="event-icon success">✓</span>
+              Database backup completed successfully
+              <b>2 min ago</b>
+            </li>
+            <li>
+              <span class="event-icon warning">!</span>
+              High memory usage detected on server us-east-1
+              <b>15 min ago</b>
+            </li>
+            <li>
+              <span class="event-icon info">i</span>
+              New institution registered
+              <b>1 hr ago</b>
+            </li>
+            <li>
+              <span class="event-icon success">✓</span>
+              AI model updated to version 2.4.1
+              <b>3 hrs ago</b>
+            </li>
+            <li>
+              <span class="event-icon info">i</span>
+              Scheduled maintenance completed
+              <b>5 hrs ago</b>
+            </li>
+          </ul>
+        </article>
+
+        <!-- STORAGE UTILIZATION -->
+        <article class="panel storage-utilization">
+          <div class="panel-header">
+            <h3>Storage Utilization <span>ⓘ</span></h3>
+          </div>
+
+          <div class="storage-layout">
+            <div class="storage-ring">
+              <strong>68%</strong>
+            </div>
+
+            <ul class="storage-list">
+              <li><span><img src="assets/documents-icon.png" alt="" /> Documents</span><b>42 GB</b></li>
+              <li><span><img src="assets/reports-icon.png" alt="" /> Reports</span><b>16 GB</b></li>
+              <li><span><img src="assets/logs-icon.png" alt="" /> Logs</span><b>7 GB</b></li>
+              <li><span><img src="assets/others-icon.png" alt="" /> Others</span><b>3 GB</b></li>
+            </ul>
+          </div>
+
+          <div class="storage-summary">
+            <span>Used</span>
+            <p>68 GB / 100 GB</p>
+            <a href="platform-monitoring.html">View Storage Details →</a>
+          </div>
+        </article>
+
+        <!-- QUICK INSIGHTS -->
+        <article class="panel quick-insights">
+          <div class="panel-header">
+            <h3>Quick Insights <span>ⓘ</span></h3>
+          </div>
+
+          <ul class="insight-list">
+            <li>
+              <img src="assets/insight-volume-icon.png" alt="" />
+              Submission volume increased by 15.3% compared to last month.
+            </li>
+
+            <li>
+              <img src="assets/insight-similarity-icon.png" alt="" />
+              Average similarity index decreased by 2.6%.
+            </li>
+
+            <li>
+              <img src="assets/insight-ai-icon.png" alt="" />
+              AI detections accuracy rate is 92.4% this month.
+            </li>
+
+            <li>
+              <img src="assets/insight-uptime-icon.png" alt="" />
+              System uptime is 99.98% ensuring reliable service.
+            </li>
+          </ul>
+        </article>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

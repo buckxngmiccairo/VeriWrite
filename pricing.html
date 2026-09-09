@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | VeriWrite</title>
+  <link rel="stylesheet" href="pricing.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Go to VeriWrite homepage">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="header-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="institutions.html">Institutions</a>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" id="resourcesBtn" aria-expanded="false">
+            Resources
+            <img src="assets/chevron-down-icon.png" alt="" />
+          </button>
+
+          <div class="nav-dropdown-menu" id="resourcesMenu">
+            <a href="help-center.html">Help Center</a>
+            <a href="guidelines.html">Guidelines</a>
+            <a href="blog.html">Blog</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+
+        <a href="about.html">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+      </div>
+
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <img src="assets/menu-icon.png" alt="" />
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pricing-hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <img src="assets/affordable-icon.png" alt="" />
+            Simple. Transparent. Affordable.
+          </span>
+
+          <h1>
+            Pricing that works for
+            <span>every academic journey.</span>
+          </h1>
+
+          <p>
+            VeriWrite helps students submit original work with confidence,
+            empowers lecturers to uphold academic integrity, and enables
+            institutions to build a culture of trust.
+          </p>
+
+          <div class="hero-features">
+            <article>
+              <img src="assets/accuracy-icon.png" alt="" />
+              <div>
+                <h3>AI-Powered Accuracy</h3>
+                <p>Advanced AI and plagiarism detection you can trust.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/secure-icon.png" alt="" />
+              <div>
+                <h3>Secure & Private</h3>
+                <p>Your data is encrypted and always protected.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/support-icon.png" alt="" />
+              <div>
+                <h3>Trusted Support</h3>
+                <p>We’re here to support you every step of the way.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="currency-panel" aria-label="Currency selector">
+          <button type="button" class="currency-toggle" id="currencyToggle" aria-expanded="false">
+            <span>
+              <img src="assets/currency-icon.png" alt="" />
+              Currency
+            </span>
+            <strong id="selectedCurrency">NGN (₦)</strong>
+            <img src="assets/chevron-down-icon.png" alt="" />
+          </button>
+
+          <div class="currency-menu" id="currencyMenu">
+            <button type="button" class="currency-option active" data-currency="NGN" data-symbol="₦">
+              <img src="assets/flag-nigeria.png" alt="Nigeria flag" />
+              <strong>NGN (₦)</strong>
+              <span>Nigerian Naira</span>
+            </button>
+
+            <button type="button" class="currency-option" data-currency="USD" data-symbol="$">
+              <img src="assets/flag-usa.png" alt="United States flag" />
+              <strong>USD ($)</strong>
+              <span>US Dollar</span>
+            </button>
+
+            <button type="button" class="currency-option" data-currency="GBP" data-symbol="£">
+              <img src="assets/flag-uk.png" alt="United Kingdom flag" />
+              <strong>GBP (£)</strong>
+              <span>British Pound</span>
+            </button>
+
+            <button type="button" class="currency-option" data-currency="EUR" data-symbol="€">
+              <img src="assets/flag-eu.png" alt="European Union flag" />
+              <strong>EUR (€)</strong>
+              <span>Euro</span>
+            </button>
+          </div>
+
+          <p class="currency-note">
+            Prices are shown in Nigerian Naira (₦). Your currency is detected based on your location.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="billing-toggle-section">
+      <div class="billing-toggle" role="group" aria-label="Billing period">
+        <button type="button" class="active" data-billing="semester">Per Semester</button>
+        <button type="button" data-billing="year">Per Year</button>
+        <span>Save up to 20%</span>
+      </div>
+    </section>
+
+    <section class="plans-section">
+      <div class="plans-grid">
+        <div class="student-plans">
+          <div class="section-title-row">
+            <img src="assets/student-plan-icon.png" alt="" />
+            <div>
+              <h2>Student Plans</h2>
+              <p>Choose the option that fits your needs.</p>
+            </div>
+          </div>
+
+          <div class="student-card-grid">
+            <article class="plan-card">
+              <h3>Per Submission</h3>
+              <div class="price" data-price-ngn="500">₦500</div>
+              <p class="price-label">Per submission</p>
+
+              <ul>
+                <li><img src="assets/check-blue-icon.png" alt="" /> AI detection & plagiarism scan</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Detailed originality report</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Downloadable PDF report</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Submission history</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> All courses</li>
+              </ul>
+
+              <a href="student-signup.html?plan=per-submission" class="outline-btn" data-plan="student-per-submission">
+                Pay Per Submission
+              </a>
+            </article>
+
+            <article class="plan-card popular">
+              <span class="popular-badge">Most Popular</span>
+              <h3>Semester Access</h3>
+              <div class="price" data-price-ngn="5000">₦5,000</div>
+              <p class="price-label">Per semester</p>
+
+              <ul>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Unlimited submissions</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> All registered courses</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> AI detection & plagiarism scan</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Detailed originality reports</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Submission history</li>
+                <li><img src="assets/check-blue-icon.png" alt="" /> Priority support</li>
+              </ul>
+
+              <a href="student-signup.html?plan=semester-access" class="primary-btn full" data-plan="student-semester">
+                Get Semester Access
+              </a>
+            </article>
+          </div>
+
+          <div class="payment-note">
+            <img src="assets/info-icon.png" alt="" />
+            <p>
+              Payments are secure and easy. You can pay with card, USSD,
+              bank transfer, or other local payment options.
+            </p>
+          </div>
+        </div>
+
+        <div class="lecturer-plan">
+          <div class="section-title-row">
+            <img src="assets/lecturer-plan-icon.png" alt="" />
+            <div>
+              <h2>Lecturer Plan</h2>
+              <p>Empower your classes and earn rewards.</p>
+            </div>
+          </div>
+
+          <article class="lecturer-card">
+            <div class="lecturer-main">
+              <div class="lecturer-price-row">
+                <div>
+                  <div class="price" data-price-ngn="15000">₦15,000</div>
+                  <p class="price-label">Per semester</p>
+                </div>
+                <span class="free-badge">First 3 Months FREE!</span>
+              </div>
+
+              <p>
+                Everything you need to manage your classes, promote integrity,
+                and get rewarded.
+              </p>
+
+              <ul>
+                <li><img src="assets/check-green-icon.png" alt="" /> Unlimited class creation</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> Unique referral code & class links</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> Student management & tracking</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> AI detection & plagiarism tools</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> Advanced reports & analytics</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> Export & download reports</li>
+                <li><img src="assets/check-green-icon.png" alt="" /> Priority support</li>
+              </ul>
+
+              <a href="lecturer-signup.html?plan=lecturer-semester" class="green-btn full" data-plan="lecturer-semester">
+                Subscribe Now
+              </a>
+            </div>
+
+            <aside class="referral-card">
+              <h3>Earn ₦1,000 Discount for Every Student</h3>
+              <img src="assets/referral-discount-illustration.png" alt="Lecturer referral discount illustration" />
+              <p>
+                For every student that subscribes using your code,
+                you earn <strong>₦1,000 discount</strong> on your next semester fee.
+              </p>
+              <strong>More students = Bigger discounts!</strong>
+            </aside>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="referral-section">
+      <h2>How Lecturer Referral Discount Works</h2>
+
+      <div class="referral-steps">
+        <article>
+          <img src="assets/get-code-icon.png" alt="" />
+          <h3>1. Get Your Code</h3>
+          <p>Receive your unique referral code when you subscribe.</p>
+        </article>
+
+        <article>
+          <img src="assets/share-code-icon.png" alt="" />
+          <h3>2. Share With Students</h3>
+          <p>Share your code or class link with your students.</p>
+        </article>
+
+        <article>
+          <img src="assets/student-subscribe-icon.png" alt="" />
+          <h3>3. Students Subscribe</h3>
+          <p>Students sign up and pay using your code.</p>
+        </article>
+
+        <article>
+          <img src="assets/earn-discount-icon.png" alt="" />
+          <h3>4. Earn ₦1,000</h3>
+          <p>You get ₦1,000 discount for each student.</p>
+        </article>
+
+        <article>
+          <img src="assets/reduce-fee-icon.png" alt="" />
+          <h3>5. Reduce Your Fee</h3>
+          <p>Use your accumulated discount to reduce next semester fee.</p>
+        </article>
+      </div>
+
+      <div class="example-note">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <p>
+          Example: 15 students use your code → 15 × ₦1,000 = ₦15,000 discount
+          → Your subscription becomes FREE!
+        </p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+        <details>
+          <summary>Is the first 3 months really free for lecturers?</summary>
+          <p>Yes. During the official launch period, lecturers get 3 months free access before subscription billing starts.</p>
+        </details>
+
+        <details>
+          <summary>When will I be charged after the free period?</summary>
+          <p>After the launch promo ends, new users receive 1 month free trial before billing starts.</p>
+        </details>
+
+        <details>
+          <summary>Can students switch from per submission to semester access?</summary>
+          <p>Yes. Students can upgrade to semester access from their dashboard when billing is connected.</p>
+        </details>
+
+        <details>
+          <summary>Can I use semester access across multiple courses?</summary>
+          <p>Yes. Semester access is designed for all registered courses linked to the student account.</p>
+        </details>
+
+        <details>
+          <summary>How do I get my referral code?</summary>
+          <p>Lecturers receive a unique referral code after creating a lecturer account and activating their plan.</p>
+        </details>
+
+        <details>
+          <summary>What payment methods are available?</summary>
+          <p>The payment system will support card, bank transfer, USSD, and other local payment methods through backend integration.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <img src="assets/pricing-cta-illustration.png" alt="Academic integrity illustration" />
+        <div>
+          <h2>Ready to promote academic integrity?</h2>
+          <p>Join thousands of students and educators using VeriWrite.</p>
+        </div>
+      </div>
+
+      <div class="cta-actions">
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+        <a href="institution-demo.html" class="secondary-btn">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/veriwrite-logo-white.png" alt="VeriWrite Logo" class="footer-logo" />
+        <p>
+          VeriWrite uses advanced AI to verify originality, prevent academic misconduct,
+          and promote a culture of honesty in learning.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="#" aria-label="X">
+            <img src="assets/twitter-x-icon.png" alt="X" />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="students.html">For Students</a>
+        <a href="lecturers.html">For Lecturers</a>
+        <a href="institutions.html">For Institutions</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <a href="help-center.html">Help Center</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="careers.html">Careers</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact Us</h4>
+        <p><img src="assets/email-icon-white.png" alt="" /> support@veriwrite.com</p>
+        <p><img src="assets/phone-icon-white.png" alt="" /> +234 800 123 4567</p>
+        <p><img src="assets/website-icon-white.png" alt="" /> www.veriwrite.com</p>
+        <p><img src="assets/location-icon-white.png" alt="" /> Lagos, Nigeria</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/pricing.js"></script>
+</body>
+</html>

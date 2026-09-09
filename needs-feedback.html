@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Needs Feedback | VeriWrite</title>
+
+  <link rel="stylesheet" href="needs-feedback.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link active">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <h1>Needs Feedback / Revision Requests</h1>
+          <p>Manage submissions that need feedback, revisions, or have unresolved concerns.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT LAYOUT -->
+      <section class="content-layout">
+
+        <!-- MAIN COLUMN -->
+        <div class="main-column">
+
+          <!-- STATS -->
+          <section class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-icon orange">
+                <img src="assets/pending-feedback-icon.png" alt="">
+              </div>
+              <div>
+                <p>Pending Feedback</p>
+                <h2>0</h2>
+                <span>Awaiting your feedback</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon purple">
+                <img src="assets/revision-requested-icon.png" alt="">
+              </div>
+              <div>
+                <p>Revision Requested</p>
+                <h2>0</h2>
+                <span>Sent back to students</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon blue">
+                <img src="assets/pending-corrections-icon.png" alt="">
+              </div>
+              <div>
+                <p>Pending Student Corrections</p>
+                <h2>0</h2>
+                <span>Awaiting resubmission</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon red">
+                <img src="assets/unresolved-concerns-icon.png" alt="">
+              </div>
+              <div>
+                <p>Unresolved Concerns</p>
+                <h2>0</h2>
+                <span>Requires attention</span>
+              </div>
+            </article>
+          </section>
+
+          <!-- FILTERS -->
+          <section class="filter-card">
+            <div class="search-box">
+              <img src="assets/search-icon.png" alt="">
+              <input type="search" name="revision_search" placeholder="Search submissions...">
+            </div>
+
+            <div class="filter-group">
+              <label for="classFilter">Class</label>
+              <select id="classFilter" name="class_filter">
+                <option value="">All Classes</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="assignmentFilter">Assignment</label>
+              <select id="assignmentFilter" name="assignment_filter">
+                <option value="">All Assignments</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="statusFilter">Status</label>
+              <select id="statusFilter" name="status_filter">
+                <option value="">All Statuses</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dateRange">Date Range</label>
+              <div class="date-input">
+                <input type="text" id="dateRange" name="date_range" placeholder="Select date range">
+                <img src="assets/calendar-icon.png" alt="">
+              </div>
+            </div>
+
+            <button type="button" class="reset-btn">
+              <img src="assets/reset-filter-icon.png" alt="">
+              Reset Filters
+            </button>
+          </section>
+
+          <!-- REVISION REQUESTS TABLE -->
+          <section class="requests-panel">
+            <div class="panel-header">
+              <h2>Revision Requests</h2>
+
+              <div class="table-actions">
+                <button type="button" class="active">
+                  <img src="assets/table-view-icon.png" alt="">
+                  Table View
+                </button>
+
+                <button type="button">
+                  <img src="assets/card-view-icon.png" alt="">
+                  Card View
+                </button>
+
+                <button type="button">
+                  <img src="assets/export-icon.png" alt="">
+                  Export
+                  <span>⌄</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" aria-label="Select all revision requests"></th>
+                    <th>Student</th>
+                    <th>Class</th>
+                    <th>Assignment</th>
+                    <th>Status</th>
+                    <th>Feedback Status</th>
+                    <th>Requested On <span>⌄</span></th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <img src="assets/empty-submissions-icon.png" alt="">
+                </div>
+
+                <h3>No revision requests yet</h3>
+                <p>Submissions that require feedback or revisions</p>
+                <p>will appear here.</p>
+
+                <a href="student-submissions.html" class="empty-action">
+                  <img src="assets/invite-students-icon.png" alt="">
+                  View Student Submissions
+                </a>
+              </div>
+            </div>
+
+            <div class="table-footer">
+              <p>Showing 0 to 0 of 0 requests</p>
+
+              <div class="pagination">
+                <button type="button">‹</button>
+                <button type="button" class="active">1</button>
+                <button type="button">›</button>
+              </div>
+
+              <div class="rows-control">
+                <span>Rows per page</span>
+                <select>
+                  <option>10</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDE COLUMN -->
+        <aside class="side-column">
+
+          <!-- STATUS OVERVIEW -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Status Overview</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="overview-content">
+              <div class="donut-chart"></div>
+
+              <div class="overview-list">
+                <p><i class="dot pending"></i> Pending Feedback <span>0</span></p>
+                <p><i class="dot revision"></i> Revision Requested <span>0</span></p>
+                <p><i class="dot corrections"></i> Pending Corrections <span>0</span></p>
+                <p><i class="dot concerns"></i> Unresolved Concerns <span>0</span></p>
+                <p><i class="dot resolved"></i> Resolved <span>0</span></p>
+              </div>
+            </div>
+          </section>
+
+          <!-- FEEDBACK STATUS -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Feedback Status</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="overview-content">
+              <div class="donut-chart"></div>
+
+              <div class="overview-list">
+                <p><i class="dot not-sent"></i> Not Sent <span>0</span></p>
+                <p><i class="dot sent"></i> Feedback Sent <span>0</span></p>
+                <p><i class="dot responded"></i> Student Responded <span>0</span></p>
+              </div>
+            </div>
+          </section>
+
+          <!-- QUICK ACTIONS -->
+          <section class="side-card">
+            <h3>Quick Actions</h3>
+
+            <div class="quick-actions">
+              <a href="student-submissions.html" class="action-blue">
+                <img src="assets/reports-review-icon.png" alt="">
+                <div>
+                  <strong>View Submission</strong>
+                  <span>Open and review the full submission</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="review-student-report.html" class="action-purple">
+                <img src="assets/message-blue-icon.png" alt="">
+                <div>
+                  <strong>Send Feedback</strong>
+                  <span>Provide feedback to the student</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="review-student-report.html" class="action-green">
+                <img src="assets/check-green-icon.png" alt="">
+                <div>
+                  <strong>Approve Revision</strong>
+                  <span>Approve the revised submission</span>
+                </div>
+                <small>›</small>
+              </a>
+            </div>
+          </section>
+
+          <!-- TIPS -->
+          <section class="side-card">
+            <h3>Tips</h3>
+
+            <ul class="tips-list">
+              <li>Provide clear and constructive feedback.</li>
+              <li>Set a due date for student revisions.</li>
+              <li>Review the updated submission once resubmitted.</li>
+            </ul>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

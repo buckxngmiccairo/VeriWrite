@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Student Sign Up | VeriWrite</title>
+
+  <link rel="stylesheet" href="student-signup.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Think Tank Technologies Home">
+      <img src="assets/think-tank-logo.png" alt="Think Tank Technologies Logo" />
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="help-center.html">Help Center</a>
+    </nav>
+
+    <a href="login.html" class="login-btn">
+      <img src="assets/user-icon.png" alt="" />
+      Login
+    </a>
+  </header>
+
+  <main class="signup-page">
+    <a href="choose-account.html" class="back-link">← Back to account types</a>
+
+    <section class="signup-grid">
+      <div class="signup-card">
+        <div class="form-icon">
+          <img src="assets/student-icon.png" alt="" />
+        </div>
+
+        <h1>Student Sign Up</h1>
+
+        <p class="intro">
+          Create your account to get started with VeriWrite and improve academic integrity.
+        </p>
+
+        <form action="/api/auth/student/signup" method="POST" class="signup-form" id="studentSignupForm">
+          <input type="hidden" name="role" value="student" />
+          <input type="hidden" name="account_type" value="student" />
+          <input type="hidden" name="trial_status" value="active" />
+          <input type="hidden" name="trial_duration_months" value="3" />
+          <input type="hidden" name="subscription_status" value="free_trial" />
+          <input type="hidden" name="billing_starts_after_trial" value="true" />
+          <input
+            type="hidden"
+            name="student_privileges"
+            value="upload_assignments,run_integrity_checks,view_reports,join_classes,track_submissions"
+          />
+
+          <label for="fullName">
+            Full Name
+            <div class="input-box">
+              <img src="assets/user-field-icon.png" alt="" />
+              <input
+                type="text"
+                id="fullName"
+                name="full_name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+          </label>
+
+          <label for="email">
+            Email Address
+            <div class="input-box">
+              <img src="assets/email-field-icon.png" alt="" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </label>
+
+          <label for="phoneNumber">
+            Phone Number
+            <div class="phone-box">
+              <img src="assets/phone-field-icon.png" alt="" />
+
+              <select name="country_code" id="countryCode" required>
+                <option value="+234">🇳🇬 +234</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+46">🇸🇪 +46</option>
+              </select>
+
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phone_number"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                required
+              />
+            </div>
+          </label>
+
+          <label for="institution">
+            Institution / University
+            <div class="input-box">
+              <img src="assets/institution-field-icon.png" alt="" />
+
+              <input
+                list="institutions"
+                id="institution"
+                name="institution"
+                placeholder="Select or enter your institution"
+                autocomplete="organization"
+                required
+              />
+
+              <datalist id="institutions">
+                <option value="University of Abuja"></option>
+                <option value="University of Lagos"></option>
+                <option value="University of Ibadan"></option>
+                <option value="Ahmadu Bello University"></option>
+                <option value="University of Mkar"></option>
+                <option value="Moses Orshio Adasu University"></option>
+                <option value="University of Nigeria, Nsukka"></option>
+                <option value="Joseph Sarwuan Tarka University, Makurdi"></option>
+                <option value="Covenant University"></option>
+                <option value="Babcock University"></option>
+                <option value="University of Warwick"></option>
+                <option value="University of Sussex"></option>
+                <option value="University of Nottingham"></option>
+                <option value="Harvard University"></option>
+              </datalist>
+            </div>
+          </label>
+
+          <label for="department">
+            Department <span>(Optional)</span>
+            <div class="input-box">
+              <img src="assets/department-icon.png" alt="" />
+              <input
+                type="text"
+                id="department"
+                name="department"
+                placeholder="Enter your department"
+                autocomplete="organization-title"
+              />
+            </div>
+          </label>
+
+          <label for="studentId">
+            Matric / Student ID <span>(Optional)</span>
+            <div class="input-box">
+              <img src="assets/id-card-icon.png" alt="" />
+              <input
+                type="text"
+                id="studentId"
+                name="student_id"
+                placeholder="Enter your student ID"
+              />
+            </div>
+          </label>
+
+          <label for="classCode">
+            Lecturer Class Code <span>(Optional)</span>
+            <div class="input-box">
+              <img src="assets/class-code-icon.png" alt="" />
+              <input
+                type="text"
+                id="classCode"
+                name="class_code"
+                placeholder="Enter lecturer class code"
+              />
+            </div>
+          </label>
+
+          <label for="password">
+            Password
+            <div class="input-box">
+              <img src="assets/password-field-icon.png" alt="" />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+
+              <button type="button" class="eye-btn" onclick="togglePassword('password')" aria-label="Show or hide password">
+                <img src="assets/eye-icon.png" alt="" />
+              </button>
+            </div>
+          </label>
+
+          <label for="confirmPassword">
+            Confirm Password
+            <div class="input-box">
+              <img src="assets/password-field-icon.png" alt="" />
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirm_password"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+
+              <button type="button" class="eye-btn" onclick="togglePassword('confirmPassword')" aria-label="Show or hide confirm password">
+                <img src="assets/eye-icon.png" alt="" />
+              </button>
+            </div>
+          </label>
+
+          <div class="trial-box">
+            <strong>3 Months Free Access Included</strong>
+            <p>
+              No subscription payment is required today. Billing starts only after your free trial ends.
+            </p>
+          </div>
+
+          <label class="agree" for="termsAccepted">
+            <input type="checkbox" id="termsAccepted" name="terms_accepted" required />
+            <span>
+              I agree to the
+              <a href="terms.html">Terms of Service</a>
+              and
+              <a href="privacy.html">Privacy Policy</a>
+            </span>
+          </label>
+
+          <button type="submit" class="submit-btn">
+            Create Student Account <span>→</span>
+          </button>
+
+          <div class="divider">
+            <span>or sign up with</span>
+          </div>
+
+          <div class="oauth-row">
+            <a href="/api/auth/google/student" class="oauth-btn">
+              <img src="assets/google-icon.png" alt="" />
+              Google
+            </a>
+
+            <a href="/api/auth/microsoft/student" class="oauth-btn">
+              <img src="assets/microsoft-icon.png" alt="" />
+              Microsoft
+            </a>
+          </div>
+
+          <p class="login-text">
+            Already have an account?
+            <a href="login.html">Login here</a>
+          </p>
+        </form>
+      </div>
+
+      <aside class="benefit-card">
+        <h2>
+          Join thousands of students using
+          <span>VeriWrite</span>
+        </h2>
+
+        <p>
+          Upload your assignments, check for originality, and improve the quality of your academic work.
+        </p>
+
+        <img
+          src="assets/student-dashboard-illustration.png"
+          alt="Student using VeriWrite"
+          class="hero-img"
+        />
+
+        <div class="privileges-box">
+          <h3>As a student, you can:</h3>
+
+          <div class="privilege">
+            <img src="assets/upload-icon.png" alt="" />
+            <div>
+              <h4>Upload assignments in various formats</h4>
+              <p>Support for PDF, DOCX, TXT and more.</p>
+            </div>
+          </div>
+
+          <div class="privilege">
+            <img src="assets/report-icon-blue.png" alt="" />
+            <div>
+              <h4>Get accurate originality reports</h4>
+              <p>AI-powered detection with detailed insights.</p>
+            </div>
+          </div>
+
+          <div class="privilege">
+            <img src="assets/security-shield-blue.png" alt="" />
+            <div>
+              <h4>Improve your academic integrity</h4>
+              <p>Learn and grow with every submission.</p>
+            </div>
+          </div>
+
+          <div class="privilege">
+            <img src="assets/group-icon.png" alt="" />
+            <div>
+              <h4>Join lecturer-created classes</h4>
+              <p>Connect with lecturers using unique class codes.</p>
+            </div>
+          </div>
+
+          <div class="privilege">
+            <img src="assets/history-icon.png" alt="" />
+            <div>
+              <h4>Track your submission history</h4>
+              <p>Access all your reports in one place.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="security-strip">
+      <div class="privacy-copy">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <div>
+          <h3>Your privacy and data are our priority.</h3>
+          <p>
+            We use industry-standard security to protect your data and never share your information with third parties.
+          </p>
+        </div>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/lock-icon.png" alt="" />
+        <p>Secure &amp; Encrypted</p>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/security-shield-blue.png" alt="" />
+        <p>Private &amp; Confidential</p>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/trusted-icon-blue.png" alt="" />
+        <p>Trusted Platform</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/think-tank-logo-white.png" alt="Think Tank Technologies Logo" />
+
+        <p>
+          VeriWrite is an AI-powered academic integrity platform built to detect AI-written content and plagiarism with accuracy.
+        </p>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="" />
+          </a>
+          <a href="#" aria-label="X">
+            <img src="assets/x-icon.png" alt="" />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/linkedin-icon.png" alt="" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="help-center.html">Help Center</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div>
+        <h4>Resources</h4>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <p>support@veriwrite.com</p>
+        <p>+234 800 123 4567</p>
+        <p>www.veriwrite.com</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 VeriWrite by Think Tank Technologies. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    function togglePassword(inputId) {
+      const input = document.getElementById(inputId);
+
+      if (!input) return;
+
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    const studentSignupForm = document.getElementById("studentSignupForm");
+
+    studentSignupForm.addEventListener("submit", function (event) {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        event.preventDefault();
+        alert("Password and confirm password do not match.");
+      }
+    });
+  </script>
+</body>
+</html>

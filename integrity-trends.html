@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Integrity Trends | VeriWrite</title>
+
+  <link rel="stylesheet" href="integrity-trends.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link active">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <div class="title-row">
+            <h1>Integrity Trends</h1>
+            <span>ⓘ</span>
+          </div>
+          <p>Track and analyze integrity patterns and trends across your classes over time.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- EXPORT -->
+      <section class="export-row">
+        <button type="button" class="export-btn">
+          <img src="assets/download-blue-icon.png" alt="">
+          Export Report
+        </button>
+
+        <button type="button" class="export-dropdown" aria-label="Export options">
+          <img src="assets/chevron-down-icon.png" alt="">
+        </button>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="filter-card">
+        <div class="filter-group">
+          <label for="classFilter">Class</label>
+          <select id="classFilter" name="class_filter">
+            <option value="">All Classes</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="courseFilter">Course</label>
+          <select id="courseFilter" name="course_filter">
+            <option value="">All Courses</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="dateRange">Date Range</label>
+          <div class="date-input">
+            <img src="assets/calendar-icon.png" alt="">
+            <input type="text" id="dateRange" name="date_range" placeholder="Select date range">
+            <img src="assets/calendar-icon.png" alt="">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="comparisonFilter">Comparison</label>
+          <div class="comparison-input">
+            <img src="assets/my-classes-icon.png" alt="">
+            <select id="comparisonFilter" name="comparison_filter">
+              <option value="">No comparison</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" class="reset-btn">
+          <img src="assets/reset-filter-icon.png" alt="">
+          Reset Filters
+        </button>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/reports-analyzed-icon.png" alt="">
+          </div>
+          <div>
+            <p>Reports Analyzed</p>
+            <h2>0</h2>
+            <small>vs previous period&nbsp; 0%</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/ai-score-trend-icon.png" alt="">
+          </div>
+          <div>
+            <p>Avg AI Detection Score</p>
+            <h2>0%</h2>
+            <small>vs previous period&nbsp; 0%</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/similarity-trend-icon.png" alt="">
+          </div>
+          <div>
+            <p>Avg Similarity Index</p>
+            <h2>0%</h2>
+            <small>vs previous period&nbsp; 0%</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/flagged-submissions-icon.png" alt="">
+          </div>
+          <div>
+            <p>Flagged Submissions</p>
+            <h2>0</h2>
+            <small>vs previous period&nbsp; 0%</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/citation-quality-icon.png" alt="">
+          </div>
+          <div>
+            <p>Citation Issues</p>
+            <h2>0</h2>
+            <small>vs previous period&nbsp; 0%</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- CHART GRID -->
+      <section class="trends-grid">
+
+        <article class="chart-card axis-card">
+          <div class="card-header">
+            <h2>AI Detection Score Trend <span>ⓘ</span></h2>
+            <select>
+              <option>Line</option>
+              <option>Bar</option>
+            </select>
+          </div>
+
+          <div class="axis-chart">
+            <div class="y-axis">
+              <span>100%</span>
+              <span>75%</span>
+              <span>50%</span>
+              <span>25%</span>
+              <span>0%</span>
+            </div>
+
+            <div class="chart-area">
+              <div class="empty-chart">
+                <img src="assets/integrity-trends-chart-icon.png" alt="">
+                <h3>No analytics data yet</h3>
+                <p>AI detection trend over time will appear here.</p>
+              </div>
+
+              <div class="x-axis">
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chart-card axis-card">
+          <div class="card-header">
+            <h2>Similarity Index Trend <span>ⓘ</span></h2>
+            <select>
+              <option>Line</option>
+              <option>Bar</option>
+            </select>
+          </div>
+
+          <div class="axis-chart">
+            <div class="y-axis">
+              <span>100%</span>
+              <span>75%</span>
+              <span>50%</span>
+              <span>25%</span>
+              <span>0%</span>
+            </div>
+
+            <div class="chart-area">
+              <div class="empty-chart">
+                <img src="assets/similarity-trend-icon.png" alt="">
+                <h3>No analytics data yet</h3>
+                <p>Similarity index trend over time will appear here.</p>
+              </div>
+
+              <div class="x-axis">
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chart-card axis-card">
+          <div class="card-header">
+            <h2>Citation Issues Trend <span>ⓘ</span></h2>
+            <select>
+              <option>Line</option>
+              <option>Bar</option>
+            </select>
+          </div>
+
+          <div class="axis-chart">
+            <div class="y-axis">
+              <span>100%</span>
+              <span>75%</span>
+              <span>50%</span>
+              <span>25%</span>
+              <span>0%</span>
+            </div>
+
+            <div class="chart-area">
+              <div class="empty-chart">
+                <img src="assets/citation-quality-icon.png" alt="">
+                <h3>No analytics data yet</h3>
+                <p>Citation issues trend over time will appear here.</p>
+              </div>
+
+              <div class="x-axis">
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chart-card axis-card">
+          <div class="card-header">
+            <h2>Flagged Submission Trend <span>ⓘ</span></h2>
+            <select>
+              <option>Bar</option>
+              <option>Line</option>
+            </select>
+          </div>
+
+          <div class="axis-chart">
+            <div class="y-axis">
+              <span>10</span>
+              <span>8</span>
+              <span>6</span>
+              <span>4</span>
+              <span>2</span>
+              <span>0</span>
+            </div>
+
+            <div class="chart-area">
+              <div class="empty-chart">
+                <img src="assets/flagged-trend-icon.png" alt="">
+                <h3>No analytics data yet</h3>
+                <p>Flagged submissions trend over time will appear here.</p>
+              </div>
+
+              <div class="x-axis">
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+                <span>--/--</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chart-card risk-card">
+          <div class="card-header">
+            <h2>Risk Distribution Across Classes <span>ⓘ</span></h2>
+          </div>
+
+          <div class="risk-content">
+            <div>
+              <div class="risk-donut">
+                <strong>0</strong>
+                <span>Total Classes</span>
+              </div>
+
+              <h3>No data to display</h3>
+              <p>Risk distribution across classes will appear here.</p>
+            </div>
+
+            <div class="risk-list">
+              <p><i class="dot high"></i> High Risk <span>0 (0%)</span></p>
+              <p><i class="dot moderate"></i> Moderate Risk <span>0 (0%)</span></p>
+              <p><i class="dot low"></i> Low Risk <span>0 (0%)</span></p>
+              <p><i class="dot very-low"></i> Very Low Risk <span>0 (0%)</span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="chart-card comparison-card">
+          <div class="card-header">
+            <h2>Trend Comparison <span>ⓘ</span></h2>
+          </div>
+
+          <select class="comparison-select">
+            <option>No comparison</option>
+          </select>
+
+          <div class="comparison-list">
+            <div>
+              <img src="assets/ai-detection-icon.png" alt="">
+              <p>AI Detection Score</p>
+              <span>No data<br>-</span>
+            </div>
+
+            <div>
+              <img src="assets/similarity-trend-icon.png" alt="">
+              <p>Similarity Index</p>
+              <span>No data<br>-</span>
+            </div>
+
+            <div>
+              <img src="assets/flagged-submissions-icon.png" alt="">
+              <p>Flagged Submissions</p>
+              <span>No data<br>-</span>
+            </div>
+
+            <div>
+              <img src="assets/citation-quality-icon.png" alt="">
+              <p>Citation Issues</p>
+              <span>No data<br>-</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- BOTTOM INFO BAR -->
+      <section class="info-bar">
+        <div>
+          <img src="assets/info-blue-icon.png" alt="">
+          <div>
+            <h3>No analytics data yet</h3>
+            <p>Analytics will appear once you have submissions and reports to analyze.</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/tips-icon.png" alt="">
+          <div>
+            <h3>Tips</h3>
+            <p>Continue analyzing submissions to unlock powerful integrity insights and trends.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

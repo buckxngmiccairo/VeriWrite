@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Platform Monitoring | VeriWrite</title>
+
+  <link rel="stylesheet" href="platform-monitoring.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" />
+        <div>
+          <h1>VeriWrite</h1>
+          <p>AI-Powered Academic Integrity</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main</span>
+
+        <a href="super-admin-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          Dashboard
+        </a>
+
+        <span class="nav-label">User Management</span>
+
+        <a href="institutions.html" class="nav-link">
+          <img src="assets/institution-icon.png" alt="" />
+          Institutions
+        </a>
+
+        <a href="admins.html" class="nav-link">
+          <img src="assets/admins-icon.png" alt="" />
+          Admins
+        </a>
+
+        <a href="lecturers.html" class="nav-link">
+          <img src="assets/lecturers-icon.png" alt="" />
+          Lecturers
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="" />
+          Students
+        </a>
+
+        <span class="nav-label">Platform</span>
+
+        <a href="platform-monitoring.html" class="nav-link active">
+          <img src="assets/monitoring-icon.png" alt="" />
+          Monitoring
+        </a>
+
+        <a href="system-analytics.html" class="nav-link">
+          <img src="assets/system-analytics-icon.png" alt="" />
+          System Analytics
+        </a>
+
+        <a href="subscription-management.html" class="nav-link">
+          <img src="assets/subscription-icon.png" alt="" />
+          Subscription Management
+        </a>
+
+        <span class="nav-label">Support</span>
+
+        <a href="support-center.html" class="nav-link">
+          <img src="assets/support-center-icon.png" alt="" />
+          Support Center
+        </a>
+
+        <a href="ticket-management.html" class="nav-link">
+          <img src="assets/ticket-management-icon.png" alt="" />
+          Ticket Management
+        </a>
+
+        <span class="nav-label">System</span>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          Settings
+        </a>
+
+        <a href="audit-logs.html" class="nav-link">
+          <img src="assets/audit-logs-icon.png" alt="" />
+          Audit Logs
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♕</div>
+        <div>
+          <h3>Upgrade to Premium</h3>
+          <p>Unlock advanced monitoring and control features.</p>
+        </div>
+        <a href="subscription-management.html">›</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <h2>Platform Monitoring <span>ⓘ</span></h2>
+          <p>Monitor system health, performance, and platform services in real-time.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </button>
+
+          <div class="admin-profile">
+            <div class="admin-avatar super-admin-avatar">
+              <span>SA</span>
+            </div>
+            <p>Super Admin</p>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD TOOLS -->
+      <section class="dashboard-tools">
+        <button class="date-filter" type="button" data-backend-filter="time_range">
+          <img src="assets/calendar-icon.png" alt="" />
+          Last 24 Hours
+          <span>⌄</span>
+        </button>
+
+        <button class="export-btn" type="button" data-export="monitoring_report">
+          <img src="assets/download-icon.png" alt="" />
+          Export Report
+        </button>
+      </section>
+
+      <!-- MONITORING METRICS -->
+      <section class="monitoring-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/system-uptime-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>System Uptime</p>
+            <h3>99.98%</h3>
+            <span class="status-text success">All Systems Operational</span>
+            <small>vs yesterday 99.95%</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/api-response-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>API Response Time</p>
+            <h3>128ms</h3>
+            <span class="status-text success">Average Response</span>
+            <small>vs yesterday 132ms</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/total-requests-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>Total Requests</p>
+            <h3>2.45M</h3>
+            <span class="status-text success">↑ 12.4%</span>
+            <small>vs yesterday 2.18M</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/active-incidents-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>Active Incidents</p>
+            <h3>0</h3>
+            <span class="status-text success">No active incidents</span>
+            <small>vs yesterday 1</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon teal">
+            <img src="assets/data-processed-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>Data Processed</p>
+            <h3>18.6GB</h3>
+            <span class="status-text success">↑ 8.7%</span>
+            <small>vs yesterday 17.1GB</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/concurrent-users-icon.png" alt="" />
+          </div>
+
+          <div>
+            <p>Concurrent Users</p>
+            <h3>1,240</h3>
+            <span class="status-text success">↑ 9.3%</span>
+            <small>vs yesterday 1,135</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- MONITORING GRID -->
+      <section class="monitoring-grid">
+
+        <!-- SYSTEM PERFORMANCE -->
+        <article class="panel system-performance">
+          <div class="panel-header">
+            <h3>System Performance</h3>
+            <button type="button">Last 24 Hours ⌄</button>
+          </div>
+
+          <div class="line-chart performance-chart">
+            <div class="performance-lines"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="blue-dot">API Response Time (ms)</span>
+            <span class="green-dot">Database Response (ms)</span>
+            <span class="purple-dot">Page Load Time (ms)</span>
+          </div>
+        </article>
+
+        <!-- SYSTEM HEALTH STATUS -->
+        <article class="panel system-health">
+          <div class="panel-header">
+            <h3>System Health Status</h3>
+            <a href="platform-monitoring.html">View All</a>
+          </div>
+
+          <ul class="health-list">
+            <li>
+              <span><img src="assets/web-application-icon.png" alt="" /> Web Application</span>
+              <b>Operational</b>
+              <strong>100%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/api-gateway-icon.png" alt="" /> API Gateway</span>
+              <b>Operational</b>
+              <strong>100%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/database-icon.png" alt="" /> Database</span>
+              <b>Operational</b>
+              <strong>100%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/ai-engine-icon.png" alt="" /> AI Analysis Engine</span>
+              <b>Operational</b>
+              <strong>99.99%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/file-storage-icon.png" alt="" /> File Storage</span>
+              <b>Operational</b>
+              <strong>100%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/email-service-icon.png" alt="" /> Email Service</span>
+              <b>Operational</b>
+              <strong>99.97%</strong>
+            </li>
+
+            <li>
+              <span><img src="assets/background-jobs-icon.png" alt="" /> Background Jobs</span>
+              <b>Operational</b>
+              <strong>100%</strong>
+            </li>
+          </ul>
+        </article>
+
+        <!-- INCIDENT SUMMARY -->
+        <article class="panel incident-summary">
+          <div class="panel-header">
+            <h3>Incident Summary</h3>
+            <a href="platform-monitoring.html">View All</a>
+          </div>
+
+          <div class="incident-layout">
+            <div class="donut-chart incident-donut">
+              <div class="donut-center">
+                <strong>0</strong>
+                <span>Total</span>
+              </div>
+            </div>
+
+            <ul class="legend-list">
+              <li><span class="dot green-bg"></span>Resolved <b>0 (0%)</b></li>
+              <li><span class="dot orange-bg"></span>Investigating <b>0 (0%)</b></li>
+              <li><span class="dot red-bg"></span>Critical <b>0 (0%)</b></li>
+              <li><span class="dot purple-bg"></span>Scheduled <b>0 (0%)</b></li>
+            </ul>
+          </div>
+
+          <div class="incident-boxes">
+            <div><strong>0</strong><span>Resolved</span></div>
+            <div><strong>0</strong><span>Investigating</span></div>
+            <div><strong>0</strong><span>Critical</span></div>
+            <div><strong>0</strong><span>Scheduled</span></div>
+          </div>
+        </article>
+
+        <!-- RESOURCE UTILIZATION -->
+        <article class="panel resource-utilization">
+          <div class="panel-header">
+            <h3>Resource Utilization</h3>
+            <button type="button">Last 24 Hours ⌄</button>
+          </div>
+
+          <div class="gauge-grid">
+            <div class="gauge-item">
+              <div class="gauge gauge-32"><span>32%</span></div>
+              <p>CPU Usage</p>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge gauge-48"><span>48%</span></div>
+              <p>Memory Usage</p>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge gauge-36 blue-gauge"><span>36%</span></div>
+              <p>Disk Usage</p>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge gauge-26"><span>26%</span></div>
+              <p>Network I/O</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOP API ENDPOINTS -->
+        <article class="panel top-api">
+          <div class="panel-header">
+            <h3>Top API Endpoints</h3>
+            <a href="system-analytics.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Endpoint</th>
+                  <th>Requests</th>
+                  <th>Avg Response (ms)</th>
+                  <th>Error Rate</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>/api/v1/submissions</td>
+                  <td>542,180</td>
+                  <td>120</td>
+                  <td>0.12%</td>
+                </tr>
+
+                <tr>
+                  <td>/api/v1/reports</td>
+                  <td>312,450</td>
+                  <td>110</td>
+                  <td>0.08%</td>
+                </tr>
+
+                <tr>
+                  <td>/api/v1/auth/login</td>
+                  <td>245,780</td>
+                  <td>98</td>
+                  <td>0.05%</td>
+                </tr>
+
+                <tr>
+                  <td>/api/v1/users</td>
+                  <td>188,230</td>
+                  <td>115</td>
+                  <td>0.09%</td>
+                </tr>
+
+                <tr>
+                  <td>/api/v1/analytics</td>
+                  <td>142,600</td>
+                  <td>130</td>
+                  <td>0.11%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- ERROR RATE -->
+        <article class="panel error-rate">
+          <div class="panel-header">
+            <h3>Error Rate</h3>
+            <button type="button">Last 24 Hours ⌄</button>
+          </div>
+
+          <div class="line-chart error-chart">
+            <div class="error-line"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="blue-dot">Error Rate (%)</span>
+          </div>
+        </article>
+
+        <!-- RECENT ALERTS -->
+        <article class="panel recent-alerts">
+          <div class="panel-header">
+            <h3>Recent Alerts</h3>
+            <a href="platform-monitoring.html">View All</a>
+          </div>
+
+          <ul class="alert-list">
+            <li>
+              <span class="alert-status success">✓</span>
+              Database backup completed successfully
+              <b>2 min ago</b>
+            </li>
+
+            <li>
+              <span class="alert-status info">i</span>
+              AI model performance optimized
+              <b>18 min ago</b>
+            </li>
+
+            <li>
+              <span class="alert-status warning">!</span>
+              High memory usage detected on node-3
+              <b>45 min ago</b>
+            </li>
+
+            <li>
+              <span class="alert-status success">✓</span>
+              File storage cleanup completed
+              <b>1 hr ago</b>
+            </li>
+
+            <li>
+              <span class="alert-status info">i</span>
+              System maintenance scheduled for May 25, 2024
+              <b>2 hrs ago</b>
+            </li>
+          </ul>
+        </article>
+
+        <!-- ACTIVE SESSIONS -->
+        <article class="panel active-sessions">
+          <div class="panel-header">
+            <h3>Active Sessions</h3>
+            <a href="system-analytics.html">View All</a>
+          </div>
+
+          <div class="sessions-layout">
+            <div class="sessions-total">
+              <strong>1,240</strong>
+              <span>Active Now</span>
+            </div>
+
+            <ul class="session-list">
+              <li><span><img src="assets/institution-icon.png" alt="" /> Institutions</span><b>320</b></li>
+              <li><span><img src="assets/lecturers-icon.png" alt="" /> Lecturers</span><b>680</b></li>
+              <li><span><img src="assets/students-icon.png" alt="" /> Students</span><b>1,120</b></li>
+              <li><span><img src="assets/admins-icon.png" alt="" /> Admins</span><b>45</b></li>
+              <li><span><img src="assets/api-clients-icon.png" alt="" /> API Clients</span><b>120</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- SYSTEM INFORMATION -->
+        <article class="panel system-information">
+          <div class="panel-header">
+            <h3>System Information</h3>
+          </div>
+
+          <ul class="info-list">
+            <li>
+              <span><img src="assets/platform-version-icon.png" alt="" /> Platform Version</span>
+              <b>v2.4.1</b>
+            </li>
+
+            <li>
+              <span><img src="assets/last-updated-icon.png" alt="" /> Last Updated</span>
+              <b>May 23, 2024 10:30 AM</b>
+            </li>
+
+            <li>
+              <span><img src="assets/environment-icon.png" alt="" /> Environment</span>
+              <b>Production</b>
+            </li>
+
+            <li>
+              <span><img src="assets/server-region-icon.png" alt="" /> Server Region</span>
+              <b>us-east-1</b>
+            </li>
+
+            <li>
+              <span><img src="assets/maintenance-icon.png" alt="" /> Next Maintenance</span>
+              <b>May 25, 2024 02:00 AM</b>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Student Management | VeriWrite</title>
+
+  <link rel="stylesheet" href="student-management.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link active">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <div class="title-row">
+            <h1>Student Management</h1>
+            <span>ⓘ</span>
+          </div>
+          <p>Manage students across your classes, monitor their participation and status.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- TOP ACTIONS -->
+      <section class="top-actions-row">
+        <a href="#" class="outline-action">
+          <img src="assets/download-blue-icon.png" alt="">
+          Export Students
+        </a>
+
+        <a href="invite-students.html" class="primary-action">
+          <img src="assets/plus-white-icon.png" alt="">
+          Add Students
+        </a>
+
+        <button type="button" class="primary-dropdown" aria-label="Add student options">
+          <img src="assets/chevron-down-white-icon.png" alt="">
+        </button>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-students-icon.png" alt="">
+          </div>
+          <div>
+            <p>Total Students</p>
+            <h2>0</h2>
+            <small>Across all classes</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/active-students-icon.png" alt="">
+          </div>
+          <div>
+            <p>Active Students</p>
+            <h2>0</h2>
+            <small>Currently enrolled</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/pending-invitations-icon.png" alt="">
+          </div>
+          <div>
+            <p>Pending Invitations</p>
+            <h2>0</h2>
+            <small>Awaiting acceptance</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/inactive-students-icon.png" alt="">
+          </div>
+          <div>
+            <p>Inactive Students</p>
+            <h2>0</h2>
+            <small>Not active</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/removed-students-icon.png" alt="">
+          </div>
+          <div>
+            <p>Removed Students</p>
+            <h2>0</h2>
+            <small>No longer in classes</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="filter-card">
+        <div class="search-box">
+          <img src="assets/search-icon.png" alt="">
+          <input type="search" name="student_search" placeholder="Search students...">
+        </div>
+
+        <div class="filter-group">
+          <label for="classFilter">Class</label>
+          <select id="classFilter" name="class_filter">
+            <option value="">All Classes</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="statusFilter">Status</label>
+          <select id="statusFilter" name="status_filter">
+            <option value="">All Statuses</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="enrollmentDate">Enrollment Date</label>
+          <div class="date-input">
+            <img src="assets/calendar-icon.png" alt="">
+            <input type="text" id="enrollmentDate" name="enrollment_date" placeholder="Select date range">
+            <img src="assets/calendar-icon.png" alt="">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="participationFilter">Participation</label>
+          <select id="participationFilter" name="participation_filter">
+            <option value="">All Levels</option>
+          </select>
+        </div>
+
+        <button type="button" class="reset-btn">
+          <img src="assets/reset-filter-icon.png" alt="">
+          Reset Filters
+        </button>
+      </section>
+
+      <!-- CONTENT GRID -->
+      <section class="content-layout">
+
+        <!-- STUDENTS TABLE -->
+        <div class="main-panel">
+          <section class="students-panel">
+            <div class="panel-header">
+              <h2>Students</h2>
+
+              <div class="table-actions">
+                <button type="button" class="active">
+                  <img src="assets/table-view-icon.png" alt="">
+                  Table View
+                </button>
+
+                <button type="button">
+                  <img src="assets/card-view-icon.png" alt="">
+                  Card View
+                </button>
+
+                <button type="button" class="small-icon-btn" aria-label="Table options">
+                  <img src="assets/more-icon.png" alt="">
+                </button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" aria-label="Select all students"></th>
+                    <th>Student <span>↕</span></th>
+                    <th>Class <span>↕</span></th>
+                    <th>Email <span>↕</span></th>
+                    <th>Status <span>↕</span></th>
+                    <th>Participation <span>ⓘ</span></th>
+                    <th>Enrolled On <span>↕</span></th>
+                    <th>Last Active <span>↕</span></th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <img src="assets/empty-students-icon.png" alt="">
+                </div>
+
+                <h3>No students found</h3>
+                <p>Add students to your classes or invite them to get started.</p>
+
+                <a href="invite-students.html" class="empty-action">
+                  <img src="assets/plus-blue-icon.png" alt="">
+                  Add Students
+                </a>
+              </div>
+            </div>
+
+            <div class="table-footer">
+              <p>Showing 0 to 0 of 0 students</p>
+
+              <div class="pagination">
+                <button type="button">‹</button>
+                <button type="button" class="active">1</button>
+                <button type="button">›</button>
+              </div>
+
+              <div class="rows-control">
+                <span>Rows per page</span>
+                <select>
+                  <option>10</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="side-column">
+
+          <!-- STUDENT OVERVIEW -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Student Overview</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="overview-content">
+              <div class="donut-chart"></div>
+
+              <div class="overview-list">
+                <p><i class="dot active"></i> Active <span>0 (0%)</span></p>
+                <p><i class="dot inactive"></i> Inactive <span>0 (0%)</span></p>
+                <p><i class="dot pending"></i> Pending <span>0 (0%)</span></p>
+                <p><i class="dot removed"></i> Removed <span>0 (0%)</span></p>
+              </div>
+            </div>
+
+            <div class="overview-total">
+              <span>Total</span>
+              <strong>0</strong>
+            </div>
+          </section>
+
+          <!-- PARTICIPATION OVERVIEW -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Participation Overview</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="overview-content">
+              <div class="donut-chart"></div>
+
+              <div class="overview-list">
+                <p><i class="dot high"></i> High <span>0 (0%)</span></p>
+                <p><i class="dot medium"></i> Medium <span>0 (0%)</span></p>
+                <p><i class="dot low"></i> Low <span>0 (0%)</span></p>
+                <p><i class="dot no-activity"></i> No Activity <span>0 (0%)</span></p>
+              </div>
+            </div>
+
+            <div class="overview-total">
+              <span>Total</span>
+              <strong>0</strong>
+            </div>
+          </section>
+
+          <!-- QUICK ACTIONS -->
+          <section class="side-card">
+            <h3>Quick Actions</h3>
+
+            <div class="quick-actions">
+              <a href="invite-students.html">
+                <img src="assets/invitations-sent-icon.png" alt="">
+                <strong>Invite Students</strong>
+                <span>Send invitations to students</span>
+                <small>›</small>
+              </a>
+
+              <a href="#">
+                <img src="assets/upload-blue-icon.png" alt="">
+                <strong>Bulk Import</strong>
+                <span>Import students from CSV</span>
+                <small>›</small>
+              </a>
+
+              <a href="#">
+                <img src="assets/download-blue-icon.png" alt="">
+                <strong>Download Template</strong>
+                <span>Get CSV template</span>
+                <small>›</small>
+              </a>
+            </div>
+          </section>
+
+          <!-- TIPS -->
+          <section class="side-card tips-card">
+            <h3>Tips</h3>
+
+            <ul>
+              <li>Keep your class roster up to date for accurate reports.</li>
+              <li>You can bulk import students using a CSV file.</li>
+            </ul>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

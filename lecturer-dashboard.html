@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lecturer Dashboard | VeriWrite</title>
+
+  <link rel="stylesheet" href="lecturer-dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="dashboard-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="lecturer-dashboard.html" class="nav-link active">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Lecturer Dashboard</h1>
+          <p>Overview of your classes, submissions, and academic integrity insights.</p>
+        </div>
+
+        <div class="header-right">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- ACTION BAR -->
+      <section class="action-bar">
+        <a href="create-class.html" class="outline-action">
+          <img src="assets/plus-blue-icon.png" alt="">
+          Create Class
+        </a>
+
+        <a href="invite-students.html" class="primary-action">
+          <img src="assets/invite-white-icon.png" alt="">
+          Invite Students
+        </a>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-classes-icon.png" alt="">
+          </div>
+          <div>
+            <p>Total Classes</p>
+            <h2>0</h2>
+            <span>All time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/total-submissions-icon.png" alt="">
+          </div>
+          <div>
+            <p>Total Submissions</p>
+            <h2>0</h2>
+            <span>All time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/pending-reviews-icon.png" alt="">
+          </div>
+          <div>
+            <p>Pending Reviews</p>
+            <h2>0</h2>
+            <span>Awaiting your review</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/integrity-score-icon.png" alt="">
+          </div>
+          <div>
+            <p>Average Integrity Score</p>
+            <h2>- -</h2>
+            <span>Across all classes</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/reports-reviewed-icon.png" alt="">
+          </div>
+          <div>
+            <p>Reports Reviewed</p>
+            <h2>0</h2>
+            <span>All time</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- DASHBOARD GRID -->
+      <section class="dashboard-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+
+          <!-- RECENT CLASSES -->
+          <article class="panel recent-classes-panel">
+            <div class="panel-header">
+              <div>
+                <h3>Recent Classes <span>ⓘ</span></h3>
+              </div>
+
+              <a href="my-classes.html">View All Classes →</a>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class Name</th>
+                    <th>Course / Subject</th>
+                    <th>Students</th>
+                    <th>Submissions</th>
+                    <th>Pending Reviews</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="empty-table-state">
+                <div class="empty-icon">
+                  <img src="assets/empty-classes-icon.png" alt="">
+                </div>
+                <h4>No classes yet</h4>
+                <p>You haven't created any classes yet.</p>
+                <p>Create your first class to get started.</p>
+
+                <a href="create-class.html" class="empty-action">
+                  <img src="assets/plus-blue-icon.png" alt="">
+                  Create Class
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- LOWER LEFT GRID -->
+          <div class="lower-grid">
+
+            <!-- SUBMISSIONS TO REVIEW -->
+            <article class="panel">
+              <div class="panel-header">
+                <h3>Submissions to Review <span>ⓘ</span></h3>
+                <a href="student-submissions.html">View All</a>
+              </div>
+
+              <div class="mini-table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Class</th>
+                      <th>Assignment</th>
+                      <th>Submitted On</th>
+                      <th>Integrity Score</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                </table>
+
+                <div class="empty-small-state">
+                  <img src="assets/empty-submissions-icon.png" alt="">
+                  <h4>No submissions to review</h4>
+                  <p>Submitted assignments that need your review will appear here.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- INTEGRITY INSIGHTS -->
+            <article class="panel">
+              <div class="panel-header">
+                <h3>Integrity Insights <span>ⓘ</span></h3>
+
+                <select aria-label="Insight period">
+                  <option>This Month</option>
+                  <option>This Week</option>
+                  <option>This Semester</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+
+              <div class="insight-grid">
+                <div class="insight-card">
+                  <img src="assets/high-risk-icon.png" alt="">
+                  <div>
+                    <p>High Risk Submissions</p>
+                    <h4>-</h4>
+                    <span>0%</span>
+                  </div>
+                </div>
+
+                <div class="insight-card">
+                  <img src="assets/ai-detection-icon.png" alt="">
+                  <div>
+                    <p>Avg AI Probability</p>
+                    <h4>- -</h4>
+                    <span>-</span>
+                  </div>
+                </div>
+
+                <div class="insight-card">
+                  <img src="assets/similarity-icon.png" alt="">
+                  <div>
+                    <p>Similarity Index (Avg)</p>
+                    <h4>- -</h4>
+                    <span>-</span>
+                  </div>
+                </div>
+
+                <div class="insight-card">
+                  <img src="assets/citation-quality-icon.png" alt="">
+                  <div>
+                    <p>Citation Issues</p>
+                    <h4>-</h4>
+                    <span>-</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="right-column">
+
+          <!-- SUBMISSION OVERVIEW -->
+          <article class="panel side-panel">
+            <div class="panel-header">
+              <h3>Submission Overview <span>ⓘ</span></h3>
+
+              <select aria-label="Submission overview period">
+                <option>This Month</option>
+                <option>This Week</option>
+                <option>This Semester</option>
+                <option>This Year</option>
+              </select>
+            </div>
+
+            <div class="overview-content">
+              <div class="donut-chart">
+                <strong>- -</strong>
+                <span>Total</span>
+              </div>
+
+              <div class="overview-list">
+                <p><i class="dot delivered"></i> Delivered <span>-</span></p>
+                <p><i class="dot reviewed"></i> Reviewed <span>-</span></p>
+                <p><i class="dot feedback"></i> Needs Feedback <span>-</span></p>
+                <p><i class="dot revision"></i> Revision Submitted <span>-</span></p>
+                <p><i class="dot approved"></i> Approved <span>-</span></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- RECENT ACTIVITY -->
+          <article class="panel side-panel">
+            <div class="panel-header">
+              <h3>Recent Activity <span>ⓘ</span></h3>
+              <a href="notifications.html">View All</a>
+            </div>
+
+            <div class="empty-side-state">
+              <img src="assets/empty-activity-icon.png" alt="">
+              <h4>No recent activity</h4>
+              <p>Class activities and submissions will appear here.</p>
+            </div>
+          </article>
+
+          <!-- IMPORTANT REMINDERS -->
+          <article class="panel side-panel">
+            <div class="panel-header">
+              <h3>Important Reminders <span>ⓘ</span></h3>
+            </div>
+
+            <div class="empty-side-state">
+              <img src="assets/empty-reminders-icon.png" alt="">
+              <h4>No reminders</h4>
+              <p>You're all caught up!</p>
+            </div>
+          </article>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

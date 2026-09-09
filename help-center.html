@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Help Center | VeriWrite</title>
+
+  <link rel="stylesheet" href="help-center.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Go to VeriWrite homepage">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="header-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="institutions.html">Institutions</a>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn active" id="resourcesBtn" aria-expanded="false">
+            Resources
+            <img src="assets/chevron-down-icon.png" alt="" />
+          </button>
+
+          <div class="nav-dropdown-menu" id="resourcesMenu">
+            <a href="help-center.html" class="active-dropdown-link">Help Center</a>
+            <a href="guidelines.html">Guidelines</a>
+            <a href="blog.html">Blog</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+      </div>
+
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <img src="assets/menu-icon.png" alt="" />
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="help-hero">
+      <div class="help-hero-container">
+        <div class="help-hero-content">
+          <span class="section-label">HELP CENTER</span>
+
+          <h1>How can we help you?</h1>
+
+          <p>
+            Find answers to common questions, learn how VeriWrite works,
+            and get the most out of our platform.
+          </p>
+
+          <form
+            class="help-search-form"
+            id="helpSearchForm"
+            action="/api/help/search"
+            method="GET"
+            data-form-type="help-search"
+          >
+            <label for="helpSearch" class="sr-only">Search help articles</label>
+            <img src="assets/search-icon.png" alt="" />
+            <input
+              type="search"
+              id="helpSearch"
+              name="query"
+              placeholder="Search for articles..."
+              autocomplete="off"
+            />
+          </form>
+        </div>
+
+        <div class="help-hero-image">
+          <img src="assets/help-center-hero.png" alt="Help center support illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section class="help-main-section">
+      <div class="help-content">
+        <div class="category-area">
+          <h2>Browse by Category</h2>
+
+          <div class="category-grid">
+            <article class="category-card">
+              <img src="assets/getting-started-icon.png" alt="" />
+              <h3>Getting Started</h3>
+              <p>New to VeriWrite? Start here. Learn the basics and set up with ease.</p>
+              <a href="help-category-getting-started.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <article class="category-card">
+              <img src="assets/submissions-icon.png" alt="" />
+              <h3>Submissions</h3>
+              <p>Learn how to submit documents, check results, and understand reports.</p>
+              <a href="help-category-submissions.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <article class="category-card">
+              <img src="assets/ai-detection-icon.png" alt="" />
+              <h3>AI Detection</h3>
+              <p>Understand our AI detection technology and how similarity scores work.</p>
+              <a href="help-category-ai-detection.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <article class="category-card">
+              <img src="assets/reports-icon.png" alt="" />
+              <h3>Reports</h3>
+              <p>Explore report features, interpret results, and export your documents.</p>
+              <a href="help-category-reports.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <article class="category-card">
+              <img src="assets/classes-students-icon.png" alt="" />
+              <h3>Classes & Students</h3>
+              <p>Create classes, manage students, and track submissions.</p>
+              <a href="help-category-classes.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <article class="category-card">
+              <img src="assets/account-settings-icon.png" alt="" />
+              <h3>Account & Settings</h3>
+              <p>Manage your account, preferences, and security settings.</p>
+              <a href="help-category-account-settings.html">
+                View Articles
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+          </div>
+
+          <div class="support-strip">
+            <div>
+              <img src="assets/lightbulb-icon.png" alt="" />
+              <div>
+                <h3>Can’t find what you're looking for?</h3>
+                <p>Our support team is here to help you.</p>
+              </div>
+            </div>
+
+            <a href="contact.html" class="secondary-btn">Contact Support</a>
+          </div>
+        </div>
+
+        <aside class="help-sidebar">
+          <section class="popular-card">
+            <h2>Popular Articles</h2>
+
+            <div class="article-list">
+              <a href="article-submit-document.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How do I submit a document?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-ai-detection.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How does AI detection work?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-similarity-scores.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  Understanding Similarity Scores
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-create-class.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How to create a class
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-read-report.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How do I read my report?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-file-types.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  What file types are supported?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-reset-password.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How do I reset my password?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+
+              <a href="article-contact-support.html">
+                <span>
+                  <img src="assets/article-icon.png" alt="" />
+                  How do I contact support?
+                </span>
+                <img src="assets/chevron-right-icon.png" alt="" />
+              </a>
+            </div>
+
+            <a href="help-articles.html" class="view-all-link">
+              View All Articles
+              <img src="assets/arrow-right-blue-icon.png" alt="" />
+            </a>
+          </section>
+
+          <section class="still-help-card">
+            <h2>Still Need Help?</h2>
+
+            <p>Our support team is ready to assist you with any questions.</p>
+
+            <div class="help-contact-list">
+              <div>
+                <img src="assets/email-icon.png" alt="" />
+                <div>
+                  <h3>Email Us</h3>
+                  <a href="mailto:support@veriwrite.com">support@veriwrite.com</a>
+                </div>
+              </div>
+
+              <div>
+                <img src="assets/phone-icon.png" alt="" />
+                <div>
+                  <h3>Call Us</h3>
+                  <a href="tel:+2348001234567">+234 800 123 4567</a>
+                </div>
+              </div>
+
+              <div>
+                <img src="assets/clock-icon.png" alt="" />
+                <div>
+                  <h3>Help Center Hours</h3>
+                  <p>Mon – Fri: 8:00 AM – 6:00 PM (WAT)</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <h2>New to VeriWrite? Get Started in 4 Easy Steps</h2>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span>1</span>
+          <img src="assets/create-account-icon.png" alt="" />
+          <div>
+            <h3>Create an Account</h3>
+            <p>Sign up and verify your account.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <span>2</span>
+          <img src="assets/upload-cloud-icon.png" alt="" />
+          <div>
+            <h3>Submit Your Document</h3>
+            <p>Upload your file or paste your content.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <span>3</span>
+          <img src="assets/ai-shield-icon.png" alt="" />
+          <div>
+            <h3>Get AI Analysis</h3>
+            <p>Our AI checks for plagiarism and AI-generated content.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <span>4</span>
+          <img src="assets/review-report-icon.png" alt="" />
+          <div>
+            <h3>Review Your Report</h3>
+            <p>Explore insights and improve your work.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <div>
+          <h2>VeriWrite is here to promote academic integrity and originality.</h2>
+          <p>Explore our Help Center or reach out to our support team anytime.</p>
+        </div>
+      </div>
+
+      <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/veriwrite-logo-white.png" alt="VeriWrite Logo" class="footer-logo" />
+
+        <p>
+          Advanced AI to detect plagiarism and AI-written content, promoting honesty,
+          originality, and excellence in education.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="X">
+            <img src="assets/twitter-x-icon.png" alt="X" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="students.html">For Students</a>
+        <a href="lecturers.html">For Lecturers</a>
+        <a href="institutions.html">For Institutions</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <a href="help-center.html" class="active-footer-link">Help Center</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="news.html">News & Updates</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact</h4>
+
+        <p>
+          <img src="assets/email-icon-white.png" alt="" />
+          support@veriwrite.com
+        </p>
+
+        <p>
+          <img src="assets/phone-icon-white.png" alt="" />
+          +234 800 123 4567
+        </p>
+
+        <p>
+          <img src="assets/website-icon-white.png" alt="" />
+          www.veriwrite.com
+        </p>
+
+        <p>
+          <img src="assets/location-icon-white.png" alt="" />
+          Lagos, Nigeria
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/help-center.js"></script>
+</body>
+</html>

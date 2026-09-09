@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | VeriWrite</title>
+
+  <link rel="stylesheet" href="contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Go to VeriWrite homepage">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="header-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="institutions.html">Institutions</a>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" id="resourcesBtn" aria-expanded="false">
+            Resources
+            <img src="assets/chevron-down-icon.png" alt="" />
+          </button>
+
+          <div class="nav-dropdown-menu" id="resourcesMenu">
+            <a href="help-center.html">Help Center</a>
+            <a href="guidelines.html">Guidelines</a>
+            <a href="blog.html">Blog</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+      </div>
+
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <img src="assets/menu-icon.png" alt="" />
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero-container">
+        <div class="contact-intro">
+          <span class="section-label">CONTACT US</span>
+
+          <h1>
+            We’re Here to
+            <span>Help You.</span>
+          </h1>
+
+          <p>
+            Have questions about VeriWrite? Want to learn more about our services
+            or request a demo? Our team is ready to assist you. Reach out to us
+            using any of the options below.
+          </p>
+
+          <ul class="hero-checklist">
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              Fast & Friendly Support
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              Expert Guidance
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              Committed to Your Success
+            </li>
+          </ul>
+
+          <div class="contact-hero-image">
+            <img src="assets/contact-hero.png" alt="Message and support illustration" />
+          </div>
+        </div>
+
+        <form
+          class="contact-form-card"
+          id="contactForm"
+          action="/api/contact"
+          method="POST"
+          data-form-type="contact-message"
+        >
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and we’ll get back to you as soon as possible.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="full_name"
+                placeholder="Your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddress">Email Address</label>
+              <input
+                type="email"
+                id="emailAddress"
+                name="email"
+                placeholder="youremail@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Organization / Institution</label>
+            <input
+              type="text"
+              id="organization"
+              name="organization"
+              placeholder="Your institution or organization"
+              autocomplete="organization"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="How can we help you?"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="sendMessageBtn">
+            <img src="assets/send-icon-white.png" alt="" />
+            Send Message
+          </button>
+
+          <p class="secure-note">
+            <img src="assets/lock-grey-icon.png" alt="" />
+            Your information is secure and will never be shared.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="reach-section">
+      <div class="section-heading">
+        <h2>Other Ways to Reach Us</h2>
+        <p>Choose the option that works best for you.</p>
+      </div>
+
+      <div class="reach-grid">
+        <article class="reach-card">
+          <img src="assets/email-icon.png" alt="" />
+          <div>
+            <h3>Email Us</h3>
+            <p>Send us an email anytime. We’ll respond within 24 hours.</p>
+            <a href="mailto:support@veriwrite.com">support@veriwrite.com</a>
+          </div>
+        </article>
+
+        <article class="reach-card">
+          <img src="assets/phone-icon.png" alt="" />
+          <div>
+            <h3>Call Us</h3>
+            <p>Speak with our team during business hours.</p>
+            <a href="tel:+2348001234567">+234 800 123 4567</a>
+          </div>
+        </article>
+
+        <article class="reach-card">
+          <img src="assets/support-icon.png" alt="" />
+          <div>
+            <h3>Support Center</h3>
+            <p>Find answers to common questions in our Help Center.</p>
+            <a href="help-center.html">
+              Visit Help Center
+              <img src="assets/arrow-right-blue-icon.png" alt="" />
+            </a>
+          </div>
+        </article>
+
+        <article class="reach-card">
+          <img src="assets/business-icon.png" alt="" />
+          <div>
+            <h3>Business Inquiries</h3>
+            <p>For partnerships, integrations and enterprise solutions.</p>
+            <a href="mailto:business@veriwrite.com">business@veriwrite.com</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-details-section">
+      <div class="contact-office">
+        <img src="assets/contact-office.png" alt="VeriWrite office meeting room" />
+
+        <div class="contact-office-content">
+          <h2>We’d Love to Hear From You</h2>
+
+          <p>
+            Whether you're an educator, student, institution, or partner, we're here
+            to help you promote academic integrity and originality.
+          </p>
+
+          <div class="audience-list">
+            <article>
+              <img src="assets/educator-icon.png" alt="" />
+              <div>
+                <h3>For Educators</h3>
+                <p>Get support for using VeriWrite in your classes.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/institution-icon.png" alt="" />
+              <div>
+                <h3>For Institutions</h3>
+                <p>Learn about our solutions for universities and schools.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/student-icon.png" alt="" />
+              <div>
+                <h3>For Students</h3>
+                <p>Get help with your submissions and account.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/partners-icon.png" alt="" />
+              <div>
+                <h3>For Partners</h3>
+                <p>Explore collaboration and integration opportunities.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <aside class="business-hours-card">
+        <div class="business-hours-header">
+          <img src="assets/clock-icon.png" alt="" />
+          <h2>Business Hours</h2>
+        </div>
+
+        <div class="hours-list">
+          <div>
+            <span>Monday – Friday</span>
+            <strong>8:00 AM – 6:00 PM (WAT)</strong>
+          </div>
+
+          <div>
+            <span>Saturday</span>
+            <strong>9:00 AM – 2:00 PM (WAT)</strong>
+          </div>
+
+          <div>
+            <span>Sunday</span>
+            <strong>Closed</strong>
+          </div>
+        </div>
+
+        <div class="location-box">
+          <img src="assets/location-icon.png" alt="" />
+          <div>
+            <h3>We are based in</h3>
+            <strong>Lagos, Nigeria</strong>
+            <p>Serving institutions and users across Nigeria and beyond.</p>
+          </div>
+        </div>
+
+        <img src="assets/africa-map.png" alt="Africa map illustration" class="map-illustration" />
+      </aside>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+        <details>
+          <summary>How quickly will I get a response?</summary>
+          <p>We aim to respond to most messages within 24 hours during business days.</p>
+        </details>
+
+        <details>
+          <summary>Is VeriWrite available for all institutions?</summary>
+          <p>Yes. VeriWrite is designed for schools, departments, lecturers, and institutions.</p>
+        </details>
+
+        <details>
+          <summary>Can I request a demo for my institution?</summary>
+          <p>Yes. Use the Request a Demo button and our team will follow up with you.</p>
+        </details>
+
+        <details>
+          <summary>How do I report a technical issue?</summary>
+          <p>You can contact support through this form or visit the Help Center.</p>
+        </details>
+
+        <details>
+          <summary>Do you offer training for educators?</summary>
+          <p>Yes. Training and onboarding support can be arranged for institutions.</p>
+        </details>
+
+        <details>
+          <summary>Where can I find more help?</summary>
+          <p>You can visit the Help Center for guides, FAQs, and support resources.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <div>
+          <h2>Ready to promote academic integrity?</h2>
+          <p>Join thousands of educators and institutions using VeriWrite.</p>
+        </div>
+      </div>
+
+      <div class="cta-actions">
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+        <a href="institution-demo.html" class="secondary-btn">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/veriwrite-logo-white.png" alt="VeriWrite Logo" class="footer-logo" />
+
+        <p>
+          VeriWrite uses advanced AI to detect plagiarism and AI-written content,
+          promoting honesty, originality, and excellence in education.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="X">
+            <img src="assets/twitter-x-icon.png" alt="X" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="students.html">For Students</a>
+        <a href="lecturers.html">For Lecturers</a>
+        <a href="institutions.html">For Institutions</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <a href="blog.html">Blog</a>
+        <a href="help-center.html">Help Center</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active-footer-link">Contact Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="news.html">News & Updates</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact</h4>
+
+        <p>
+          <img src="assets/email-icon-white.png" alt="" />
+          support@veriwrite.com
+        </p>
+
+        <p>
+          <img src="assets/phone-icon-white.png" alt="" />
+          +234 800 123 4567
+        </p>
+
+        <p>
+          <img src="assets/website-icon-white.png" alt="" />
+          www.veriwrite.com
+        </p>
+
+        <p>
+          <img src="assets/location-icon-white.png" alt="" />
+          Lagos, Nigeria
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>

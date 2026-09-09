@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Notifications | VeriWrite</title>
+
+  <link rel="stylesheet" href="notifications.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link active">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <div class="title-row">
+            <h1>Notifications</h1>
+            <img src="assets/notifications-icon.png" alt="">
+          </div>
+          <p>Stay updated with important alerts, system updates, and activity across your classes.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT GRID -->
+      <section class="content-layout">
+
+        <!-- MAIN COLUMN -->
+        <div class="main-column">
+
+          <!-- TABS -->
+          <section class="tabs-card">
+            <div class="notification-tabs">
+              <button type="button" class="active">All</button>
+              <button type="button">Unread</button>
+              <button type="button">Read</button>
+              <button type="button">Archived</button>
+            </div>
+          </section>
+
+          <!-- FILTERS -->
+          <section class="filter-card">
+            <div class="search-box">
+              <img src="assets/search-icon.png" alt="">
+              <input type="search" name="notification_search" placeholder="Search notifications...">
+            </div>
+
+            <div class="filter-group">
+              <label for="typeFilter">Type</label>
+              <select id="typeFilter" name="type_filter">
+                <option value="">All Types</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="priorityFilter">Priority</label>
+              <select id="priorityFilter" name="priority_filter">
+                <option value="">All Priorities</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dateRange">Date Range</label>
+              <div class="date-input">
+                <img src="assets/calendar-icon.png" alt="">
+                <input type="text" id="dateRange" name="date_range" placeholder="Select date range">
+              </div>
+            </div>
+
+            <button type="button" class="reset-btn">
+              <img src="assets/reset-filter-icon.png" alt="">
+              Reset Filters
+            </button>
+          </section>
+
+          <!-- NOTIFICATION LIST -->
+          <section class="notifications-panel">
+            <div class="empty-state">
+              <div class="empty-icon">
+                <img src="assets/empty-notifications-icon.png" alt="">
+              </div>
+
+              <h2>No notifications yet</h2>
+              <p>You'll see important updates, alerts, and activity here</p>
+              <p>when they become available.</p>
+
+              <button type="button" class="empty-action">
+                <img src="assets/bell-blue-icon.png" alt="">
+                Mark all as read
+              </button>
+            </div>
+
+            <div class="table-footer">
+              <p>Showing 0 to 0 of 0 notifications</p>
+
+              <div class="pagination">
+                <button type="button">‹</button>
+                <button type="button" class="active">1</button>
+                <button type="button">›</button>
+              </div>
+
+              <div class="rows-control">
+                <span>Rows per page</span>
+                <select>
+                  <option>20</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDE COLUMN -->
+        <aside class="side-column">
+
+          <!-- NOTIFICATION SUMMARY -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Notification Summary</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="summary-list">
+              <div>
+                <span class="summary-icon blue">
+                  <img src="assets/bell-blue-icon.png" alt="">
+                </span>
+                <strong>All Notifications</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="summary-icon orange">
+                  <img src="assets/unread-notification-icon.png" alt="">
+                </span>
+                <strong>Unread</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="summary-icon red">
+                  <img src="assets/high-priority-icon.png" alt="">
+                </span>
+                <strong>High Priority</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="summary-icon purple">
+                  <img src="assets/assignment-notification-icon.png" alt="">
+                </span>
+                <strong>Assignments</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="summary-icon green">
+                  <img src="assets/system-update-icon.png" alt="">
+                </span>
+                <strong>System Updates</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="summary-icon blue">
+                  <img src="assets/messages-icon.png" alt="">
+                </span>
+                <strong>Messages</strong>
+                <p>0</p>
+              </div>
+            </div>
+
+            <a href="#" class="view-all-link">View all <span>›</span></a>
+          </section>
+
+          <!-- QUICK ACTIONS -->
+          <section class="side-card">
+            <h3>Quick Actions</h3>
+
+            <div class="quick-actions">
+              <a href="#">
+                <img src="assets/unread-notification-icon.png" alt="">
+                <div>
+                  <strong>Mark all as read</strong>
+                  <span>Mark all notifications as read</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="settings.html">
+                <img src="assets/settings-icon.png" alt="">
+                <div>
+                  <strong>Notification Settings</strong>
+                  <span>Manage how you receive alerts</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="messages.html">
+                <img src="assets/messages-icon.png" alt="">
+                <div>
+                  <strong>Message Center</strong>
+                  <span>View all messages</span>
+                </div>
+                <small>›</small>
+              </a>
+            </div>
+          </section>
+
+          <!-- PREFERENCES -->
+          <section class="side-card preferences-card">
+            <h3>Notification Preferences</h3>
+            <p>Manage your notification preferences</p>
+
+            <a href="settings.html" class="preferences-btn">
+              <img src="assets/settings-icon.png" alt="">
+              Manage Preferences
+            </a>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

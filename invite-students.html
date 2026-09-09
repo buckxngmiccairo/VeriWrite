@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Invite Students | VeriWrite</title>
+
+  <link rel="stylesheet" href="invite-students.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link active">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <a href="my-classes.html" class="back-link">← Back to My Classes</a>
+          <h1>Invite Students</h1>
+          <p>Invite students to join your class using class code or email invitations.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <section class="content-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="main-column">
+
+          <!-- SELECT CLASS -->
+          <section class="panel">
+            <h2>Select Class</h2>
+            <p class="section-note">Choose a class to invite students to.</p>
+
+            <div class="form-group">
+              <label for="classSelect" class="sr-only">Select Class</label>
+              <select id="classSelect" name="class_id">
+                <option value="">Select a class</option>
+              </select>
+            </div>
+          </section>
+
+          <!-- INVITE BY CLASS CODE -->
+          <section class="panel">
+            <h2>Invite by Class Code</h2>
+            <p class="section-note">Share the class code with your students. They can use this code to join the class.</p>
+
+            <div class="class-code-box">
+              <div class="code-icon">
+                <img src="assets/class-code-lock-icon.png" alt="">
+              </div>
+
+              <div class="code-content">
+                <strong id="classCodeDisplay">Class code will be generated after class creation.</strong>
+                <p>Students will use this code to join your class.</p>
+              </div>
+
+              <button type="button" class="copy-btn">
+                <img src="assets/copy-blue-icon.png" alt="">
+                Copy Code
+              </button>
+            </div>
+
+            <div class="backend-note">
+              <p>
+                Backend note: each class receives one unique auto-generated code when the lecturer creates the class.
+                This invite page only displays the saved class code after a class is selected.
+              </p>
+            </div>
+          </section>
+
+          <div class="divider">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+          </div>
+
+          <!-- INVITE BY EMAIL -->
+          <form class="panel email-panel" action="#" method="post">
+            <h2>Invite by Email</h2>
+            <p class="section-note">Send email invitations to students.</p>
+
+            <div class="form-group">
+              <label for="studentEmails" class="sr-only">Student Email Addresses</label>
+              <textarea
+                id="studentEmails"
+                name="student_emails"
+                maxlength="300"
+                placeholder="Enter email addresses (comma or newline separated)"
+              ></textarea>
+              <p class="char-count">0/300</p>
+            </div>
+
+            <button type="button" class="message-btn">
+              <img src="assets/message-blue-icon.png" alt="">
+              Add a message (optional)
+            </button>
+
+            <div class="email-actions">
+              <button type="submit" class="send-btn">
+                <img src="assets/send-blue-icon.png" alt="">
+                Send Invitations
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="side-column">
+
+          <!-- INVITE SUMMARY -->
+          <section class="side-card">
+            <h3>Invite Summary</h3>
+
+            <div class="summary-list">
+              <div class="summary-item">
+                <div class="summary-icon blue">
+                  <img src="assets/invitations-sent-icon.png" alt="">
+                </div>
+                <div>
+                  <p>Invitations Sent</p>
+                  <strong>0</strong>
+                </div>
+                <span>-</span>
+              </div>
+
+              <div class="summary-item">
+                <div class="summary-icon green">
+                  <img src="assets/joined-icon.png" alt="">
+                </div>
+                <div>
+                  <p>Joined</p>
+                  <strong>0</strong>
+                </div>
+                <span>-</span>
+              </div>
+
+              <div class="summary-item">
+                <div class="summary-icon orange">
+                  <img src="assets/pending-icon.png" alt="">
+                </div>
+                <div>
+                  <p>Pending</p>
+                  <strong>0</strong>
+                </div>
+                <span>-</span>
+              </div>
+
+              <div class="summary-item">
+                <div class="summary-icon red">
+                  <img src="assets/expired-icon.png" alt="">
+                </div>
+                <div>
+                  <p>Expired</p>
+                  <strong>0</strong>
+                </div>
+                <span>-</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- RECENT INVITES -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Recent Invites</h3>
+              <a href="student-management.html">View All</a>
+            </div>
+
+            <div class="empty-invites">
+              <div class="empty-icon">
+                <img src="assets/empty-invites-icon.png" alt="">
+              </div>
+              <h4>No recent invites</h4>
+              <p>Invitations you send will appear here.</p>
+            </div>
+          </section>
+
+          <!-- HOW STUDENTS JOIN -->
+          <section class="side-card">
+            <h3>How Students Join</h3>
+
+            <div class="join-steps">
+              <div>
+                <span>1</span>
+                <p>Students receive the class code or email invite.</p>
+              </div>
+
+              <div>
+                <span>2</span>
+                <p>They sign in to their VeriWrite account.</p>
+              </div>
+
+              <div>
+                <span>3</span>
+                <p>They enter the class code or accept the invite.</p>
+              </div>
+
+              <div>
+                <span>4</span>
+                <p>Once approved, they can access the class.</p>
+              </div>
+            </div>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

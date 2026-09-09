@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecturer Sign Up | VeriWrite</title>
+  <link rel="stylesheet" href="lecturer-signup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="assets/think-tank-logo.png" alt="Think Tank Technologies" class="header-logo">
+    </a>
+
+    <nav class="main-nav">
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="help-center.html">Help Center</a>
+    </nav>
+
+    <a href="login.html" class="login-button">
+      <img src="assets/user-icon-green.png" alt="">
+      Login
+    </a>
+  </div>
+</header>
+
+<main class="main-area">
+  <section class="signup-wrapper">
+    <a href="choose-account.html" class="back-link">← Back to account types</a>
+
+    <div class="signup-grid">
+
+      <div class="form-card">
+        <div class="top-icon">
+          <img src="assets/graduation-icon-green.png" alt="">
+        </div>
+
+        <h1>Lecturer <span>Sign Up</span></h1>
+        <p class="intro-text">
+          Create your lecturer account to manage classes, review submissions,
+          and promote academic integrity.
+        </p>
+
+        <form class="signup-form" action="#" method="POST">
+
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <div class="input-field">
+              <img src="assets/user-field-icon.png" alt="">
+              <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-field">
+              <img src="assets/email-field-icon.png" alt="">
+              <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <div class="phone-field">
+              <div class="country-select">
+                <img src="assets/phone-field-icon.png" alt="">
+                <span class="flag">🇳🇬</span>
+                <select>
+                  <option>+234</option>
+                  <option>+44</option>
+                  <option>+1</option>
+                  <option>+46</option>
+                </select>
+              </div>
+              <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="institution">Institution / University</label>
+            <div class="input-field">
+              <img src="assets/institution-field-icon.png" alt="">
+              <select id="institution" required>
+                <option value="">Select or enter your institution</option>
+                <option>University of Abuja</option>
+                <option>University of Lagos</option>
+                <option>University of Ibadan</option>
+                <option>Ahmadu Bello University</option>
+                <option>University of Nigeria, Nsukka</option>
+                <option>Obafemi Awolowo University</option>
+                <option>Benue State University</option>
+                <option>Joseph Sarwuan Tarka University, Makurdi</option>
+                <option>Other Institution</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="department">Department</label>
+            <div class="input-field">
+              <img src="assets/department-icon.png" alt="">
+              <input type="text" id="department" placeholder="Enter your department" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Designation / Role</label>
+            <div class="input-field">
+              <img src="assets/role-icon.png" alt="">
+              <select id="role" required>
+                <option value="">e.g. Lecturer, Professor, HOD</option>
+                <option>Lecturer</option>
+                <option>Senior Lecturer</option>
+                <option>Professor</option>
+                <option>Head of Department</option>
+                <option>Dean</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-field">
+              <img src="assets/password-field-icon.png" alt="">
+              <input type="password" id="password" placeholder="Create a strong password" required>
+              <button type="button" class="password-toggle">
+                <img src="assets/eye-icon.png" alt="">
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-field">
+              <img src="assets/password-field-icon.png" alt="">
+              <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+              <button type="button" class="password-toggle">
+                <img src="assets/eye-icon.png" alt="">
+              </button>
+            </div>
+          </div>
+
+          <label class="terms-row">
+            <input type="checkbox" checked required>
+            <span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="submit-btn">
+            Create Lecturer Account
+            <span>→</span>
+          </button>
+
+          <div class="divider">
+            <span>or sign up with</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button">
+              <img src="assets/google-icon.png" alt="">
+              Google
+            </button>
+            <button type="button">
+              <img src="assets/microsoft-icon.png" alt="">
+              Microsoft
+            </button>
+          </div>
+
+          <p class="login-note">
+            Already have an account? <a href="login.html">Login here</a>
+          </p>
+
+        </form>
+      </div>
+
+      <aside class="info-card">
+        <div class="info-content">
+          <h2>Empower your teaching<br>with <span>VeriWrite</span></h2>
+          <p>
+            Detect AI-written content, review submissions, and support academic
+            integrity with confidence.
+          </p>
+
+          <img src="assets/lecturer-signup-illustration.png" alt="Lecturer illustration" class="lecturer-image">
+        </div>
+
+        <div class="benefits-box">
+          <h3>As a lecturer, you can:</h3>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/class-icon-green.png" alt=""></div>
+            <div>
+              <h4>Create and manage classes</h4>
+              <p>Create classes and share unique class codes.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/submission-icon-green.png" alt=""></div>
+            <div>
+              <h4>Receive and review submissions</h4>
+              <p>View submissions and generate integrity reports.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/shield-icon-green.png" alt=""></div>
+            <div>
+              <h4>Detect AI-generated content</h4>
+              <p>Advanced AI detection with similarity analysis.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/analytics-icon-green.png" alt=""></div>
+            <div>
+              <h4>Analyze performance</h4>
+              <p>Get insights with detailed analytics and trends.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/students-icon-green.png" alt=""></div>
+            <div>
+              <h4>Manage students</h4>
+              <p>Add, invite, and manage your students easily.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="assets/download-icon-green.png" alt=""></div>
+            <div>
+              <h4>Export and share reports</h4>
+              <p>Download reports or share with your institution.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="security-box">
+      <div class="security-main">
+        <div class="security-round">
+          <img src="assets/shield-icon-green.png" alt="">
+        </div>
+        <div>
+          <h4>Your privacy and data are our priority.</h4>
+          <p>We use industry-standard security to protect your data and never share your information with third parties.</p>
+        </div>
+      </div>
+
+      <div class="security-feature">
+        <img src="assets/lock-icon-green.png" alt="">
+        <span>Secure & Encrypted</span>
+      </div>
+
+      <div class="security-feature">
+        <img src="assets/shield-icon-green.png" alt="">
+        <span>Private & Confidential</span>
+      </div>
+
+      <div class="security-feature">
+        <img src="assets/trusted-icon-green.png" alt="">
+        <span>Trusted Platform</span>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="assets/think-tank-logo-white.png" alt="Think Tank Technologies" class="footer-logo">
+      <p>
+        VeriWrite is an AI-powered academic integrity platform built to detect
+        AI-written content and plagiarism with accuracy.
+      </p>
+
+      <div class="footer-socials">
+        <a href="#"><img src="assets/facebook-icon-green.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/x-icon-green.png" alt="X"></a>
+        <a href="#"><img src="assets/linkedin-icon-green.png" alt="LinkedIn"></a>
+        <a href="#"><img src="assets/instagram-icon-green.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="help-center.html">Help Center</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <a href="guidelines.html">Guidelines</a>
+      <a href="blog.html">Blog</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <p><img src="assets/email-icon.png" alt=""> support@veriwrite.com</p>
+      <p><img src="assets/phone-icon.png" alt=""> +234 800 123 4567</p>
+      <p><img src="assets/website-icon.png" alt=""> www.veriwrite.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 VeriWrite by Think Tank Technologies. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

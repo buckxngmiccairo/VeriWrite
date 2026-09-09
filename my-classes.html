@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My Classes | VeriWrite</title>
+
+  <link rel="stylesheet" href="my-classes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link active">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <h1>My Classes</h1>
+          <p>View and manage all your classes in one place.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE ACTION -->
+      <section class="top-action-row">
+        <a href="create-class.html" class="primary-action">
+          <img src="assets/plus-white-icon.png" alt="">
+          Create Class
+        </a>
+      </section>
+
+      <!-- CONTENT LAYOUT -->
+      <section class="content-layout">
+
+        <!-- MAIN COLUMN -->
+        <div class="main-column">
+
+          <!-- FILTERS -->
+          <section class="filter-card">
+            <div class="search-box">
+              <img src="assets/search-icon.png" alt="">
+              <input type="search" name="class_search" placeholder="Search classes...">
+            </div>
+
+            <div class="filter-group">
+              <label for="academicTerm">Academic Term</label>
+              <select id="academicTerm" name="academic_term">
+                <option value="">All Terms</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="department">Department</label>
+              <select id="department" name="department">
+                <option value="">All Departments</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="">All Statuses</option>
+              </select>
+            </div>
+
+            <button type="button" class="reset-btn">
+              <img src="assets/reset-filter-icon.png" alt="">
+              Reset Filters
+            </button>
+          </section>
+
+          <!-- STATS -->
+          <section class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-icon blue">
+                <img src="assets/total-classes-icon.png" alt="">
+              </div>
+              <div>
+                <p>Total Classes</p>
+                <h2>0</h2>
+                <span>All time</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon blue">
+                <img src="assets/total-students-icon.png" alt="">
+              </div>
+              <div>
+                <p>Total Students</p>
+                <h2>0</h2>
+                <span>Across all classes</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon purple">
+                <img src="assets/total-submissions-icon.png" alt="">
+              </div>
+              <div>
+                <p>Total Submissions</p>
+                <h2>0</h2>
+                <span>Across all classes</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon orange">
+                <img src="assets/pending-reviews-icon.png" alt="">
+              </div>
+              <div>
+                <p>Pending Reviews</p>
+                <h2>0</h2>
+                <span>Awaiting your review</span>
+              </div>
+            </article>
+          </section>
+
+          <!-- ALL CLASSES -->
+          <section class="classes-panel">
+            <div class="panel-header">
+              <h2>All Classes</h2>
+
+              <div class="view-switch">
+                <button type="button">
+                  <img src="assets/card-view-icon.png" alt="">
+                  Card View
+                </button>
+
+                <button type="button" class="active">
+                  <img src="assets/table-view-icon.png" alt="">
+                  Table View
+                </button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class Code</th>
+                    <th>Class Name</th>
+                    <th>Course / Subject</th>
+                    <th>Students</th>
+                    <th>Submissions</th>
+                    <th>Pending Reviews</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <img src="assets/empty-classes-icon.png" alt="">
+                </div>
+
+                <h3>No classes yet</h3>
+                <p>You haven't created any classes.</p>
+                <p>Create your first class to get started.</p>
+
+                <a href="create-class.html" class="empty-action">
+                  <img src="assets/plus-white-icon.png" alt="">
+                  Create Class
+                </a>
+              </div>
+            </div>
+
+            <div class="table-footer">
+              <p>Showing 0 to 0 of 0 classes</p>
+
+              <div class="pagination">
+                <button type="button">‹</button>
+                <button type="button" class="active">1</button>
+                <button type="button">›</button>
+              </div>
+
+              <div class="rows-control">
+                <span>Rows per page</span>
+                <select>
+                  <option>10</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDE COLUMN -->
+        <aside class="side-column">
+
+          <!-- CLASS OVERVIEW -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Class Overview</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="donut-chart">
+              <strong>0</strong>
+              <span>Total Classes</span>
+            </div>
+
+            <div class="overview-list">
+              <p><i class="dot active"></i> Active <span>0</span></p>
+              <p><i class="dot upcoming"></i> Upcoming <span>0</span></p>
+              <p><i class="dot completed"></i> Completed <span>0</span></p>
+              <p><i class="dot archived"></i> Archived <span>0</span></p>
+            </div>
+          </section>
+
+          <!-- QUICK ACTIONS -->
+          <section class="side-card">
+            <h3>Quick Actions</h3>
+
+            <div class="quick-actions">
+              <a href="create-class.html">
+                <img src="assets/plus-blue-icon.png" alt="">
+                <div>
+                  <strong>Create Class</strong>
+                  <span>Set up a new class</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="invite-students.html">
+                <img src="assets/invite-students-icon.png" alt="">
+                <div>
+                  <strong>Invite Students</strong>
+                  <span>Send invites to join class</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="students.html">
+                <img src="assets/students-icon.png" alt="">
+                <div>
+                  <strong>View All Students</strong>
+                  <span>See students across classes</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="settings.html">
+                <img src="assets/settings-icon.png" alt="">
+                <div>
+                  <strong>Class Settings</strong>
+                  <span>Manage class preferences</span>
+                </div>
+                <small>›</small>
+              </a>
+            </div>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

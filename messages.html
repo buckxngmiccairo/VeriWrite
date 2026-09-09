@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Messages | VeriWrite</title>
+
+  <link rel="stylesheet" href="messages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link active">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <div class="title-row">
+            <h1>Messages</h1>
+            <img src="assets/messages-icon.png" alt="">
+          </div>
+          <p>Communicate with students, classes, and support.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- TOP ACTION -->
+      <section class="top-action-row">
+        <button type="button" class="new-message-btn">
+          <img src="assets/edit-blue-icon.png" alt="">
+          New Message
+        </button>
+      </section>
+
+      <!-- CONTENT GRID -->
+      <section class="content-layout">
+
+        <!-- CONVERSATION LIST -->
+        <aside class="conversation-panel">
+
+          <div class="conversation-filters">
+            <div class="search-box">
+              <img src="assets/search-icon.png" alt="">
+              <input type="search" name="conversation_search" placeholder="Search conversations...">
+            </div>
+
+            <select name="conversation_type">
+              <option value="">All</option>
+              <option value="students">Students</option>
+              <option value="classes">Classes</option>
+              <option value="support">Support</option>
+            </select>
+
+            <button type="button" class="filter-btn" aria-label="Filter conversations">
+              <img src="assets/filter-icon.png" alt="">
+            </button>
+          </div>
+
+          <div class="conversation-empty">
+            <div class="empty-icon">
+              <img src="assets/empty-messages-icon.png" alt="">
+            </div>
+
+            <h2>No conversations yet</h2>
+            <p>Start a new conversation to</p>
+            <p>communicate with your students,</p>
+            <p>classes, or support.</p>
+
+            <button type="button" class="outline-message-btn">
+              <img src="assets/edit-blue-icon.png" alt="">
+              New Message
+            </button>
+          </div>
+
+        </aside>
+
+        <!-- CHAT PANEL -->
+        <section class="chat-panel">
+
+          <header class="chat-header">
+            <div class="chat-identity">
+              <div class="chat-avatar">
+                <img src="assets/user-placeholder-icon.png" alt="">
+              </div>
+
+              <div>
+                <h3>Select a conversation</h3>
+                <p>Choose a conversation from the list to view messages.</p>
+              </div>
+            </div>
+
+            <div class="chat-actions">
+              <button type="button" aria-label="Conversation information">
+                <img src="assets/info-icon.png" alt="">
+              </button>
+
+              <button type="button" aria-label="More options">
+                <img src="assets/more-icon.png" alt="">
+              </button>
+            </div>
+          </header>
+
+          <div class="chat-empty">
+            <div class="empty-icon large">
+              <img src="assets/empty-messages-icon.png" alt="">
+            </div>
+
+            <h2>No messages selected</h2>
+            <p>Your messages will appear here</p>
+            <p>when you select a conversation.</p>
+          </div>
+
+          <form class="message-composer" action="#" method="post">
+            <button type="button" class="attach-btn" aria-label="Attach file">
+              <img src="assets/attachment-icon.png" alt="">
+            </button>
+
+            <div class="message-input-wrap">
+              <input type="text" name="message_body" placeholder="Type a message...">
+              <button type="button" aria-label="Emoji">
+                <img src="assets/emoji-icon.png" alt="">
+              </button>
+            </div>
+
+            <button type="submit" class="send-btn" aria-label="Send message">
+              <img src="assets/send-message-icon.png" alt="">
+            </button>
+          </form>
+
+        </section>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="side-column">
+
+          <!-- QUICK ACTIONS -->
+          <section class="side-card">
+            <h3>Quick Actions</h3>
+
+            <div class="quick-actions">
+              <a href="#">
+                <img src="assets/send-blue-icon.png" alt="">
+                <div>
+                  <strong>New Message</strong>
+                  <span>Start a new conversation</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="students.html">
+                <img src="assets/students-icon.png" alt="">
+                <div>
+                  <strong>Message Students</strong>
+                  <span>Send message to students</span>
+                </div>
+                <small>›</small>
+              </a>
+
+              <a href="support-center.html">
+                <img src="assets/support-icon.png" alt="">
+                <div>
+                  <strong>Message Support</strong>
+                  <span>Get help from support team</span>
+                </div>
+                <small>›</small>
+              </a>
+            </div>
+          </section>
+
+          <!-- MESSAGE STATS -->
+          <section class="side-card">
+            <div class="side-title">
+              <h3>Message Statistics</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="stats-list">
+              <div>
+                <span class="stat-mini-icon blue">
+                  <img src="assets/send-blue-icon.png" alt="">
+                </span>
+                <strong>All Messages</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="stat-mini-icon blue">
+                  <img src="assets/unread-notification-icon.png" alt="">
+                </span>
+                <strong>Unread</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="stat-mini-icon purple">
+                  <img src="assets/students-icon.png" alt="">
+                </span>
+                <strong>Students</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="stat-mini-icon blue">
+                  <img src="assets/my-classes-icon.png" alt="">
+                </span>
+                <strong>Classes</strong>
+                <p>0</p>
+              </div>
+
+              <div>
+                <span class="stat-mini-icon purple">
+                  <img src="assets/support-icon.png" alt="">
+                </span>
+                <strong>Support</strong>
+                <p>0</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- TIPS -->
+          <section class="side-card tips-card">
+            <h3>Tips</h3>
+
+            <ul>
+              <li>Use messages to communicate important updates to your students.</li>
+              <li>You can create group messages for entire classes.</li>
+              <li>Our support team is here to help you.</li>
+            </ul>
+          </section>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

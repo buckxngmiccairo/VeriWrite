@@ -1,0 +1,704 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #071637;
+  --blue: #0057e7;
+  --purple: #6d3fdc;
+  --purple-soft: #f0e8ff;
+  --text: #43506a;
+  --muted: #6f7c96;
+  --border: #dce5f1;
+  --white: #ffffff;
+  --shadow: 0 14px 32px rgba(15, 31, 68, 0.08);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fbfdff;
+  color: var(--navy);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+
+.site-header {
+  height: 90px;
+  padding: 0 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-logo img {
+  width: 420px;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 44px;
+}
+
+.nav-links a {
+  color: var(--navy);
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+.login-btn {
+  padding: 13px 26px;
+  border: 1.5px solid var(--purple);
+  border-radius: 7px;
+  color: var(--purple);
+  font-size: 14.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.25s ease;
+}
+
+.login-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.login-btn:hover {
+  background: var(--purple);
+  color: #ffffff;
+}
+
+/* MAIN */
+
+.demo-page {
+  padding: 24px 76px 42px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.demo-grid {
+  max-width: 1290px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.form-card,
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* FORM */
+
+.form-card {
+  padding: 30px 34px;
+}
+
+.form-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--purple-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.form-icon img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.form-card h1 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.form-card h1 span {
+  display: block;
+  color: var(--purple);
+  font-size: 30px;
+}
+
+.form-intro {
+  max-width: 450px;
+  margin: 0 auto 24px;
+  text-align: center;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+form label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin: 14px 0 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: var(--navy);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 82px;
+  padding: 14px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(109, 63, 220, 0.12);
+}
+
+.phone-group {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
+
+.field-note {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.checkbox-row input {
+  width: 15px;
+  height: 15px;
+  min-height: 15px;
+  accent-color: var(--purple);
+  margin-top: 2px;
+}
+
+.checkbox-row a {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.submit-btn {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #6d3fdc, #7b45e8);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.94;
+}
+
+/* RIGHT CARD */
+
+.info-card {
+  padding: 36px 34px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #fbf8ff);
+}
+
+.info-card h2 {
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.info-card h2 span {
+  color: var(--purple);
+}
+
+.info-card > p {
+  max-width: 470px;
+  margin: 0 auto 22px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.info-illustration {
+  max-width: 430px;
+  margin: 0 auto 24px;
+}
+
+.benefits-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+}
+
+.benefits-card h3 {
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefit-item img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.benefit-item h4 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.benefit-item p {
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* FULL FOOTER */
+
+.footer {
+  background: linear-gradient(135deg, #6d3fdc, #7b45e8);
+  color: #ffffff;
+  padding: 36px 76px 18px;
+}
+
+.footer-grid {
+  max-width: 1290px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.1fr 1fr 1fr 1.45fr;
+  gap: 70px;
+}
+
+.footer-brand img {
+  width: 230px;
+  margin-bottom: -150px;
+}
+
+.footer-brand p {
+  max-width: 310px;
+}
+
+.footer h3 {
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer p,
+.footer a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 8px;
+  transition: 0.25s ease;
+}
+
+.footer-column a:hover {
+  opacity: 0.75;
+}
+
+.contact-column p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.contact-column p img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 26px;
+  font-size: 13.5px;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .site-header,
+  .demo-page,
+  .footer {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .site-header {
+    height: auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-illustration {
+    max-width: 360px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+  }
+
+  .brand-logo img {
+    width: 220px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .demo-page {
+    padding: 24px 20px 36px;
+  }
+
+  .form-card,
+  .info-card {
+    padding: 26px 20px;
+  }
+
+  .form-card h1 {
+    font-size: 23px;
+  }
+
+  .form-card h1 span {
+    font-size: 26px;
+  }
+
+  .phone-group {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card h2 {
+    font-size: 25px;
+  }
+
+  .benefit-item {
+    grid-template-columns: 46px 1fr;
+    gap: 12px;
+  }
+
+  .footer {
+    padding: 36px 22px 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand img {
+    width: 215px;
+  }
+}
+
+/* =========================
+   SALES CONTACT STRIP
+========================= */
+
+.sales-contact-strip {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.sales-label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+.sales-contact-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sales-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+
+    padding: 14px 20px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #111827;
+
+    transition: 0.3s ease;
+}
+
+.sales-contact-card:hover {
+    border-color: #6d28d9;
+    transform: translateY(-2px);
+}
+
+.sales-contact-card img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+/* =========================
+   TRUST / SECURITY SECTION
+========================= */
+
+.trust-security-section {
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.trust-main-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    padding: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.trust-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex: 1;
+    min-width: 260px;
+}
+
+.trust-icon {
+    width: 72px;
+    height: 72px;
+
+    background: #f3f0ff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust-icon img {
+    width: 34px;
+    height: 34px;
+}
+
+.trust-text h3 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.trust-text p {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.trust-features {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.trust-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    text-align: center;
+}
+
+.trust-feature img {
+    width: 34px;
+    height: 34px;
+}
+
+.trust-feature span {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .trust-main-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .trust-features {
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .trust-feature {
+        flex: 1;
+    }
+
+    .sales-contact-boxes {
+        flex-direction: column;
+    }
+
+    .sales-contact-card {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+/* PERFECT FOOTER LOGO ALIGNMENT */
+
+.footer-brand img {
+  width: 230px;
+  height: auto;
+  display: block;
+
+  margin-top: -60px;
+  margin-bottom: -12px;
+}
+
+.footer-brand p {
+  margin-top: -80px;
+  line-height: 1.35;
+}

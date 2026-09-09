@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Support Center | VeriWrite</title>
+
+  <link rel="stylesheet" href="support-center.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" />
+        <div>
+          <h1>VeriWrite</h1>
+          <p>AI-Powered Academic Integrity</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main</span>
+
+        <a href="institution-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          Dashboard
+        </a>
+
+        <span class="nav-label">Institution</span>
+
+        <a href="institutions.html" class="nav-link">
+          <img src="assets/institution-icon.png" alt="" />
+          Institutions
+        </a>
+
+        <a href="departments.html" class="nav-link">
+          <img src="assets/departments-icon.png" alt="" />
+          Departments
+        </a>
+
+        <a href="classes.html" class="nav-link">
+          <img src="assets/classes-icon.png" alt="" />
+          Classes
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="" />
+          Students
+        </a>
+
+        <a href="lecturers.html" class="nav-link">
+          <img src="assets/lecturers-icon.png" alt="" />
+          Lecturers
+        </a>
+
+        <a href="institution-reports.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt="" />
+          Reports
+        </a>
+
+        <span class="nav-label">Billing</span>
+
+        <a href="subscription-management.html" class="nav-link">
+          <img src="assets/subscription-icon.png" alt="" />
+          Subscription
+        </a>
+
+        <a href="invoices.html" class="nav-link">
+          <img src="assets/invoices-icon.png" alt="" />
+          Invoices
+        </a>
+
+        <a href="payment-methods.html" class="nav-link">
+          <img src="assets/payment-icon.png" alt="" />
+          Payment Methods
+        </a>
+
+        <span class="nav-label">Support</span>
+
+        <a href="support-center.html" class="nav-link active">
+          <img src="assets/support-center-icon.png" alt="" />
+          Support Center
+        </a>
+
+        <a href="ticket-management.html" class="nav-link">
+          <img src="assets/ticket-management-icon.png" alt="" />
+          Ticket Management
+        </a>
+
+        <span class="nav-label">System</span>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          Settings
+        </a>
+
+        <a href="audit-logs.html" class="nav-link">
+          <img src="assets/audit-logs-icon.png" alt="" />
+          Audit Logs
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♕</div>
+        <div>
+          <h3>Upgrade to Premium</h3>
+          <p>Unlock advanced features and priority support.</p>
+        </div>
+        <a href="subscription-management.html">›</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <h2>Support Center <span>🎧</span></h2>
+          <p>Get help and support for your platform needs.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </button>
+
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <img src="assets/institution-admin-icon.png" alt="" />
+            </div>
+            <p>Institution Admin</p>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- CREATE TICKET -->
+      <section class="dashboard-tools">
+        <a href="ticket-management.html" class="create-ticket-btn">
+          <img src="assets/add-icon.png" alt="" />
+          Create Ticket
+        </a>
+      </section>
+
+      <!-- SUPPORT METRICS -->
+      <section class="support-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-tickets-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Tickets</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/resolved-tickets-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Resolved Tickets</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/avg-response-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Avg. Response Time</p>
+            <h3>--</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/avg-resolution-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Avg. Resolution Time</p>
+            <h3>--</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/customer-satisfaction-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Customer Satisfaction</p>
+            <h3>--</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon teal">
+            <img src="assets/active-tickets-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Active Tickets</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- SUPPORT SEARCH + QUICK ACTIONS -->
+      <section class="support-top-grid">
+
+        <!-- HELP SEARCH -->
+        <article class="panel help-search-panel">
+          <div class="panel-header block-header">
+            <div>
+              <h3>How can we help you?</h3>
+              <p>Search for help articles or create a ticket for personalized support.</p>
+            </div>
+          </div>
+
+          <form class="help-search-form" action="#" method="get" data-backend-search="knowledge_base">
+            <img src="assets/search-icon.png" alt="" />
+            <input type="search" name="query" placeholder="Search help articles..." />
+          </form>
+
+          <div class="help-category-grid">
+            <a href="knowledge-base.html">
+              <img src="assets/getting-started-icon.png" alt="" />
+              <div>
+                <b>Getting Started</b>
+                <span>Learn the basics</span>
+              </div>
+            </a>
+
+            <a href="billing-help.html">
+              <img src="assets/account-billing-icon.png" alt="" />
+              <div>
+                <b>Account & Billing</b>
+                <span>Manage your account</span>
+              </div>
+            </a>
+
+            <a href="technical-support.html">
+              <img src="assets/technical-support-icon.png" alt="" />
+              <div>
+                <b>Technical Support</b>
+                <span>Fix technical issues</span>
+              </div>
+            </a>
+
+            <a href="feature-guides.html">
+              <img src="assets/feature-guides-icon.png" alt="" />
+              <div>
+                <b>Feature Guides</b>
+                <span>Learn features</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- QUICK ACTIONS -->
+        <article class="panel quick-actions-panel">
+          <div class="panel-header">
+            <h3>Quick Actions</h3>
+          </div>
+
+          <div class="support-action-grid">
+            <a href="ticket-management.html">
+              <img src="assets/create-ticket-icon.png" alt="" />
+              <div>
+                <b>Create Ticket</b>
+                <span>Submit a new support ticket</span>
+              </div>
+            </a>
+
+            <a href="ticket-management.html">
+              <img src="assets/my-tickets-icon.png" alt="" />
+              <div>
+                <b>My Tickets</b>
+                <span>View your ticket status</span>
+              </div>
+            </a>
+
+            <a href="knowledge-base.html">
+              <img src="assets/knowledge-base-icon.png" alt="" />
+              <div>
+                <b>Knowledge Base</b>
+                <span>Browse help articles</span>
+              </div>
+            </a>
+
+            <a href="video-tutorials.html">
+              <img src="assets/video-tutorials-icon.png" alt="" />
+              <div>
+                <b>Video Tutorials</b>
+                <span>Watch step-by-step guides</span>
+              </div>
+            </a>
+
+            <a href="platform-monitoring.html">
+              <img src="assets/system-status-icon.png" alt="" />
+              <div>
+                <b>System Status</b>
+                <span>Check platform status</span>
+              </div>
+            </a>
+
+            <a href="contact-support.html">
+              <img src="assets/contact-support-icon.png" alt="" />
+              <div>
+                <b>Contact Support</b>
+                <span>Reach our support team</span>
+              </div>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- SUPPORT ANALYTICS -->
+      <section class="support-grid">
+
+        <!-- TICKET OVERVIEW -->
+        <article class="panel ticket-overview">
+          <div class="panel-header">
+            <h3>Ticket Overview</h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart ticket-donut">
+              <div class="donut-center">
+                <strong>0</strong>
+                <span>Total</span>
+              </div>
+            </div>
+
+            <ul class="legend-list">
+              <li><span class="dot blue-bg"></span>0 (0%) <b>Open</b></li>
+              <li><span class="dot orange-bg"></span>0 (0%) <b>In Progress</b></li>
+              <li><span class="dot purple-bg"></span>0 (0%) <b>Pending</b></li>
+              <li><span class="dot green-bg"></span>0 (0%) <b>Resolved</b></li>
+              <li><span class="dot gray-bg"></span>0 (0%) <b>Closed</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- TICKETS BY STATUS -->
+        <article class="panel tickets-by-status">
+          <div class="panel-header">
+            <h3>Tickets by Status</h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="empty-chart">
+            <div class="chart-bars">
+              <span>Open</span>
+              <span>In Progress</span>
+              <span>Pending</span>
+              <span>Resolved</span>
+              <span>Closed</span>
+            </div>
+          </div>
+
+          <p class="chart-note">No data available for the selected period.</p>
+        </article>
+
+        <!-- RECENT TICKETS -->
+        <article class="panel recent-tickets">
+          <div class="panel-header">
+            <h3>Recent Tickets</h3>
+            <a href="ticket-management.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ticket ID</th>
+                  <th>Subject</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Last Updated</th>
+                </tr>
+              </thead>
+              <tbody data-backend-table="recent_tickets"></tbody>
+            </table>
+          </div>
+
+          <div class="empty-state">
+            <img src="assets/empty-tickets.png" alt="" />
+            <h4>No tickets found</h4>
+            <p>You don’t have any tickets yet.</p>
+            <a href="ticket-management.html">Create Your First Ticket</a>
+          </div>
+        </article>
+
+        <!-- POPULAR ARTICLES -->
+        <article class="panel popular-articles">
+          <div class="panel-header">
+            <h3>Popular Articles</h3>
+            <a href="knowledge-base.html">View All</a>
+          </div>
+
+          <ul class="article-list">
+            <li>
+              <a href="knowledge-base.html">
+                <span><img src="assets/article-icon.png" alt="" /> How to create a new class</span>
+                <b>›</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="knowledge-base.html">
+                <span><img src="assets/article-icon.png" alt="" /> Understanding similarity reports</span>
+                <b>›</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="knowledge-base.html">
+                <span><img src="assets/article-icon.png" alt="" /> How to invite students</span>
+                <b>›</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="knowledge-base.html">
+                <span><img src="assets/article-icon.png" alt="" /> Managing your account and billing</span>
+                <b>›</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="knowledge-base.html">
+                <span><img src="assets/article-icon.png" alt="" /> Troubleshooting upload issues</span>
+                <b>›</b>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+        <!-- CONTACT SUPPORT -->
+        <article class="panel contact-support">
+          <div class="panel-header block-header">
+            <div>
+              <h3>Contact Support</h3>
+              <p>Can’t find what you need? Our support team is here to help.</p>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <img src="assets/email-support-icon.png" alt="" />
+              <div>
+                <b>Email Support</b>
+                <span>support@veriwrite.com</span>
+                <small>Response within 24 hours</small>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <img src="assets/live-chat-icon.png" alt="" />
+              <div>
+                <b>Live Chat</b>
+                <span>Available 9AM – 6PM (Mon – Fri)</span>
+                <small>Chat with our team</small>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <img src="assets/phone-support-icon.png" alt="" />
+              <div>
+                <b>Phone Support</b>
+                <span>+234 000 000 0000</span>
+                <small>Available 9AM – 6PM (Mon – Fri)</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEED MORE HELP -->
+        <article class="panel more-help">
+          <div>
+            <h3>Need more help?</h3>
+            <p>Our support team is ready to assist you with any questions or issues you may have.</p>
+            <a href="ticket-management.html">
+              <img src="assets/add-icon.png" alt="" />
+              Create Ticket
+            </a>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

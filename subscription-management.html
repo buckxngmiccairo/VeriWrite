@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Subscription Management | VeriWrite</title>
+
+  <link rel="stylesheet" href="subscription-management.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" />
+        <div>
+          <h1>VeriWrite</h1>
+          <p>AI-Powered Academic Integrity</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main</span>
+
+        <a href="super-admin-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          Dashboard
+        </a>
+
+        <span class="nav-label">User Management</span>
+
+        <a href="institutions.html" class="nav-link">
+          <img src="assets/institution-icon.png" alt="" />
+          Institutions
+        </a>
+
+        <a href="admins.html" class="nav-link">
+          <img src="assets/admins-icon.png" alt="" />
+          Admins
+        </a>
+
+        <a href="lecturers.html" class="nav-link">
+          <img src="assets/lecturers-icon.png" alt="" />
+          Lecturers
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="" />
+          Students
+        </a>
+
+        <span class="nav-label">Platform</span>
+
+        <a href="platform-monitoring.html" class="nav-link">
+          <img src="assets/monitoring-icon.png" alt="" />
+          Monitoring
+        </a>
+
+        <a href="system-analytics.html" class="nav-link">
+          <img src="assets/system-analytics-icon.png" alt="" />
+          System Analytics
+        </a>
+
+        <a href="subscription-management.html" class="nav-link active">
+          <img src="assets/subscription-icon.png" alt="" />
+          Subscription Management
+        </a>
+
+        <span class="nav-label">Support</span>
+
+        <a href="support-center.html" class="nav-link">
+          <img src="assets/support-center-icon.png" alt="" />
+          Support Center
+        </a>
+
+        <a href="ticket-management.html" class="nav-link">
+          <img src="assets/ticket-management-icon.png" alt="" />
+          Ticket Management
+        </a>
+
+        <span class="nav-label">System</span>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          Settings
+        </a>
+
+        <a href="audit-logs.html" class="nav-link">
+          <img src="assets/audit-logs-icon.png" alt="" />
+          Audit Logs
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♕</div>
+        <div>
+          <h3>Upgrade to Premium</h3>
+          <p>Unlock advanced features and full platform control.</p>
+        </div>
+        <a href="subscription-management.html">›</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <h2>Subscription Management <span>ⓘ</span></h2>
+          <p>Manage plans, subscriptions, billing cycles, and renewals across the platform.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </button>
+
+          <div class="admin-profile">
+            <div class="admin-avatar super-admin-avatar">
+              <span>SA</span>
+            </div>
+            <p>Super Admin</p>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TOOLS -->
+      <section class="dashboard-tools">
+        <button class="date-filter" type="button" data-backend-filter="date_range">
+          <img src="assets/calendar-icon.png" alt="" />
+          May 1 – May 31, 2024
+          <span>⌄</span>
+        </button>
+
+        <button class="export-btn" type="button" data-export="subscription_report">
+          <img src="assets/download-icon.png" alt="" />
+          Export Report
+        </button>
+      </section>
+
+      <!-- TOP METRICS -->
+      <section class="subscription-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-subscriptions-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Subscriptions</p>
+            <h3>1,248</h3>
+            <span class="growth positive">↑ 12.6%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/active-subscriptions-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Active Subscriptions</p>
+            <h3>1,035</h3>
+            <span class="growth positive">↑ 9.8%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/expiring-soon-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Expiring Soon</p>
+            <h3>96</h3>
+            <span class="growth positive">↑ 5.2%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/renewed-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Renewed This Month</p>
+            <h3>210</h3>
+            <span class="growth positive">↑ 14.3%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon teal">
+            <img src="assets/cancelled-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Cancelled This Month</p>
+            <h3>42</h3>
+            <span class="growth negative">↓ 8.7%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/monthly-revenue-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Monthly Recurring Revenue</p>
+            <h3>₦24.6M</h3>
+            <span class="growth positive">↑ 18.9%</span>
+            <small>vs Apr 1 – Apr 30, 2024</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="filter-panel" aria-label="Subscription filters">
+        <div class="filter-group">
+          <label for="plan">Plan</label>
+          <select id="plan" name="plan" data-backend-filter="plan">
+            <option value="">All Plans</option>
+            <option value="enterprise">Enterprise</option>
+            <option value="professional">Professional</option>
+            <option value="starter">Starter</option>
+            <option value="basic">Basic</option>
+            <option value="free">Free</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="subscriptionStatus">Subscription Status</label>
+          <select id="subscriptionStatus" name="subscription_status" data-backend-filter="subscription_status">
+            <option value="">All Statuses</option>
+            <option value="active">Active</option>
+            <option value="expiring_soon">Expiring Soon</option>
+            <option value="cancelled">Cancelled</option>
+            <option value="paused">Paused</option>
+            <option value="trial">Trial</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="institutionType">Institution Type</label>
+          <select id="institutionType" name="institution_type" data-backend-filter="institution_type">
+            <option value="">All Types</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="billingCycle">Billing Cycle</label>
+          <select id="billingCycle" name="billing_cycle" data-backend-filter="billing_cycle">
+            <option value="">All Cycles</option>
+            <option value="monthly">Monthly</option>
+            <option value="annual">Annual</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="dateRange">Date Range</label>
+          <button class="date-filter input-filter" id="dateRange" type="button">
+            <img src="assets/calendar-icon.png" alt="" />
+            May 1 – May 31, 2024
+            <span>⌄</span>
+          </button>
+        </div>
+
+        <button class="reset-btn" type="button" data-reset-filters="true">
+          <img src="assets/reset-icon.png" alt="" />
+          Reset Filters
+        </button>
+      </section>
+
+      <!-- MAIN GRID -->
+      <section class="subscription-grid">
+
+        <!-- SUBSCRIPTIONS OVER TIME -->
+        <article class="panel subscriptions-over-time">
+          <div class="panel-header">
+            <h3>Subscriptions Over Time <span>ⓘ</span></h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="line-chart subscription-chart">
+            <div class="subscription-line"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="blue-dot">Total Subscriptions</span>
+          </div>
+        </article>
+
+        <!-- SUBSCRIPTIONS BY PLAN -->
+        <article class="panel subscriptions-by-plan">
+          <div class="panel-header">
+            <h3>Subscriptions by Plan <span>ⓘ</span></h3>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart plan-donut"></div>
+
+            <ul class="legend-list">
+              <li><span class="dot blue-bg"></span>Enterprise <b>28% (349)</b></li>
+              <li><span class="dot green-bg"></span>Professional <b>32% (399)</b></li>
+              <li><span class="dot orange-bg"></span>Starter <b>30% (374)</b></li>
+              <li><span class="dot purple-bg"></span>Basic <b>8% (100)</b></li>
+              <li><span class="dot gray-bg"></span>Free <b>2% (26)</b></li>
+            </ul>
+          </div>
+
+          <div class="panel-total">
+            <span>Total</span>
+            <b>1,248</b>
+          </div>
+        </article>
+
+        <!-- SUBSCRIPTION STATUS DISTRIBUTION -->
+        <article class="panel status-distribution">
+          <div class="panel-header">
+            <h3>Subscription Status Distribution <span>ⓘ</span></h3>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart status-donut"></div>
+
+            <ul class="legend-list">
+              <li><span class="dot green-bg"></span>Active <b>83% (1,035)</b></li>
+              <li><span class="dot orange-bg"></span>Expiring Soon <b>8% (96)</b></li>
+              <li><span class="dot red-bg"></span>Cancelled <b>3% (42)</b></li>
+              <li><span class="dot purple-bg"></span>Paused <b>4% (50)</b></li>
+              <li><span class="dot blue-bg"></span>Trial <b>2% (25)</b></li>
+            </ul>
+          </div>
+
+          <div class="panel-total">
+            <span>Total</span>
+            <b>1,248</b>
+          </div>
+        </article>
+
+        <!-- RECENT SUBSCRIPTIONS -->
+        <article class="panel table-panel recent-subscriptions">
+          <div class="panel-header">
+            <h3>Recent Subscriptions <span>ⓘ</span></h3>
+            <a href="subscription-management.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Plan</th>
+                  <th>Billing Cycle</th>
+                  <th>Status</th>
+                  <th>Start Date</th>
+                  <th>Next Renewal</th>
+                  <th>Amount (₦)</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> City University</td>
+                  <td>Enterprise</td>
+                  <td>Annual</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>May 1, 2024</td>
+                  <td>May 1, 2025</td>
+                  <td>120,000.00</td>
+                  <td><button class="table-action" type="button">👁</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> State College</td>
+                  <td>Professional</td>
+                  <td>Monthly</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>May 5, 2024</td>
+                  <td>Jun 5, 2024</td>
+                  <td>25,000.00</td>
+                  <td><button class="table-action" type="button">👁</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Tech Institute</td>
+                  <td>Starter</td>
+                  <td>Monthly</td>
+                  <td><span class="badge expiring">Expiring Soon</span></td>
+                  <td>May 10, 2024</td>
+                  <td>Jun 10, 2024</td>
+                  <td>8,000.00</td>
+                  <td><button class="table-action" type="button">👁</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Global University</td>
+                  <td>Enterprise</td>
+                  <td>Annual</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>Apr 15, 2024</td>
+                  <td>Apr 15, 2025</td>
+                  <td>120,000.00</td>
+                  <td><button class="table-action" type="button">👁</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> West Academy</td>
+                  <td>Basic</td>
+                  <td>Monthly</td>
+                  <td><span class="badge cancelled">Cancelled</span></td>
+                  <td>Apr 2, 2024</td>
+                  <td>May 2, 2024</td>
+                  <td>3,000.00</td>
+                  <td><button class="table-action" type="button">👁</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a href="subscription-management.html" class="panel-link">View All Subscriptions →</a>
+        </article>
+
+        <!-- EXPIRING SOON -->
+        <article class="panel table-panel expiring-soon">
+          <div class="panel-header">
+            <h3>Expiring Soon <span>ⓘ</span></h3>
+            <a href="subscription-management.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Plan</th>
+                  <th>Next Renewal</th>
+                  <th>Days Left</th>
+                  <th>Amount (₦)</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Tech Institute</td>
+                  <td>Starter</td>
+                  <td>Jun 10, 2024</td>
+                  <td class="warning-text">10 days</td>
+                  <td>8,000.00</td>
+                  <td><button class="table-action" type="button">✉</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Knowledge College</td>
+                  <td>Professional</td>
+                  <td>Jun 12, 2024</td>
+                  <td class="warning-text">12 days</td>
+                  <td>25,000.00</td>
+                  <td><button class="table-action" type="button">✉</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Bright Future Univ.</td>
+                  <td>Enterprise</td>
+                  <td>Jun 15, 2024</td>
+                  <td class="warning-text">15 days</td>
+                  <td>120,000.00</td>
+                  <td><button class="table-action" type="button">✉</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Innovation Academy</td>
+                  <td>Starter</td>
+                  <td>Jun 18, 2024</td>
+                  <td class="warning-text">18 days</td>
+                  <td>8,000.00</td>
+                  <td><button class="table-action" type="button">✉</button></td>
+                </tr>
+
+                <tr>
+                  <td><img src="assets/institution-mini-icon.png" alt="" /> Excel University</td>
+                  <td>Professional</td>
+                  <td>Jun 20, 2024</td>
+                  <td class="warning-text">20 days</td>
+                  <td>25,000.00</td>
+                  <td><button class="table-action" type="button">✉</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a href="subscription-management.html" class="panel-link">View All Expiring Soon →</a>
+        </article>
+
+        <!-- PLAN OVERVIEW -->
+        <article class="panel plan-overview">
+          <div class="panel-header">
+            <h3>Plan Overview <span>ⓘ</span></h3>
+            <a href="subscription-management.html">View All Plans</a>
+          </div>
+
+          <div class="plan-grid">
+            <div class="plan-card">
+              <img src="assets/enterprise-plan-icon.png" alt="" />
+              <h4>Enterprise</h4>
+              <strong>₦120,000 <span>/year</span></strong>
+              <p>For large institutions with advanced needs.</p>
+              <small>349 Subscriptions</small>
+            </div>
+
+            <div class="plan-card">
+              <img src="assets/professional-plan-icon.png" alt="" />
+              <h4>Professional</h4>
+              <strong>₦25,000 <span>/month</span></strong>
+              <p>For growing institutions with extended features.</p>
+              <small>399 Subscriptions</small>
+            </div>
+
+            <div class="plan-card">
+              <img src="assets/starter-plan-icon.png" alt="" />
+              <h4>Starter</h4>
+              <strong>₦8,000 <span>/month</span></strong>
+              <p>For small institutions getting started.</p>
+              <small>374 Subscriptions</small>
+            </div>
+
+            <div class="plan-card">
+              <img src="assets/basic-plan-icon.png" alt="" />
+              <h4>Basic</h4>
+              <strong>₦3,000 <span>/month</span></strong>
+              <p>For individuals and basic usage.</p>
+              <small>100 Subscriptions</small>
+            </div>
+
+            <div class="plan-card">
+              <img src="assets/free-plan-icon.png" alt="" />
+              <h4>Free</h4>
+              <strong>₦0 <span>/forever</span></strong>
+              <p>Limited access to core features.</p>
+              <small>26 Subscriptions</small>
+            </div>
+          </div>
+        </article>
+
+        <!-- BILLING SUMMARY -->
+        <article class="panel billing-summary">
+          <div class="panel-header">
+            <h3>Billing Summary <span>ⓘ</span></h3>
+            <a href="subscription-management.html">View Full Report</a>
+          </div>
+
+          <div class="billing-grid">
+            <article class="billing-card">
+              <img src="assets/total-revenue-icon.png" alt="" />
+              <div>
+                <p>Total Revenue (₦)</p>
+                <h4>₦24.6M</h4>
+                <span class="positive">↑ 18.9%</span>
+                <small>vs Apr 1 – Apr 30, 2024</small>
+              </div>
+            </article>
+
+            <article class="billing-card">
+              <img src="assets/mrr-icon.png" alt="" />
+              <div>
+                <p>MRR (₦)</p>
+                <h4>₦24.6M</h4>
+                <span class="positive">↑ 18.9%</span>
+                <small>vs Apr 1 – Apr 30, 2024</small>
+              </div>
+            </article>
+
+            <article class="billing-card">
+              <img src="assets/refunds-icon.png" alt="" />
+              <div>
+                <p>Refunds (₦)</p>
+                <h4>₦320.4K</h4>
+                <span class="negative">↓ 6.4%</span>
+                <small>vs Apr 1 – Apr 30, 2024</small>
+              </div>
+            </article>
+
+            <article class="billing-card">
+              <img src="assets/failed-payments-icon.png" alt="" />
+              <div>
+                <p>Failed Payments</p>
+                <h4>28</h4>
+                <span class="negative">↓ 12.3%</span>
+                <small>vs Apr 1 – Apr 30, 2024</small>
+              </div>
+            </article>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

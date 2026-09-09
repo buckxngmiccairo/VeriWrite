@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | VeriWrite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="login.css">>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/think-tank-logo.png" alt="Think Tank Technologies" />
+      </a>
+
+      <nav class="main-nav">
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="help-center.html">Help Center</a>
+      </nav>
+
+      <a href="choose-account.html" class="header-signup">
+        <img src="assets/signup-icon.png" alt="" />
+        <span>Sign Up</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <div class="container">
+
+      <a href="choose-account.html" class="back-link">
+        <span>←</span>
+        Back to account types
+      </a>
+
+      <section class="login-grid">
+
+        <aside class="welcome-card">
+          <div class="welcome-top">
+            <h2>Welcome back to</h2>
+            <h1>VeriWrite</h1>
+            <p>
+              Sign in to continue to your dashboard and uphold academic integrity with confidence.
+            </p>
+          </div>
+
+          <div class="login-visual">
+            <img src="assets/login-illustration.png" alt="VeriWrite dashboard illustration" />
+          </div>
+
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <div class="benefit-icon blue">
+                <img src="assets/ai-chip-icon-blue.png" alt="" />
+              </div>
+              <div>
+                <h3>AI-Powered Integrity Checks</h3>
+                <p>Detect AI-written content and plagiarism with advanced accuracy.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon green">
+                <img src="assets/security-icon-green.png" alt="" />
+              </div>
+              <div>
+                <h3>Secure & Confidential</h3>
+                <p>Your data is encrypted and protected with enterprise-grade security.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon purple">
+                <img src="assets/users-icon-purple.png" alt="" />
+              </div>
+              <div>
+                <h3>Trusted by Educators</h3>
+                <p>Used by institutions and educators worldwide to promote academic honesty.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon orange">
+                <img src="assets/analytics-icon-orange.png" alt="" />
+              </div>
+              <div>
+                <h3>Actionable Insights</h3>
+                <p>Get detailed reports and analytics to improve learning outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="form-card">
+          <div class="form-heading">
+            <h2>Login to <span>VeriWrite</span></h2>
+            <p>Welcome back! Please enter your details to access your account.</p>
+          </div>
+
+          <form class="login-form" action="#" method="post">
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-box">
+                <img src="assets/email-field-icon.png" alt="" />
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-box">
+                <img src="assets/password-field-icon.png" alt="" />
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                <button type="button" class="password-toggle" aria-label="Show password">
+                  <img src="assets/eye-icon.png" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="remember">
+                <input type="checkbox" checked />
+                <span>Remember me</span>
+              </label>
+
+              <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <div class="role-area">
+              <h3>I am logging in as</h3>
+
+              <label class="role-card selected">
+                <input type="radio" name="role" value="student" checked />
+                <span class="role-icon student">
+                  <img src="assets/student-icon.png" alt="" />
+                </span>
+                <span class="role-copy">
+                  <strong>Student</strong>
+                  <small>Access your student dashboard</small>
+                </span>
+                <span class="role-arrow">›</span>
+              </label>
+
+              <label class="role-card">
+                <input type="radio" name="role" value="lecturer" />
+                <span class="role-icon lecturer">
+                  <img src="assets/lecturer-icon.png" alt="" />
+                </span>
+                <span class="role-copy">
+                  <strong>Lecturer</strong>
+                  <small>Access your lecturer dashboard</small>
+                </span>
+                <span class="role-arrow">›</span>
+              </label>
+
+              <label class="role-card">
+                <input type="radio" name="role" value="institution" />
+                <span class="role-icon institution">
+                  <img src="assets/institution-icon.png" alt="" />
+                </span>
+                <span class="role-copy">
+                  <strong>Institution</strong>
+                  <small>Access your institution dashboard</small>
+                </span>
+                <span class="role-arrow">›</span>
+              </label>
+
+              <label class="role-card">
+                <input type="radio" name="role" value="admin" />
+                <span class="role-icon admin">
+                  <img src="assets/admin-icon.png" alt="" />
+                </span>
+                <span class="role-copy">
+                  <strong>Admin</strong>
+                  <small>Access the admin panel</small>
+                </span>
+                <span class="role-arrow">›</span>
+              </label>
+            </div>
+
+            <button type="submit" class="login-btn">
+              Login
+              <span>→</span>
+            </button>
+
+            <div class="divider">
+              <span>or continue with</span>
+            </div>
+
+            <div class="social-login">
+              <button type="button">
+                <img src="assets/google-icon.png" alt="" />
+                Google
+              </button>
+
+              <button type="button">
+                <img src="assets/microsoft-icon.png" alt="" />
+                Microsoft
+              </button>
+            </div>
+
+            <p class="signup-note">
+              Don’t have an account?
+              <a href="choose-account.html">Sign up here</a>
+            </p>
+
+          </form>
+        </section>
+
+      </section>
+
+      <section class="security-strip">
+        <div class="security-main">
+          <div class="security-shield">
+            <img src="assets/security-shield-blue.png" alt="" />
+          </div>
+
+          <div>
+            <h3>Your security is our priority</h3>
+            <p>
+              We use industry-standard encryption and security protocols to keep your data safe and private.
+            </p>
+          </div>
+        </div>
+
+        <div class="security-points">
+          <div>
+            <img src="assets/secure-login-icon-blue.png" alt="" />
+            <span>Secure Login</span>
+          </div>
+
+          <div>
+            <img src="assets/encrypted-icon.png" alt="" />
+            <span>Data Encrypted</span>
+          </div>
+
+          <div>
+            <img src="assets/privacy-icon.png" alt="" />
+            <span>Privacy Focused</span>
+          </div>
+
+          <div>
+            <img src="assets/trusted-icon-blue.png" alt="" />
+            <span>Trusted Platform</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/think-tank-logo-white.png" alt="Think Tank Technologies" />
+        <p>
+          VeriWrite is an AI-powered academic integrity platform built to detect AI-written content and plagiarism with accuracy.
+        </p>
+
+        <div class="footer-socials">
+          <a href="#"><img src="assets/facebook-icon-navy-blue.png" alt="Facebook" /></a>
+          <a href="#"><img src="assets/twitter-icon-navy-blue.png" alt="Twitter" /></a>
+          <a href="#"><img src="assets/linkedin-icon-navy-blue.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="assets/instagram-icon-navy-blue.png" alt="Instagram" /></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="help-center.html">Help Center</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4>Contact Us</h4>
+        <a href="mailto:support@veriwrite.com">
+          <img src="assets/email-white.png" alt="" />
+          support@veriwrite.com
+        </a>
+        <a href="tel:+2348001234567">
+          <img src="assets/phone-white.png" alt="" />
+          +234 800 123 4567
+        </a>
+        <a href="https://www.veriwrite.com">
+          <img src="assets/web-white.png" alt="" />
+          www.veriwrite.com
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My Submissions | VeriWrite</title>
+
+  <link rel="stylesheet" href="my-submissions.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="student-dashboard.html" class="brand-link">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo" />
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <a href="student-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-label">Submissions</p>
+
+        <a href="upload-assignment.html" class="nav-link">
+          <img src="assets/new-submission-icon.png" alt="" />
+          <span>New Submission</span>
+        </a>
+
+        <a href="my-submissions.html" class="nav-link active" aria-current="page">
+          <img src="assets/my-submissions-icon.png" alt="" />
+          <span>My Submissions</span>
+        </a>
+
+        <a href="integrity-report.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt="" />
+          <span>Reports</span>
+        </a>
+
+        <p class="nav-label">Classes</p>
+
+        <a href="join-class.html" class="nav-link">
+          <img src="assets/join-class-icon.png" alt="" />
+          <span>Join Class</span>
+        </a>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="" />
+          <span>My Classes</span>
+        </a>
+
+        <p class="nav-label">Tools</p>
+
+        <a href="ai-humanizer.html" class="nav-link">
+          <img src="assets/ai-humanizer-icon.png" alt="" />
+          <span>AI Humanizer</span>
+        </a>
+
+        <a href="citation-generator.html" class="nav-link">
+          <img src="assets/citation-icon.png" alt="" />
+          <span>Citation Generator</span>
+        </a>
+
+        <a href="grammar-checker.html" class="nav-link">
+          <img src="assets/grammar-icon.png" alt="" />
+          <span>Grammar Checker</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-link">
+          <img src="assets/profile-icon.png" alt="" />
+          <span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          <span>Settings</span>
+        </a>
+
+        <a href="help-center.html" class="nav-link">
+          <img src="assets/help-icon-navy-blue.png" alt="" />
+          <span>Help &amp; Support</span>
+        </a>
+      </nav>
+
+      <a href="pricing.html" class="upgrade-card">
+        <div class="upgrade-content">
+          <img src="assets/crown-icon.png" alt="" />
+          <div>
+            <h4>Upgrade to Premium</h4>
+            <p>Unlock more features and higher submission limits.</p>
+          </div>
+        </div>
+        <span class="upgrade-arrow">›</span>
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="page-title-block">
+          <h1>My Submissions</h1>
+          <p>View and manage all your assignment submissions and integrity reports.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="notifications.html" class="notification-btn" aria-label="View notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </a>
+
+          <div class="user-menu">
+            <div class="avatar">-</div>
+            <div class="user-info">
+              <h4 data-field="student_name">--</h4>
+              <p>Student</p>
+            </div>
+            <button type="button" class="menu-toggle" aria-label="Open user menu">
+              <img src="assets/dropdown-arrow-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <section class="submissions-page">
+
+        <div class="submissions-grid">
+
+          <!-- MAIN AREA -->
+          <section class="submissions-main">
+
+            <!-- FILTERS -->
+            <form class="panel filters-panel" action="/api/student/submissions/filter/" method="GET">
+              <div class="search-field">
+                <img src="assets/search-icon.png" alt="" />
+                <input
+                  type="search"
+                  name="q"
+                  placeholder="Search by assignment title..."
+                  aria-label="Search submissions"
+                />
+              </div>
+
+              <div class="filter-group">
+                <label for="course-filter">Course</label>
+                <select id="course-filter" name="course">
+                  <option value="">All Courses</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="lecturer-filter">Lecturer</label>
+                <select id="lecturer-filter" name="lecturer">
+                  <option value="">All Lecturers</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="status-filter">Status</label>
+                <select id="status-filter" name="status">
+                  <option value="">All Statuses</option>
+                  <option value="processing">Processing</option>
+                  <option value="delivered">Delivered</option>
+                  <option value="reviewed">Reviewed</option>
+                  <option value="needs_revision">Needs Revision</option>
+                  <option value="approved">Approved</option>
+                </select>
+              </div>
+
+              <div class="filter-group date-filter">
+                <label for="date-range">Date Range</label>
+                <div class="date-input">
+                  <img src="assets/calendar-small-icon.png" alt="" />
+                  <input type="text" id="date-range" name="date_range" placeholder="Select Date Range" />
+                </div>
+              </div>
+
+              <button type="reset" class="clear-filter-btn">
+                <img src="assets/refresh-icon.png" alt="" />
+                Clear Filters
+              </button>
+            </form>
+
+            <!-- STATS -->
+            <section class="stats-grid">
+              <article class="stat-card">
+                <div class="stat-icon blue-soft">
+                  <img src="assets/document-icon.png" alt="" />
+                </div>
+
+                <div>
+                  <p>Total Submissions</p>
+                  <h2 data-field="total_submissions">0</h2>
+                  <span>All time</span>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon green-soft">
+                  <img src="assets/shield-icon-green.png" alt="" />
+                </div>
+
+                <div>
+                  <p>Average Integrity Score</p>
+                  <h2 data-field="average_integrity_score">--</h2>
+                  <span>Across all submissions</span>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon purple-soft">
+                  <img src="assets/sent-to-lecturer-icon.png" alt="" />
+                </div>
+
+                <div>
+                  <p>Reports Delivered</p>
+                  <h2 data-field="reports_delivered">0</h2>
+                  <span>Sent to lecturers</span>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon orange-soft">
+                  <img src="assets/clock-icon.png" alt="" />
+                </div>
+
+                <div>
+                  <p>Pending Reviews</p>
+                  <h2 data-field="pending_reviews">0</h2>
+                  <span>Awaiting lecturer review</span>
+                </div>
+              </article>
+            </section>
+
+            <!-- SUBMISSIONS TABLE -->
+            <article class="panel submissions-table-card">
+              <div class="table-header">
+                <h2>Submissions</h2>
+
+                <div class="view-toggle">
+                  <button type="button" class="active">
+                    <img src="assets/table-view-icon.png" alt="" />
+                    Table View
+                  </button>
+
+                  <button type="button">
+                    <img src="assets/card-view-icon.png" alt="" />
+                    Card View
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Assignment Title</th>
+                      <th>Course</th>
+                      <th>Lecturer</th>
+                      <th>Submitted On</th>
+                      <th>Status</th>
+                      <th>Integrity Score</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="submissions-table-body">
+                    <tr class="empty-table-row">
+                      <td colspan="7">
+                        <div class="empty-state">
+                          <img src="assets/empty-submissions.png" alt="No submissions yet" />
+                          <h3>No submissions yet</h3>
+                          <p>You haven’t submitted any assignments.</p>
+                          <p>Start by uploading your first assignment for integrity analysis.</p>
+
+                          <a href="upload-assignment.html" class="primary-btn">
+                            <span>+</span>
+                            New Submission
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-footer">
+                <p>Showing 0 to 0 of 0 submissions</p>
+
+                <div class="pagination">
+                  <button type="button" disabled>
+                    <img src="assets/chevron-left-icon.png" alt="" />
+                  </button>
+
+                  <button type="button" class="active-page">1</button>
+
+                  <button type="button" disabled>
+                    <img src="assets/chevron-right-icon.png" alt="" />
+                  </button>
+                </div>
+
+                <div class="rows-select">
+                  <label for="rows-per-page">Rows per page</label>
+                  <select id="rows-per-page" name="rows_per_page">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside class="submissions-side">
+
+            <!-- STATUS GUIDE -->
+            <article class="side-card status-guide-card">
+              <h2>Status Guide</h2>
+
+              <ul class="status-guide-list">
+                <li>
+                  <div class="guide-icon blue-soft">
+                    <img src="assets/upload-icon.png" alt="" />
+                  </div>
+                  <div>
+                    <h3>Processing</h3>
+                    <p>No data yet</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="guide-icon green-soft">
+                    <img src="assets/delivered-icon.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 class="green-text">Delivered</h3>
+                    <p>No data yet</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="guide-icon blue-soft">
+                    <img src="assets/document-icon.png" alt="" />
+                  </div>
+                  <div>
+                    <h3>Reviewed</h3>
+                    <p>No data yet</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="guide-icon orange-soft">
+                    <img src="assets/info-orange-icon.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 class="orange-text">Needs Revision</h3>
+                    <p>No data yet</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="guide-icon green-soft">
+                    <img src="assets/shield-success-icon.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 class="green-text">Approved</h3>
+                    <p>No data yet</p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <!-- RECENT FEEDBACK -->
+            <article class="side-card feedback-card">
+              <div class="side-header">
+                <h2>Recent Feedback</h2>
+                <a href="feedback.html">View All Feedback</a>
+              </div>
+
+              <div class="empty-feedback">
+                <img src="assets/empty-feedback.png" alt="No feedback yet" />
+                <h3>No feedback yet</h3>
+                <p>Lecturer feedback and comments will appear here.</p>
+              </div>
+            </article>
+
+            <!-- QUICK ACTIONS -->
+            <article class="side-card quick-actions-card">
+              <h2>Quick Actions</h2>
+
+              <div class="quick-actions-grid">
+                <a href="upload-assignment.html" class="quick-action">
+                  <img src="assets/upload-icon.png" alt="" />
+                  <span>New Submission</span>
+                </a>
+
+                <a href="upload-assignment.html" class="quick-action">
+                  <img src="assets/upload-icon.png" alt="" />
+                  <span>Re-upload Revision</span>
+                </a>
+
+                <a href="integrity-report.html" class="quick-action">
+                  <img src="assets/document-icon.png" alt="" />
+                  <span>View All Reports</span>
+                </a>
+
+                <a href="feedback.html" class="quick-action">
+                  <img src="assets/chat-feedback-icon.png" alt="" />
+                  <span>View Feedback</span>
+                </a>
+              </div>
+            </article>
+          </aside>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+          <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+          <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </footer>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

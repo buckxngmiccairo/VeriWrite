@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Integrity Report | VeriWrite</title>
+
+  <link rel="stylesheet" href="integrity-report.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="student-dashboard.html" class="brand-link">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo" />
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <a href="student-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-label">Submissions</p>
+
+        <a href="upload-assignment.html" class="nav-link">
+          <img src="assets/new-submission-icon.png" alt="" />
+          <span>New Submission</span>
+        </a>
+
+        <a href="my-submissions.html" class="nav-link active" aria-current="page">
+          <img src="assets/my-submissions-icon.png" alt="" />
+          <span>My Submissions</span>
+        </a>
+
+        <a href="integrity-report.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt="" />
+          <span>Reports</span>
+        </a>
+
+        <p class="nav-label">Classes</p>
+
+        <a href="join-class.html" class="nav-link">
+          <img src="assets/join-class-icon.png" alt="" />
+          <span>Join Class</span>
+        </a>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="" />
+          <span>My Classes</span>
+        </a>
+
+        <p class="nav-label">Tools</p>
+
+        <a href="ai-humanizer.html" class="nav-link">
+          <img src="assets/ai-humanizer-icon.png" alt="" />
+          <span>AI Humanizer</span>
+        </a>
+
+        <a href="citation-generator.html" class="nav-link">
+          <img src="assets/citation-icon.png" alt="" />
+          <span>Citation Generator</span>
+        </a>
+
+        <a href="grammar-checker.html" class="nav-link">
+          <img src="assets/grammar-icon.png" alt="" />
+          <span>Grammar Checker</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-link">
+          <img src="assets/profile-icon.png" alt="" />
+          <span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          <span>Settings</span>
+        </a>
+
+        <a href="help-center.html" class="nav-link">
+          <img src="assets/help-icon-navy-blue.png" alt="" />
+          <span>Help &amp; Support</span>
+        </a>
+      </nav>
+
+      <a href="pricing.html" class="upgrade-card">
+        <div class="upgrade-content">
+          <img src="assets/crown-icon.png" alt="" />
+          <div>
+            <h4>Upgrade to Premium</h4>
+            <p>Unlock more features and higher submission limits.</p>
+          </div>
+        </div>
+        <span class="upgrade-arrow">›</span>
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="page-title-block">
+          <div class="title-row">
+            <h1>Integrity Report</h1>
+            <span class="report-status-badge">
+              <img src="assets/report-ready-icon.png" alt="" />
+              Report Ready
+            </span>
+          </div>
+          <p>Here’s the detailed analysis of your assignment.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="notifications.html" class="notification-btn" aria-label="View notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </a>
+
+          <div class="user-menu">
+            <div class="avatar">UP</div>
+            <div class="user-info">
+              <h4>User Profile</h4>
+              <p>Student</p>
+            </div>
+            <button type="button" class="menu-toggle" aria-label="Open user menu">
+              <img src="assets/drop-down-arrow-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- REPORT PAGE -->
+      <section class="report-page">
+
+        <div class="report-grid">
+
+          <!-- LEFT CONTENT -->
+          <section class="report-main">
+
+            <!-- OVERALL SCORE -->
+            <article class="panel overall-panel">
+              <div class="overall-score">
+                <div class="panel-title">
+                  <h2>Overall Integrity Score</h2>
+                  <img src="assets/info-small-icon.png" alt="" />
+                </div>
+
+                <div class="score-circle">
+                  <strong data-field="overall_score">--</strong>
+                  <span data-field="overall_label">--</span>
+                </div>
+
+                <p class="score-label">Score Breakdown</p>
+                <h3><span data-field="score_value">--</span> / 100</h3>
+              </div>
+
+              <div class="score-message">
+                <p>Your work is analyzed for academic integrity.</p>
+                <div class="mini-status">
+                  <img src="assets/shield-small-icon.png" alt="" />
+                  <span data-field="integrity_status">--</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-icon purple-bg">
+                  <img src="assets/ai-detection-icon.png" alt="" />
+                </div>
+                <h4>AI Detection</h4>
+                <strong data-field="ai_detection">--%</strong>
+                <p>AI-generated probability</p>
+                <span data-field="ai_detection_status">--</span>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-icon blue-bg">
+                  <img src="assets/similarity-check-icon.png" alt="" />
+                </div>
+                <h4>Similarity</h4>
+                <strong data-field="similarity_score">--%</strong>
+                <p>Overall similarity index</p>
+                <span data-field="similarity_status">--</span>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-icon orange-bg">
+                  <img src="assets/citation-analysis-icon.png" alt="" />
+                </div>
+                <h4>Citations</h4>
+                <strong data-field="citation_score">--%</strong>
+                <p>Citation quality score</p>
+                <span data-field="citation_status">--</span>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-icon gray-bg">
+                  <img src="assets/ai-humanizer-icon.png" alt="" />
+                </div>
+                <h4>Writing Quality</h4>
+                <strong data-field="writing_quality">--%</strong>
+                <p>Writing quality score</p>
+                <span data-field="writing_status">--</span>
+              </div>
+            </article>
+
+            <!-- AI DETECTION -->
+            <article class="panel ai-panel">
+              <div class="panel-title">
+                <h2>AI Detection Results</h2>
+                <img src="assets/info-small-icon.png" alt="" />
+              </div>
+
+              <div class="ai-results-grid">
+                <div class="ai-circle">
+                  <strong data-field="ai_probability">--%</strong>
+                  <span>AI Probability</span>
+                </div>
+
+                <div class="ai-bars">
+                  <div class="bar-row">
+                    <span class="dot purple-dot"></span>
+                    <p>Human Written</p>
+                    <div class="bar-track"><span style="width: 0%;"></span></div>
+                    <strong data-field="human_written">--%</strong>
+                  </div>
+
+                  <div class="bar-row">
+                    <span class="dot blue-dot"></span>
+                    <p>AI Generated</p>
+                    <div class="bar-track"><span style="width: 0%;"></span></div>
+                    <strong data-field="ai_generated">--%</strong>
+                  </div>
+
+                  <div class="bar-row">
+                    <span class="dot gray-dot"></span>
+                    <p>Uncertain</p>
+                    <div class="bar-track"><span style="width: 0%;"></span></div>
+                    <strong data-field="uncertain">--%</strong>
+                  </div>
+                </div>
+
+                <div class="flagged-card">
+                  <h3>Flagged Sections</h3>
+                  <img src="assets/empty-document-icon.png" alt="" />
+                  <p data-field="flagged_sections">--</p>
+                  <a href="full-report.html" class="outline-btn">
+                    View Details
+                    <img src="assets/arrow-right-blue-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- SIMILARITY ANALYSIS -->
+            <article class="panel similarity-panel">
+              <div class="panel-header">
+                <div class="panel-title">
+                  <h2>Similarity Analysis</h2>
+                  <img src="assets/info-small-icon.png" alt="" />
+                </div>
+
+                <a href="full-report.html">
+                  View Full Report
+                  <img src="assets/arrow-right-blue-icon.png" alt="" />
+                </a>
+              </div>
+
+              <div class="similarity-grid">
+                <div class="similarity-circle">
+                  <strong data-field="similarity_percent">--%</strong>
+                  <span>Similarity</span>
+                </div>
+
+                <div class="sources-list">
+                  <h3>Top Matched Sources</h3>
+
+                  <div class="source-row">
+                    <span></span>
+                    <div class="source-line"></div>
+                    <strong>--%</strong>
+                  </div>
+
+                  <div class="source-row">
+                    <span></span>
+                    <div class="source-line"></div>
+                    <strong>--%</strong>
+                  </div>
+
+                  <div class="source-row">
+                    <span></span>
+                    <div class="source-line"></div>
+                    <strong>--%</strong>
+                  </div>
+
+                  <div class="source-row">
+                    <span></span>
+                    <div class="source-line"></div>
+                    <strong>--%</strong>
+                  </div>
+
+                  <div class="source-note">
+                    <img src="assets/info-blue-icon.png" alt="" />
+                    <p><strong>--%</strong> of your content matches with existing sources.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- LOWER REPORT PANELS -->
+            <section class="lower-report-grid">
+
+              <!-- CITATION REVIEW -->
+              <article class="panel citation-panel">
+                <div class="panel-title">
+                  <h2>Citation &amp; Referencing Review</h2>
+                  <img src="assets/info-small-icon.png" alt="" />
+                </div>
+
+                <div class="citation-grid">
+                  <div class="mini-card">
+                    <h4>Missing Citations</h4>
+                    <div>
+                      <img src="assets/clock-icon.png" alt="" />
+                      <strong>--</strong>
+                    </div>
+                    <p>Add citations</p>
+                  </div>
+
+                  <div class="mini-card">
+                    <h4>Citation Consistency</h4>
+                    <div>
+                      <img src="assets/clock-icon-grey.png" alt="" />
+                      <strong>--</strong>
+                    </div>
+                    <p>--</p>
+                  </div>
+
+                  <div class="mini-card">
+                    <h4>Reference Quality</h4>
+                    <div>
+                      <img src="assets/clock-icon-grey.png" alt="" />
+                      <strong>--</strong>
+                    </div>
+                    <p>--</p>
+                  </div>
+
+                  <div class="mini-card">
+                    <h4>Style Guide</h4>
+                    <div>
+                      <img src="assets/clock-icon-grey.png" alt="" />
+                      <strong>--</strong>
+                    </div>
+                    <p>--</p>
+                  </div>
+                </div>
+
+                <a href="full-report.html" class="text-link">
+                  View Details
+                  <img src="assets/arrow-right-blue-icon.png" alt="" />
+                </a>
+              </article>
+
+              <!-- WRITING QUALITY -->
+              <article class="panel writing-panel">
+                <div class="panel-header">
+                  <div class="panel-title">
+                    <h2>Writing Quality Insights</h2>
+                    <img src="assets/info-small-icon.png" alt="" />
+                  </div>
+
+                  <a href="full-report.html">
+                    Detailed Writing Report
+                    <img src="assets/arrow-right-blue-icon.png" alt="" />
+                  </a>
+                </div>
+
+                <div class="writing-grid">
+                  <div class="quality-item">
+                    <img src="assets/grammar-quality-icon.png" alt="" />
+                    <div>
+                      <p>Grammar</p>
+                      <strong>--%</strong>
+                      <span>--</span>
+                    </div>
+                  </div>
+
+                  <div class="quality-item">
+                    <img src="assets/readability-icon.png" alt="" />
+                    <div>
+                      <p>Readability</p>
+                      <strong>--%</strong>
+                      <span>--</span>
+                    </div>
+                  </div>
+
+                  <div class="quality-item">
+                    <img src="assets/originality-icon.png" alt="" />
+                    <div>
+                      <p>Originality</p>
+                      <strong>--%</strong>
+                      <span>--</span>
+                    </div>
+                  </div>
+
+                  <div class="quality-item">
+                    <img src="assets/sentence-diversity-icon.png" alt="" />
+                    <div>
+                      <p>Sentence Diversity</p>
+                      <strong>--%</strong>
+                      <span>--</span>
+                    </div>
+                  </div>
+
+                  <div class="quality-item">
+                    <img src="assets/clarity-icon.png" alt="" />
+                    <div>
+                      <p>Clarity</p>
+                      <strong>--%</strong>
+                      <span>--</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <!-- RECOMMENDATIONS -->
+            <article class="panel recommendations-panel">
+              <div class="panel-title">
+                <h2>Improvement Recommendations</h2>
+                <img src="assets/info-small-icon.png" alt="" />
+              </div>
+
+              <div class="recommendation-list">
+                <div class="recommendation-row">
+                  <img src="assets/clock-icon-grey.png" alt="" />
+                  <div class="recommendation-line"></div>
+                  <a href="full-report.html">View Details</a>
+                </div>
+
+                <div class="recommendation-row">
+                  <img src="assets/clock-icon-grey.png" alt="" />
+                  <div class="recommendation-line"></div>
+                  <a href="full-report.html">View Details</a>
+                </div>
+
+                <div class="recommendation-row">
+                  <img src="assets/clock-icon-grey.png" alt="" />
+                  <div class="recommendation-line"></div>
+                  <a href="full-report.html">View Details</a>
+                </div>
+
+                <div class="recommendation-row">
+                  <img src="assets/clock-icon-grey.png" alt="" />
+                  <div class="recommendation-line"></div>
+                  <a href="full-report.html">View Details</a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside class="report-side">
+
+            <!-- SUBMISSION STATUS -->
+            <article class="side-card status-card">
+              <h2>Submission Status</h2>
+
+              <dl class="status-list">
+                <div>
+                  <dt>
+                    <img src="assets/clock-icon-grey.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Status<br /><span>--</span></dd>
+                </div>
+
+                <div>
+                  <dt>
+                    <img src="assets/user-field-icon.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Lecturer<br /><span>--</span></dd>
+                </div>
+
+                <div>
+                  <dt>
+                    <img src="assets/class-small-icon.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Class / Course<br /><span>--</span></dd>
+                </div>
+
+                <div>
+                  <dt>
+                    <img src="assets/institution-field-icon.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Institution<br /><span>--</span></dd>
+                </div>
+
+                <div>
+                  <dt>
+                    <img src="assets/calendar-small-icon.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Submitted On<br /><span>--</span></dd>
+                </div>
+
+                <div>
+                  <dt>
+                    <img src="assets/report-id-icon.png" alt="" />
+                    --
+                  </dt>
+                  <dd>Report ID<br /><span>--</span></dd>
+                </div>
+              </dl>
+
+              <div class="status-success">
+                <img src="assets/check-green-icon.png" alt="" />
+                <span>--</span>
+              </div>
+            </article>
+
+            <!-- DOCUMENT PREVIEW -->
+            <article class="side-card document-card">
+              <h2>Document Preview</h2>
+
+              <div class="document-preview">
+                <img src="assets/document-icon.png" alt="" />
+                <div>
+                  <strong data-field="document_name">--</strong>
+                  <p data-field="document_meta">--</p>
+                </div>
+              </div>
+
+              <a href="report-viewer.html" class="outline-btn full-width">Preview Document</a>
+            </article>
+
+            <!-- QUICK ACTIONS -->
+            <article class="side-card actions-card">
+              <h2>Quick Actions</h2>
+
+              <a href="/api/student/reports/download/" class="action-btn">
+                <img src="assets/download-icon.png" alt="" />
+                Download PDF Report
+              </a>
+
+              <a href="/api/student/reports/share/" class="action-btn">
+                <img src="assets/share-icon.png" alt="" />
+                Share with Lecturer
+              </a>
+
+              <a href="upload-assignment.html" class="action-btn">
+                <img src="assets/upload-small-icon.png" alt="" />
+                Re-upload Revised Version
+              </a>
+            </article>
+
+            <!-- SCORE EXPLANATION -->
+            <article class="side-card score-help-card">
+              <div class="score-help-title">
+                <img src="assets/question-purple-icon.png" alt="" />
+                <h2>What Do These Scores Mean?</h2>
+              </div>
+
+              <div class="score-help-list">
+                <div>
+                  <span>--</span>
+                  <p>--</p>
+                  <div></div>
+                </div>
+
+                <div>
+                  <span>--</span>
+                  <p>--</p>
+                  <div></div>
+                </div>
+
+                <div>
+                  <span>--</span>
+                  <p>--</p>
+                  <div></div>
+                </div>
+
+                <div>
+                  <span>--</span>
+                  <p>--</p>
+                  <div></div>
+                </div>
+              </div>
+
+              <a href="help-center.html" class="text-link">
+                Learn more about scoring
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+
+            <!-- HELP -->
+            <article class="side-card help-card">
+              <div class="help-title">
+                <img src="assets/support-icon.png" alt="" />
+                <div>
+                  <h2>Need Help?</h2>
+                  <p>Our support team is here if you have any questions.</p>
+                </div>
+              </div>
+
+              <a href="help-center.html" class="outline-btn full-width">
+                Visit Help Center
+                <img src="assets/arrow-right-blue-icon.png" alt="" />
+              </a>
+            </article>
+          </aside>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+          <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+          <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </footer>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

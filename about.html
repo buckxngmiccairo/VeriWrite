@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | VeriWrite</title>
+
+  <link rel="stylesheet" href="about.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Go to VeriWrite homepage">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="header-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="institutions.html">Institutions</a>
+
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" id="resourcesBtn" aria-expanded="false">
+            Resources
+            <img src="assets/chevron-down-icon.png" alt="" />
+          </button>
+
+          <div class="nav-dropdown-menu" id="resourcesMenu">
+            <a href="help-center.html">Help Center</a>
+            <a href="guidelines.html">Guidelines</a>
+            <a href="blog.html">Blog</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="active">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="choose-account.html" class="primary-btn">Get Started Free</a>
+      </div>
+
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <img src="assets/menu-icon.png" alt="" />
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="section-label">ABOUT VERIWRITE</span>
+
+          <h1>
+            Building a Culture of Integrity in
+            <span>Education.</span>
+          </h1>
+
+          <p>
+            VeriWrite is an AI-powered academic integrity platform designed to help
+            educators promote originality, prevent plagiarism, and empower students
+            to do their best work.
+          </p>
+
+          <p>
+            We combine advanced AI technology with a deep understanding of education
+            to create a solution that is accurate, reliable, and easy to use.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/about-hero.png" alt="VeriWrite dashboard displayed on a laptop" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-vision-section">
+      <div class="mvv-grid">
+        <article class="mvv-card">
+          <img src="assets/mission-icon.png" alt="" class="mvv-icon" />
+          <h2>Our Mission</h2>
+          <p>
+            To promote academic honesty and excellence by providing institutions,
+            educators, and students with intelligent tools that detect plagiarism
+            and AI-generated content with unmatched accuracy.
+          </p>
+        </article>
+
+        <article class="mvv-card">
+          <img src="assets/vision-icon.png" alt="" class="mvv-icon" />
+          <h2>Our Vision</h2>
+          <p>
+            A world where originality is celebrated, learning is authentic, and every
+            student has the opportunity to succeed through their own ideas and efforts.
+          </p>
+        </article>
+
+        <article class="mvv-card">
+          <img src="assets/values-icon.png" alt="" class="mvv-icon" />
+          <h2>Our Values</h2>
+
+          <ul class="values-list">
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              <span><strong>Integrity</strong> – We stand for honesty and transparency.</span>
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              <span><strong>Innovation</strong> – We use AI to solve real problems.</span>
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              <span><strong>Impact</strong> – We create solutions that make a difference.</span>
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              <span><strong>Excellence</strong> – We are committed to quality.</span>
+            </li>
+            <li>
+              <img src="assets/check-blue-icon.png" alt="" />
+              <span><strong>Collaboration</strong> – We grow stronger together.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-label="VeriWrite platform metrics">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <img src="assets/documents-icon.png" alt="" />
+          <h3 id="documentsAnalyzed" data-metric="documents_analyzed">--</h3>
+          <p>Documents Analyzed</p>
+        </article>
+
+        <article class="stat-card">
+          <img src="assets/institutions-icon.png" alt="" />
+          <h3 id="institutionsCount" data-metric="institutions_count">--</h3>
+          <p>Institutions</p>
+        </article>
+
+        <article class="stat-card">
+          <img src="assets/countries-icon.png" alt="" />
+          <h3 id="countriesCount" data-metric="countries_count">--</h3>
+          <p>Countries</p>
+        </article>
+
+        <article class="stat-card">
+          <img src="assets/accuracy-icon.png" alt="" />
+          <h3 id="accuracyRate" data-metric="accuracy_rate">--</h3>
+          <p>Accuracy Rate</p>
+        </article>
+
+        <article class="stat-card">
+          <img src="assets/monitoring-icon.png" alt="" />
+          <h3 id="monitoringUptime" data-metric="monitoring_uptime">--</h3>
+          <p>AI Monitoring</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="commitment-section">
+      <div class="commitment-container">
+        <div class="commitment-content">
+          <span class="section-label">OUR COMMITMENT</span>
+
+          <h2>
+            Empowering Education Through Technology and Trust
+          </h2>
+
+          <p>
+            We are committed to building technology that is secure, inclusive, and
+            aligned with the needs of modern education. Your trust drives everything
+            we do.
+          </p>
+
+          <div class="commitment-features">
+            <article>
+              <img src="assets/data-security-icon.png" alt="" />
+              <div>
+                <h3>Data Security</h3>
+                <p>We protect your data with enterprise-grade security.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/educator-centric-icon.png" alt="" />
+              <div>
+                <h3>Educator-Centric</h3>
+                <p>Built to support educators and simplify their work.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/student-success-icon.png" alt="" />
+              <div>
+                <h3>Student Success</h3>
+                <p>Helping students learn, improve, and achieve more.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/global-impact-icon.png" alt="" />
+              <div>
+                <h3>Global Impact</h3>
+                <p>Supporting institutions and learners around the world.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="commitment-image">
+          <img src="assets/commitment-illustration.png" alt="Education technology and trust illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <div>
+          <h2>Let's build a future of honesty and academic excellence—together.</h2>
+          <p>Join thousands of institutions that trust VeriWrite.</p>
+        </div>
+      </div>
+
+      <a href="choose-account.html" class="cta-btn">
+        Get Started Free
+        <img src="assets/arrow-right-icon.png" alt="" />
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/veriwrite-logo-white.png" alt="VeriWrite Logo" class="footer-logo" />
+
+        <p>
+          Advanced AI to detect plagiarism and AI-written content. Promoting honesty,
+          originality, and excellence in education.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+
+          <a href="#" aria-label="X">
+            <img src="assets/twitter-x-icon.png" alt="X" />
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="students.html">For Students</a>
+        <a href="lecturers.html">For Lecturers</a>
+        <a href="institutions.html">For Institutions</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <a href="blog.html">Blog</a>
+        <a href="help-center.html">Help Center</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="about.html" class="active-footer-link">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="news.html">News & Updates</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact</h4>
+
+        <p>
+          <img src="assets/email-icon-white.png" alt="" />
+          support@veriwrite.com
+        </p>
+
+        <p>
+          <img src="assets/phone-icon-white.png" alt="" />
+          +234 800 123 4567
+        </p>
+
+        <p>
+          <img src="assets/website-icon-white.png" alt="" />
+          www.veriwrite.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/about.js"></script>
+</body>
+</html>

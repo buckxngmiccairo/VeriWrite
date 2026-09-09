@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Email Verification | VeriWrite</title>
+
+  <link rel="stylesheet" href="email-verification.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="assets/think-tank-logo.png" alt="Think Tank Technologies Logo" />
+    </a>
+
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="help-center.html">Help Center</a>
+    </nav>
+
+    <a href="login.html" class="login-btn">
+      <img src="assets/logout-icon.png" alt="" />
+      Logout
+    </a>
+  </header>
+
+  <main class="verification-page">
+    <section class="verification-grid">
+      <aside class="info-card">
+        <img
+          src="assets/email-verification-illustration.png"
+          alt="Email verification illustration"
+          class="main-illustration"
+        />
+
+        <div class="info-box secure-box">
+          <img src="assets/shield-check-icon.png" alt="" />
+          <div>
+            <h3>Secure &amp; Confidential</h3>
+            <p>Your email is safe with us. We will never share your information with third parties.</p>
+          </div>
+        </div>
+
+        <div class="steps-box">
+          <div class="step-item">
+            <div class="step-icon">
+              <img src="assets/email-blue-icon.png" alt="" />
+              <span>1</span>
+            </div>
+            <h4>Check Email</h4>
+            <p>We've sent a verification link to your email</p>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-item">
+            <div class="step-icon">
+              <img src="assets/link-icon.png" alt="" />
+              <span>2</span>
+            </div>
+            <h4>Verify Email</h4>
+            <p>Click the verification link in the email</p>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-item">
+            <div class="step-icon">
+              <img src="assets/shield-check-icon.png" alt="" />
+              <span>3</span>
+            </div>
+            <h4>Access Account</h4>
+            <p>Once verified, you can access your account</p>
+          </div>
+        </div>
+
+        <div class="info-box help-box">
+          <img src="assets/help-icon.png" alt="" />
+          <div>
+            <h3>Didn’t receive the email?</h3>
+            <p>Check your spam or junk folder. If you still can't find it, you can resend the verification email.</p>
+
+            <button type="button" class="resend-btn">
+              Resend Verification Email
+              <img src="assets/refresh-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="verify-card">
+        <div class="verify-icon">
+          <img src="assets/email-check-icon.png" alt="" />
+        </div>
+
+        <h1>Verify Your Email</h1>
+
+        <p class="sent-text">
+          We've sent a verification link to
+          <strong>john.doe@example.com</strong>
+        </p>
+
+        <p class="instruction-text">
+          Please check your inbox and click the link to verify your email address and activate your account.
+        </p>
+
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <form action="/api/auth/verify-email" method="POST" class="verify-form" id="verifyEmailForm">
+          <input type="hidden" name="verification_type" value="email_verification" />
+          <input type="hidden" name="platform" value="veriwrite" />
+
+          <label>
+            Enter the 6-digit code sent to your email
+          </label>
+
+          <div class="code-inputs">
+            <input type="text" name="code_1" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+            <input type="text" name="code_2" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+            <input type="text" name="code_3" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+            <input type="text" name="code_4" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+            <input type="text" name="code_5" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+            <input type="text" name="code_6" maxlength="1" inputmode="numeric" pattern="[0-9]" required />
+          </div>
+
+          <p class="expiry-text">
+            Code expires in <span>09:45</span>
+          </p>
+
+          <button type="submit" class="submit-btn">
+            Verify Email <span>→</span>
+          </button>
+
+          <a href="login.html" class="back-login">Back to Login</a>
+        </form>
+      </section>
+    </section>
+
+    <section class="security-strip">
+      <div class="security-copy">
+        <img src="assets/shield-check-icon.png" alt="" />
+        <div>
+          <h3>Why email verification?</h3>
+          <p>Email verification helps us ensure the security of your account and prevents unauthorized access.</p>
+        </div>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/private-shield-icon.png" alt="" />
+        <p>Protects Your Account</p>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/user-control-icon.png" alt="" />
+        <p>Confirms Your Identity</p>
+      </div>
+
+      <div class="security-item">
+        <img src="assets/trusted-icon-thick.png" alt="" />
+        <p>Enables Full Access</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/think-tank-logo-white.png" alt="Think Tank Technologies Logo" />
+
+        <p>
+          VeriWrite is an AI-powered academic integrity platform built to detect AI-written content and plagiarism with accuracy.
+        </p>
+
+        <div class="socials">
+          <a href="#"><img src="assets/facebook-icon.png" alt="" /></a>
+          <a href="#"><img src="assets/x-icon.png" alt="" /></a>
+          <a href="#"><img src="assets/linkedin-icon.png" alt="" /></a>
+          <a href="#"><img src="assets/instagram-icon.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="help-center.html">Help Center</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div>
+        <h4>Resources</h4>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <p>support@veriwrite.com</p>
+        <p>+234 800 123 4567</p>
+        <p>www.veriwrite.com</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 VeriWrite by Think Tank Technologies. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    const inputs = document.querySelectorAll(".code-inputs input");
+
+    inputs.forEach((input, index) => {
+      input.addEventListener("input", () => {
+        input.value = input.value.replace(/[^0-9]/g, "");
+
+        if (input.value && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Backspace" && !input.value && index > 0) {
+          inputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

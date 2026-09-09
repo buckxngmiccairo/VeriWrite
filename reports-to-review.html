@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Review Student Report | VeriWrite</title>
+
+  <link rel="stylesheet" href="review-student-report.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link active">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <a href="student-submissions.html" class="back-link">← Back to Submissions</a>
+          <h1>Review Student Report</h1>
+          <p>Review the integrity report and provide feedback for the submission.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- ACTION ROW -->
+      <section class="action-row">
+        <a href="#" class="download-btn">
+          <img src="assets/download-blue-icon.png" alt="">
+          Download Report
+        </a>
+
+        <button type="button" class="more-btn" aria-label="More options">
+          <img src="assets/more-icon.png" alt="">
+        </button>
+      </section>
+
+      <!-- SUBMISSION META -->
+      <section class="submission-meta-card">
+        <div class="meta-group">
+          <div>
+            <p>Submission ID</p>
+            <strong>- - - - - -</strong>
+          </div>
+          <img src="assets/copy-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Student</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/student-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Class</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/my-classes-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Status</p>
+            <strong class="status-pill">- - - - -</strong>
+          </div>
+          <img src="assets/status-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Submission Version</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/document-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Submitted On</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/calendar-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Email</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/email-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Assignment</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/assignment-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Review Due</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/calendar-icon.png" alt="">
+        </div>
+
+        <div class="meta-group">
+          <div>
+            <p>Attempts</p>
+            <strong>- - - - -</strong>
+          </div>
+          <img src="assets/refresh-icon.png" alt="">
+        </div>
+      </section>
+
+      <!-- MAIN GRID -->
+      <section class="review-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="review-main">
+
+          <!-- REPORT OVERVIEW -->
+          <section class="panel">
+            <h2>Report Overview</h2>
+
+            <div class="overview-grid">
+              <article class="overview-card">
+                <h3>AI Integrity Score <span>ⓘ</span></h3>
+                <div class="mini-donut">
+                  <strong>- -</strong>
+                  <span>/100</span>
+                </div>
+                <p>- - - - -</p>
+              </article>
+
+              <article class="overview-card">
+                <h3>Similarity Index <span>ⓘ</span></h3>
+                <div class="mini-donut">
+                  <strong>- -</strong>
+                  <span>%</span>
+                </div>
+                <p>- - - - -</p>
+              </article>
+
+              <article class="overview-card">
+                <h3>AI Generated Probability <span>ⓘ</span></h3>
+                <div class="mini-donut">
+                  <strong>- -</strong>
+                  <span>%</span>
+                </div>
+                <p>- - - - -</p>
+              </article>
+
+              <article class="overview-card">
+                <h3>High Risk Sections <span>ⓘ</span></h3>
+                <div class="metric-icon red">
+                  <img src="assets/high-risk-icon.png" alt="">
+                </div>
+                <strong class="metric-number">- -</strong>
+                <p>- - - - -</p>
+              </article>
+
+              <article class="overview-card">
+                <h3>Citation Issues <span>ⓘ</span></h3>
+                <div class="metric-icon orange">
+                  <img src="assets/citation-quality-icon.png" alt="">
+                </div>
+                <strong class="metric-number">- -</strong>
+                <p>- - - - -</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- DOCUMENT + NOTES -->
+          <section class="document-notes-grid">
+
+            <!-- DOCUMENT VIEWER -->
+            <article class="panel document-panel">
+              <div class="tabs">
+                <button type="button" class="active">Document</button>
+                <button type="button">AI Highlights</button>
+                <button type="button">Matched Sources</button>
+                <button type="button">Comments</button>
+              </div>
+
+              <div class="viewer-toolbar">
+                <div class="pagination-tools">
+                  <button type="button">K</button>
+                  <button type="button">‹</button>
+                  <button type="button">1</button>
+                  <span>/ —</span>
+                  <button type="button">›</button>
+                  <button type="button">K</button>
+                </div>
+
+                <div class="zoom-tools">
+                  <button type="button">−</button>
+                  <button type="button">100%</button>
+                  <button type="button">+</button>
+                  <button type="button">
+                    <img src="assets/fullscreen-icon.png" alt="">
+                  </button>
+                </div>
+              </div>
+
+              <div class="document-empty">
+                <img src="assets/empty-document-icon.png" alt="">
+                <h3>No document to display</h3>
+                <p>The submitted assignment will appear here.</p>
+              </div>
+            </article>
+
+            <!-- LECTURER NOTES -->
+            <article class="panel notes-panel">
+              <h2>Lecturer Notes</h2>
+
+              <div class="notes-empty">
+                <img src="assets/lecturer-notes-icon.png" alt="">
+                <h3>No notes yet</h3>
+                <p>Your private notes about this submission will appear here.</p>
+              </div>
+
+              <p class="note-count">0/1000</p>
+            </article>
+
+          </section>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <aside class="feedback-column">
+
+          <section class="side-card feedback-card">
+            <div class="side-title">
+              <h3>Feedback to Student</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <textarea
+              name="lecturer_feedback"
+              maxlength="1500"
+              placeholder="Write feedback for the student..."
+            ></textarea>
+
+            <p class="char-count">0/1500</p>
+
+            <div class="attach-section">
+              <h4>Attach Files (Optional)</h4>
+
+              <div class="upload-box">
+                <img src="assets/attachment-icon.png" alt="">
+                <p>Drag and drop files here</p>
+                <span>or click to browse</span>
+              </div>
+            </div>
+
+            <div class="quick-actions">
+              <h4>Quick Actions</h4>
+
+              <button type="button" class="approve-btn">
+                <img src="assets/check-white-icon.png" alt="">
+                Approve Submission
+              </button>
+
+              <button type="button" class="revision-btn">
+                <img src="assets/revision-orange-icon.png" alt="">
+                Request Revision
+              </button>
+
+              <button type="button" class="feedback-btn">
+                <img src="assets/message-blue-icon.png" alt="">
+                Add Feedback
+              </button>
+
+              <a href="#" class="download-outline">
+                <img src="assets/download-blue-icon.png" alt="">
+                Download Report
+              </a>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="timeline-card">
+        <h2>Submission Timeline <span>ⓘ</span></h2>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <img src="assets/submitted-icon.png" alt="">
+            </div>
+            <p>Submitted</p>
+            <span>- - - - -</span>
+          </div>
+
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <img src="assets/processing-icon.png" alt="">
+            </div>
+            <p>Processing</p>
+            <span>- - - - -</span>
+          </div>
+
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <img src="assets/report-generated-icon.png" alt="">
+            </div>
+            <p>Report Generated</p>
+            <span>- - - - -</span>
+          </div>
+
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <img src="assets/under-review-icon.png" alt="">
+            </div>
+            <p>Under Review</p>
+            <span>- - - - -</span>
+          </div>
+
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <img src="assets/completed-icon.png" alt="">
+            </div>
+            <p>Completed</p>
+            <span>- - - - -</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

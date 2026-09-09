@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Report | VeriWrite</title>
+
+  <link rel="stylesheet" href="full-report.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="student-dashboard.html" class="nav-item">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-label">Submissions</p>
+
+        <a href="upload-assignment.html" class="nav-item">
+          <img src="assets/new-submission-icon.png" alt="">
+          <span>New Submission</span>
+        </a>
+
+        <a href="my-submissions.html" class="nav-item active">
+          <img src="assets/my-submissions-icon.png" alt="">
+          <span>My Submissions</span>
+        </a>
+
+        <a href="reports.html" class="nav-item">
+          <img src="assets/reports-icon.png" alt="">
+          <span>Reports</span>
+        </a>
+
+        <p class="nav-label">Classes</p>
+
+        <a href="join-class.html" class="nav-item">
+          <img src="assets/join-class-icon.png" alt="">
+          <span>Join Class</span>
+        </a>
+
+        <a href="my-classes.html" class="nav-item">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <p class="nav-label">Tools</p>
+
+        <a href="ai-humanizer.html" class="nav-item">
+          <img src="assets/ai-humanizer-icon.png" alt="">
+          <span>AI Humanizer</span>
+        </a>
+
+        <a href="citation-generator.html" class="nav-item">
+          <img src="assets/citation-icon.png" alt="">
+          <span>Citation Generator</span>
+        </a>
+
+        <a href="grammar-checker.html" class="nav-item">
+          <img src="assets/grammar-icon.png" alt="">
+          <span>Grammar Checker</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-item">
+          <img src="assets/profile-icon.png" alt="">
+          <span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-item">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="help-support.html" class="nav-item">
+          <img src="assets/help-icon.png" alt="">
+          <span>Help & Support</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock more features and higher submission limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div>
+          <a href="my-submissions.html" class="back-link">← Back to My Submissions</a>
+          <div class="page-title-row">
+            <h1>Full Report</h1>
+            <span class="status-dot">-</span>
+          </div>
+          <p class="meta-text">Report ID: <span>-</span> • Submitted on: <span>-</span></p>
+        </div>
+
+        <div class="top-actions">
+          <button class="secondary-btn">
+            <img src="assets/download-icon.png" alt="">
+            Download PDF
+          </button>
+
+          <button class="secondary-btn">
+            <img src="assets/print-icon.png" alt="">
+            Print Report
+          </button>
+
+          <a href="upload-assignment.html" class="primary-btn">
+            <img src="assets/upload-white-icon.png" alt="">
+            Re-upload Revised Version
+          </a>
+        </div>
+      </header>
+
+      <!-- CONTENT GRID -->
+      <section class="content-grid">
+
+        <!-- LEFT / CENTER CONTENT -->
+        <div class="main-panel">
+
+          <!-- SCORE CARDS -->
+          <section class="score-strip">
+            <div class="score-card">
+              <img src="assets/integrity-score-icon.png" alt="">
+              <div>
+                <h3>Overall Integrity Score</h3>
+                <strong>-</strong>
+                <p>/ 100</p>
+              </div>
+            </div>
+
+            <div class="score-card">
+              <img src="assets/ai-detection-icon.png" alt="">
+              <div>
+                <h3>AI Detection</h3>
+                <strong>- %</strong>
+                <p>AI probability</p>
+              </div>
+            </div>
+
+            <div class="score-card">
+              <img src="assets/similarity-icon.png" alt="">
+              <div>
+                <h3>Similarity</h3>
+                <strong>- %</strong>
+                <p>Overall similarity</p>
+              </div>
+            </div>
+
+            <div class="score-card">
+              <img src="assets/citation-quality-icon.png" alt="">
+              <div>
+                <h3>Citations</h3>
+                <strong>- %</strong>
+                <p>Citation quality</p>
+              </div>
+            </div>
+
+            <div class="score-card">
+              <img src="assets/writing-quality-icon.png" alt="">
+              <div>
+                <h3>Writing Quality</h3>
+                <strong>- %</strong>
+                <p>Writing quality</p>
+              </div>
+            </div>
+
+            <div class="score-card">
+              <img src="assets/document-pages-icon.png" alt="">
+              <div>
+                <h3>&nbsp;</h3>
+                <strong>- / -</strong>
+                <p>Words / Pages</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- REPORT VIEWER -->
+          <section class="report-viewer-card">
+            <div class="tabs">
+              <button class="tab active">Document Viewer</button>
+              <button class="tab">AI Detection</button>
+              <button class="tab">Similarity Matches</button>
+              <button class="tab">Citation Issues</button>
+              <button class="tab">Writing Quality</button>
+              <button class="tab">Feedback</button>
+              <button class="tab">Revision Tips</button>
+            </div>
+
+            <div class="viewer-toolbar">
+              <div class="toolbar-left">
+                <button>-</button>
+                <button>100% ▾</button>
+                <button>+</button>
+                <button>
+                  <img src="assets/hand-tool-icon.png" alt="">
+                </button>
+                <button>
+                  <img src="assets/cursor-icon.png" alt="">
+                </button>
+                <button>↑</button>
+                <button>↓</button>
+              </div>
+
+              <div class="toolbar-legend">
+                <span><i class="legend ai"></i> AI Flagged</span>
+                <span><i class="legend similarity"></i> Similarity</span>
+                <span><i class="legend citation"></i> Citation Issue</span>
+              </div>
+
+              <button class="fullscreen-btn">
+                <img src="assets/fullscreen-icon.png" alt="">
+              </button>
+            </div>
+
+            <div class="document-empty">
+              <div class="document-lines">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+
+              <div class="empty-state">
+                <img src="assets/empty-document-icon.png" alt="">
+                <h3>No document to display</h3>
+                <p>The analyzed document will appear here.</p>
+                <p>Submit an assignment to view the full report.</p>
+              </div>
+            </div>
+
+            <div class="viewer-footer">
+              <p>Page <span>-</span> of <span>-</span></p>
+              <div class="pagination">
+                <button>‹</button>
+                <button>-</button>
+                <span>of</span>
+                <button>-</button>
+                <button>›</button>
+              </div>
+              <p><span>-</span> words</p>
+            </div>
+          </section>
+
+          <!-- BOTTOM CARDS -->
+          <section class="bottom-grid">
+            <div class="info-card">
+              <div class="card-title">
+                <h3>Revision Recommendations</h3>
+                <span>ⓘ</span>
+              </div>
+
+              <div class="recommendation-list">
+                <div class="recommendation-row">
+                  <span class="circle"></span>
+                  <div></div>
+                  <button>View</button>
+                </div>
+
+                <div class="recommendation-row">
+                  <span class="circle"></span>
+                  <div></div>
+                  <button>View</button>
+                </div>
+
+                <div class="recommendation-row">
+                  <span class="circle"></span>
+                  <div></div>
+                  <button>View</button>
+                </div>
+
+                <div class="recommendation-row">
+                  <span class="circle"></span>
+                  <div></div>
+                  <button>View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="card-title">
+                <h3>Report Summary</h3>
+                <span>ⓘ</span>
+              </div>
+
+              <div class="summary-grid">
+                <div>
+                  <p>File Name <span>-</span></p>
+                  <p>File Type <span>-</span></p>
+                  <p>File Size <span>-</span></p>
+                  <p>Course / Class <span>-</span></p>
+                  <p>Lecturer <span>-</span></p>
+                  <p>Institution <span>-</span></p>
+                </div>
+
+                <div>
+                  <p>Submitted On <span>-</span></p>
+                  <p>Report ID <span>-</span></p>
+                  <p>Status <span class="small-badge">--</span></p>
+                  <p>Delivered To <span>-</span></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="report-sidebar">
+
+          <div class="side-card">
+            <div class="side-title">
+              <h3>AI Detection Highlights</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="ai-chart-row">
+              <div class="donut">
+                <strong>-%</strong>
+                <span>AI Probability</span>
+              </div>
+
+              <div class="chart-list">
+                <p><i class="dot human"></i> Human Written <span>-%</span></p>
+                <p><i class="dot generated"></i> AI Generated <span>-%</span></p>
+                <p><i class="dot uncertain"></i> Uncertain <span>-%</span></p>
+              </div>
+            </div>
+
+            <a href="ai-detection-report.html" class="side-btn">View AI Analysis Details →</a>
+          </div>
+
+          <div class="side-card">
+            <div class="side-title">
+              <h3>Similarity Source Matches</h3>
+              <a href="similarity-report.html">View All</a>
+            </div>
+
+            <div class="source-list">
+              <div><span></span><p></p><strong>-% ›</strong></div>
+              <div><span></span><p></p><strong>-% ›</strong></div>
+              <div><span></span><p></p><strong>-% ›</strong></div>
+              <div><span></span><p></p><strong>-% ›</strong></div>
+            </div>
+
+            <a href="similarity-report.html" class="side-btn">View Full Similarity Report →</a>
+          </div>
+
+          <div class="side-card">
+            <div class="side-title">
+              <h3>Citation Issues</h3>
+              <a href="citation-report.html">View All</a>
+            </div>
+
+            <div class="citation-boxes">
+              <div>
+                <p>Missing Citations</p>
+                <strong>-</strong>
+                <span>Issues</span>
+              </div>
+
+              <div>
+                <p>Incomplete Citations</p>
+                <strong>-</strong>
+                <span>Issues</span>
+              </div>
+
+              <div>
+                <p>Formatting Issues</p>
+                <strong>-</strong>
+                <span>Issues</span>
+              </div>
+            </div>
+
+            <a href="citation-report.html" class="side-btn">View Citation Report →</a>
+          </div>
+
+          <div class="side-card feedback-card">
+            <div class="side-title">
+              <h3>Lecturer Feedback</h3>
+              <span class="review-badge">Not Reviewed</span>
+            </div>
+
+            <div class="feedback-empty">
+              <img src="assets/empty-feedback-icon.png" alt="">
+              <h4>No feedback yet</h4>
+              <p>Lecturer comments and feedback will appear here.</p>
+            </div>
+
+            <div class="feedback-meta">
+              <p>-- <span>Lecturer</span></p>
+              <p>-- <span>Reviewed on</span></p>
+            </div>
+          </div>
+
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

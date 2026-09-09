@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/settings.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/configuration-overview.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/institution-detail.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/landing-page.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/overview.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    },
+    {
+      "source": "/user-detail.html",
+      "destination": "/under-construction.html",
+      "permanent": false
+    }
+  ]
+}

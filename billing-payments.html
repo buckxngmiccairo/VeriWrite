@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Billing & Payments | VeriWrite</title>
+
+  <link rel="stylesheet" href="billing-payments.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students List</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link active">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div>
+          <h1>Billing & Payments</h1>
+          <p>Manage your subscription, payments, usage, and billing preferences.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">L</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- SUPPORT ACTION -->
+      <section class="support-row">
+        <a href="support-center.html" class="support-btn">
+          <img src="assets/help-blue-icon.png" alt="">
+          Help & Billing Support
+        </a>
+      </section>
+
+      <!-- BILLING SUMMARY -->
+      <section class="billing-summary-grid">
+
+        <article class="summary-card">
+          <div class="summary-icon blue">
+            <img src="assets/current-plan-icon.png" alt="">
+          </div>
+
+          <div>
+            <div class="summary-title">
+              <p>Current Plan</p>
+              <span class="status-pill active">Active</span>
+            </div>
+
+            <h2>Starter Plan</h2>
+            <small>Renews on --</small>
+
+            <a href="#plans">View Plan Details <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-icon green">
+            <img src="assets/balance-icon.png" alt="">
+          </div>
+
+          <div>
+            <p>Current Balance</p>
+            <h2>₦0.00</h2>
+            <small>No outstanding balance</small>
+
+            <a href="#payment-methods">Add Funds <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-icon purple">
+            <img src="assets/billing-date-icon.png" alt="">
+          </div>
+
+          <div>
+            <p>Next Billing Date</p>
+            <h2>--</h2>
+            <small>No active subscription</small>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-icon orange">
+            <img src="assets/invoice-icon.png" alt="">
+          </div>
+
+          <div>
+            <p>Invoices</p>
+            <h2>0</h2>
+            <small>All time</small>
+
+            <a href="#invoices">View Invoices <span>→</span></a>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- BILLING TABS -->
+      <section class="tabs-panel">
+        <div class="billing-tabs">
+          <button type="button" class="active">Overview</button>
+          <button type="button">Plans & Add-ons</button>
+          <button type="button">Invoices</button>
+          <button type="button">Payment History</button>
+          <button type="button">Referral & Discounts</button>
+          <button type="button">Institution Payments</button>
+          <button type="button">Usage</button>
+          <button type="button">Payment Methods</button>
+        </div>
+      </section>
+
+      <!-- DASHBOARD GRID -->
+      <section class="dashboard-grid">
+
+        <!-- SPENDING OVERVIEW -->
+        <article class="panel spending-panel">
+          <div class="panel-header">
+            <h2>Spending Overview <span>ⓘ</span></h2>
+
+            <select>
+              <option>This Month</option>
+              <option>This Year</option>
+              <option>All Time</option>
+            </select>
+          </div>
+
+          <div class="spending-chart">
+            <div class="spending-empty">
+              <img src="assets/spending-overview-icon.png" alt="">
+              <h3>No spending data yet</h3>
+              <p>Your spending overview will appear here once you have an active subscription.</p>
+            </div>
+
+            <div class="chart-axis">
+              <div class="y-axis">
+                <span>₦1</span>
+                <span>₦0.75</span>
+                <span>₦0.50</span>
+                <span>₦0.25</span>
+                <span>₦0</span>
+              </div>
+
+              <div class="chart-body">
+                <div class="x-axis">
+                  <span>May 1</span>
+                  <span>May 6</span>
+                  <span>May 11</span>
+                  <span>May 16</span>
+                  <span>May 21</span>
+                  <span>May 26</span>
+                  <span>May 31</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-legend">
+            <span><i class="dot blue"></i> Total Spent (₦)</span>
+            <span><i class="dot gray"></i> Total Usage</span>
+          </div>
+        </article>
+
+        <!-- PLAN USAGE -->
+        <article class="panel usage-panel" id="usage">
+          <div class="panel-header">
+            <h2>Plan & Usage Summary <span>ⓘ</span></h2>
+          </div>
+
+          <div class="usage-list">
+            <div>
+              <img src="assets/submissions-scanned-icon.png" alt="">
+              <span>Submissions Scanned</span>
+              <strong>0 / 0</strong>
+            </div>
+
+            <div>
+              <img src="assets/ai-detection-icon.png" alt="">
+              <span>AI Detections</span>
+              <strong>0 / 0</strong>
+            </div>
+
+            <div>
+              <img src="assets/search-icon.png" alt="">
+              <span>Similarity Checks</span>
+              <strong>0 / 0</strong>
+            </div>
+
+            <div>
+              <img src="assets/download-blue-icon.png" alt="">
+              <span>Report Downloads</span>
+              <strong>0 / 0</strong>
+            </div>
+          </div>
+
+          <div class="usage-progress">
+            <span>0%</span>
+            <div><i></i></div>
+            <small>No usage yet</small>
+          </div>
+
+          <a href="#usage" class="outline-link">View Detailed Usage <span>→</span></a>
+        </article>
+
+        <!-- RECENT INVOICES -->
+        <article class="panel table-panel" id="invoices">
+          <h2>Recent Invoices</h2>
+
+          <div class="mini-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Date</th>
+                  <th>Plan / Item</th>
+                  <th>Amount (₦)</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+            </table>
+
+            <div class="mini-empty">
+              <img src="assets/empty-invoices-icon.png" alt="">
+              <h3>No invoices yet</h3>
+              <p>Your invoices will appear here.</p>
+
+              <a href="#invoices">View All Invoices</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PAYMENT HISTORY -->
+        <article class="panel table-panel">
+          <h2>Payment History</h2>
+
+          <div class="mini-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount (₦)</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+            </table>
+
+            <div class="mini-empty">
+              <img src="assets/payment-history-icon.png" alt="">
+              <h3>No payments yet</h3>
+              <p>Your payment history will appear here.</p>
+
+              <a href="#payments">View All Payments</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- REFERRAL -->
+        <article class="panel referral-panel">
+          <div class="referral-top">
+            <img src="assets/referral-icon.png" alt="">
+
+            <div>
+              <h2>Referral & Discounts</h2>
+              <p>Invite colleagues or institutions and earn discounts on your subscription.</p>
+            </div>
+
+            <a href="#">View Referral Dashboard <span>→</span></a>
+          </div>
+
+          <div class="referral-code">
+            <label for="referralCode">Have a Referral Code?</label>
+            <p>Apply a referral code to get discount.</p>
+
+            <div>
+              <input type="text" id="referralCode" name="referral_code" placeholder="Enter referral code">
+              <button type="button">Apply</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PAYMENT METHODS -->
+        <article class="panel payment-method-panel" id="payment-methods">
+          <img src="assets/payment-method-icon.png" alt="">
+
+          <div>
+            <h2>Payment Methods</h2>
+            <p>Manage your saved payment methods.</p>
+          </div>
+
+          <a href="#">Manage Payment Methods <span>→</span></a>
+        </article>
+
+      </section>
+
+      <!-- INSTITUTION PAYMENTS -->
+      <section class="institution-section">
+        <h2>Institution Structured Payments <span>ⓘ</span></h2>
+
+        <div class="institution-grid">
+          <article>
+            <div class="institution-icon blue">
+              <img src="assets/institution-account-icon.png" alt="">
+            </div>
+
+            <div>
+              <h3>Institution Accounts</h3>
+              <p>Institutions can create accounts and manage payments for lecturers and students.</p>
+
+              <a href="institution-demo.html">Learn More <span>→</span></a>
+            </div>
+          </article>
+
+          <article>
+            <div class="institution-icon green">
+              <img src="assets/flexible-payment-icon.png" alt="">
+            </div>
+
+            <div>
+              <h3>Flexible Payment Options</h3>
+              <p>Support bulk payments, split billing, and custom plans for institutions.</p>
+
+              <a href="#">Explore Options <span>→</span></a>
+            </div>
+          </article>
+
+          <article>
+            <div class="institution-icon purple">
+              <img src="assets/payment-control-icon.png" alt="">
+            </div>
+
+            <div>
+              <h3>Payment Control</h3>
+              <p>Institutions maintain control over billing, usage limits, and member access.</p>
+
+              <a href="#">For Institutions <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="billing-help-card">
+            <h3>Need Help?</h3>
+            <p>Our billing team is here to help you with any questions or payment issues.</p>
+
+            <a href="support-center.html">Contact Billing Support <span>→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

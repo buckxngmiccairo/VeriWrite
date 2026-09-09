@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Create Class | VeriWrite</title>
+
+  <link rel="stylesheet" href="create-class.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="lecturer-dashboard.html">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">Main</p>
+
+        <a href="lecturer-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="">
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-heading">Classes</p>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="">
+          <span>My Classes</span>
+        </a>
+
+        <a href="create-class.html" class="nav-link active">
+          <img src="assets/create-class-icon.png" alt="">
+          <span>Create Class</span>
+        </a>
+
+        <a href="invite-students.html" class="nav-link">
+          <img src="assets/invite-students-icon.png" alt="">
+          <span>Invite Students</span>
+        </a>
+
+        <p class="nav-heading">Submissions</p>
+
+        <a href="student-submissions.html" class="nav-link">
+          <img src="assets/student-submissions-icon.png" alt="">
+          <span>Student Submissions</span>
+        </a>
+
+        <a href="reports-to-review.html" class="nav-link">
+          <img src="assets/reports-review-icon.png" alt="">
+          <span>Reports to Review</span>
+        </a>
+
+        <a href="needs-feedback.html" class="nav-link">
+          <img src="assets/needs-feedback-icon.png" alt="">
+          <span>Needs Feedback</span>
+        </a>
+
+        <p class="nav-heading">Analytics</p>
+
+        <a href="lecturer-analytics-overview.html" class="nav-link">
+          <img src="assets/analytics-overview-icon.png" alt="">
+          <span>Overview</span>
+        </a>
+
+        <a href="integrity-trends.html" class="nav-link">
+          <img src="assets/integrity-trends-icon.png" alt="">
+          <span>Integrity Trends</span>
+        </a>
+
+        <a href="class-performance.html" class="nav-link">
+          <img src="assets/class-performance-icon.png" alt="">
+          <span>Class Performance</span>
+        </a>
+
+        <p class="nav-heading">Students</p>
+
+        <a href="student-management.html" class="nav-link">
+          <img src="assets/student-management-icon.png" alt="">
+          <span>Student Management</span>
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="">
+          <span>Students</span>
+        </a>
+
+        <p class="nav-heading">Communication</p>
+
+        <a href="notifications.html" class="nav-link">
+          <img src="assets/notifications-icon.png" alt="">
+          <span>Notifications</span>
+        </a>
+
+        <a href="messages.html" class="nav-link">
+          <img src="assets/messages-icon.png" alt="">
+          <span>Messages</span>
+        </a>
+
+        <p class="nav-heading">Account</p>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="">
+          <span>Settings</span>
+        </a>
+
+        <a href="billing-payments.html" class="nav-link">
+          <img src="assets/billing-icon.png" alt="">
+          <span>Billing & Payments</span>
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <img src="assets/premium-icon.png" alt="">
+        <div>
+          <h4>Upgrade to Premium</h4>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <span>›</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP HEADER -->
+      <header class="top-header">
+        <div>
+          <a href="my-classes.html" class="back-link">← Back to My Classes</a>
+          <h1>Create Class</h1>
+          <p>Set up a new class and invite students to join.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <img src="assets/bell-icon.png" alt="">
+            <span>0</span>
+          </button>
+
+          <div class="profile-chip">
+            <div class="profile-avatar">-</div>
+            <span>Lecturer</span>
+            <img src="assets/chevron-down-icon.png" alt="">
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <section class="content-layout">
+
+        <!-- FORM PANEL -->
+        <form class="form-card" action="#" method="post">
+
+          <!-- CLASS INFORMATION -->
+          <section class="form-section">
+            <h2>Class Information</h2>
+
+            <div class="form-grid two-cols">
+              <div class="form-group">
+                <label for="className">Class Name <span>*</span></label>
+                <input
+                  type="text"
+                  id="className"
+                  name="class_name"
+                  placeholder="Enter class name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="courseSubject">Course / Subject <span>*</span></label>
+                <select id="courseSubject" name="course_subject" required>
+                  <option value="">Select course or subject</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="classCode">
+                  Class Code (Auto-generated)
+                  <small>ⓘ</small>
+                </label>
+                <input
+                  type="text"
+                  id="classCode"
+                  name="class_code"
+                  placeholder="- - - - - -"
+                  readonly
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="classDescription">Class Description (Optional)</label>
+                <textarea
+                  id="classDescription"
+                  name="class_description"
+                  maxlength="500"
+                  placeholder="Enter class description"
+                ></textarea>
+                <p class="char-count">0/500</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CLASS SETTINGS -->
+          <section class="form-section">
+            <h2>Class Settings</h2>
+
+            <div class="form-grid three-cols">
+              <div class="form-group">
+                <label for="academicTerm">Academic Term</label>
+                <select id="academicTerm" name="academic_term">
+                  <option value="">Select term</option>
+                  <option value="first_semester">First Semester</option>
+                  <option value="second_semester">Second Semester</option>
+                  <option value="summer">Summer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="yearLevel">Year / Level</label>
+                <select id="yearLevel" name="year_level">
+                  <option value="">Select year or level</option>
+                  <option value="100_level">100 Level</option>
+                  <option value="200_level">200 Level</option>
+                  <option value="300_level">300 Level</option>
+                  <option value="400_level">400 Level</option>
+                  <option value="500_level">500 Level</option>
+                  <option value="postgraduate">Postgraduate</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="department">Department (Optional)</label>
+                <select id="department" name="department">
+                  <option value="">Select department</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="startDate">Submission Start Date</label>
+                <input type="text" id="startDate" name="submission_start_date" placeholder="Select start date">
+              </div>
+
+              <div class="form-group">
+                <label for="dueDate">Submission Due Date</label>
+                <input type="text" id="dueDate" name="submission_due_date" placeholder="Select due date">
+              </div>
+
+              <div class="form-group">
+                <label for="lateSubmission">Late Submission</label>
+                <select id="lateSubmission" name="late_submission">
+                  <option value="">Select preference</option>
+                  <option value="allow">Allow late submission</option>
+                  <option value="allow_with_flag">Allow but flag as late</option>
+                  <option value="block">Block after due date</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- INTEGRITY SETTINGS -->
+          <section class="form-section">
+            <h2>Integrity & Submission Settings</h2>
+
+            <div class="form-grid three-cols">
+              <div class="form-group">
+                <label for="maxFileSize">Max File Upload Size</label>
+                <select id="maxFileSize" name="max_file_upload_size">
+                  <option value="">Select file size limit</option>
+                  <option value="10mb">10MB</option>
+                  <option value="25mb">25MB</option>
+                  <option value="50mb">50MB</option>
+                  <option value="100mb">100MB</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="allowedFileTypes">Allowed File Types</label>
+                <select id="allowedFileTypes" name="allowed_file_types">
+                  <option value="">Select file types</option>
+                  <option value="pdf_docx">PDF, DOCX</option>
+                  <option value="pdf_docx_txt">PDF, DOCX, TXT</option>
+                  <option value="all_supported">All supported files</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="aiAnalysis">AI Analysis</label>
+                <select id="aiAnalysis" name="ai_analysis">
+                  <option value="">Select preference</option>
+                  <option value="enabled">Enabled</option>
+                  <option value="disabled">Disabled</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="allowRevisions">Allow Revisions</label>
+                <select id="allowRevisions" name="allow_revisions">
+                  <option value="">Select preference</option>
+                  <option value="yes">Yes, allow revisions</option>
+                  <option value="no">No revisions</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- FORM ACTIONS -->
+          <div class="form-actions">
+            <a href="my-classes.html" class="cancel-btn">Cancel</a>
+
+            <button type="submit" class="submit-btn">
+              <img src="assets/create-white-icon.png" alt="">
+              Create Class
+            </button>
+          </div>
+        </form>
+
+        <!-- SIDE PANEL -->
+        <aside class="side-column">
+
+          <article class="side-card">
+            <div class="side-title">
+              <h3>Class Code Preview</h3>
+              <span>ⓘ</span>
+            </div>
+
+            <div class="code-preview">
+              <strong>- - - - - -</strong>
+              <p>Students will use this code to join your class.</p>
+            </div>
+          </article>
+
+          <article class="side-card">
+            <h3>What happens next?</h3>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-icon">
+                  <img src="assets/class-created-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>1. Class Created</h4>
+                  <p>Your class will be created with the details you provide.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-icon">
+                  <img src="assets/invite-code-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>2. Invite Students</h4>
+                  <p>Share the class code or send invitations to students.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-icon">
+                  <img src="assets/students-join-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>3. Students Join</h4>
+                  <p>Students join using the class code and gain access.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-icon">
+                  <img src="assets/start-assignment-icon.png" alt="">
+                </div>
+                <div>
+                  <h4>4. Start Assignments</h4>
+                  <p>Create assignments and start receiving submissions.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="side-card tips-card">
+            <h3>Tips</h3>
+
+            <ul>
+              <li>Use a clear and unique class name.</li>
+              <li>Set accurate dates to manage submissions effectively.</li>
+              <li>You can edit class settings anytime.</li>
+            </ul>
+          </article>
+
+        </aside>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

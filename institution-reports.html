@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Institution Reports | VeriWrite</title>
+
+  <link rel="stylesheet" href="institution-reports.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" />
+        <div>
+          <h1>VeriWrite</h1>
+          <p>AI-Powered Academic Integrity</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main</span>
+
+        <a href="institution-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          Dashboard
+        </a>
+
+        <span class="nav-label">Institution</span>
+
+        <a href="members.html" class="nav-link">
+          <img src="assets/members-icon.png" alt="" />
+          Members
+        </a>
+
+        <a href="departments.html" class="nav-link">
+          <img src="assets/departments-icon.png" alt="" />
+          Departments
+        </a>
+
+        <a href="classes.html" class="nav-link">
+          <img src="assets/classes-icon.png" alt="" />
+          Classes
+        </a>
+
+        <a href="students.html" class="nav-link">
+          <img src="assets/students-icon.png" alt="" />
+          Students
+        </a>
+
+        <a href="lecturers.html" class="nav-link">
+          <img src="assets/lecturers-icon.png" alt="" />
+          Lecturers
+        </a>
+
+        <a href="institution-reports.html" class="nav-link active">
+          <img src="assets/reports-icon.png" alt="" />
+          Reports
+        </a>
+
+        <span class="nav-label">Billing</span>
+
+        <a href="subscription-management.html" class="nav-link">
+          <img src="assets/subscription-icon.png" alt="" />
+          Subscription
+        </a>
+
+        <a href="invoices.html" class="nav-link">
+          <img src="assets/invoices-icon.png" alt="" />
+          Invoices
+        </a>
+
+        <a href="payment-methods.html" class="nav-link">
+          <img src="assets/payment-icon.png" alt="" />
+          Payment Methods
+        </a>
+
+        <span class="nav-label">Management</span>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          Settings
+        </a>
+
+        <a href="activity-logs.html" class="nav-link">
+          <img src="assets/activity-log-icon.png" alt="" />
+          Activity Logs
+        </a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♕</div>
+        <div>
+          <h3>Upgrade to Premium</h3>
+          <p>Unlock advanced features and increase limits.</p>
+        </div>
+        <a href="subscription-management.html">›</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <h2>Institution Reports <span>ⓘ</span></h2>
+          <p>View and analyze reports across your institution.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </button>
+
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <img src="assets/institution-admin-icon.png" alt="" />
+            </div>
+            <p>Institution Admin</p>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- EXPORT -->
+      <section class="dashboard-tools">
+        <button class="export-btn" type="button">
+          <img src="assets/download-icon.png" alt="" />
+          Export Report
+        </button>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="filter-panel" aria-label="Report filters">
+        <div class="filter-group">
+          <label for="department">Department</label>
+          <select id="department" name="department" data-backend-filter="department">
+            <option value="">All Departments</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="class">Class +</label>
+          <select id="class" name="class" data-backend-filter="class">
+            <option value="">All Classes</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="dateRange">Date Range</label>
+          <button class="date-filter" id="dateRange" type="button" data-backend-filter="date_range">
+            <img src="assets/calendar-icon.png" alt="" />
+            Select date range
+            <span>»</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label for="status">Status</label>
+          <select id="status" name="status" data-backend-filter="status">
+            <option value="">All Statuses</option>
+            <option value="completed">Completed</option>
+            <option value="pending_review">Pending Review</option>
+            <option value="needs_revision">Needs Revision</option>
+            <option value="draft">Draft</option>
+          </select>
+        </div>
+
+        <button class="reset-btn" type="button" data-reset-filters="true">
+          <img src="assets/reset-icon.png" alt="" />
+          Reset Filters
+        </button>
+      </section>
+
+      <!-- SUMMARY CARDS -->
+      <section class="reports-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon blue">
+            <img src="assets/total-reports-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Total Reports</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green">
+            <img src="assets/average-similarity-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Avg. Similarity</p>
+            <h3>0%</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange">
+            <img src="assets/high-risk-icon.png" alt="" />
+          </div>
+          <div>
+            <p>High Risk Reports</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon purple">
+            <img src="assets/flags-raised-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Flags Raised</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon red">
+            <img src="assets/revisions-requested-icon.png" alt="" />
+          </div>
+          <div>
+            <p>Revisions Requested</p>
+            <h3>0</h3>
+            <span>All Time</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- ANALYTICS ROW -->
+      <section class="reports-grid">
+        <article class="panel reports-over-time">
+          <div class="panel-header">
+            <h3>Reports Over Time <span>ⓘ</span></h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="line-chart mock-chart">
+            <div class="chart-lines reports-line"></div>
+          </div>
+
+          <div class="chart-legend">
+            <span class="blue-dot">Reports</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Similarity Index Distribution <span>ⓘ</span></h3>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart similarity"></div>
+
+            <ul class="legend-list">
+              <li><span class="dot red-bg"></span>High Risk (70% - 100%) <b>0 (0%)</b></li>
+              <li><span class="dot orange-bg"></span>Medium Risk (40% - 69%) <b>0 (0%)</b></li>
+              <li><span class="dot green-bg"></span>Low Risk (10% - 39%) <b>0 (0%)</b></li>
+              <li><span class="dot blue-bg"></span>Very Low Risk (0% - 9%) <b>0 (0%)</b></li>
+            </ul>
+          </div>
+
+          <div class="panel-total">
+            <span>Total</span>
+            <b>0</b>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Reports by Status</h3>
+          </div>
+
+          <div class="donut-row">
+            <div class="donut-chart status"></div>
+
+            <ul class="legend-list">
+              <li><span class="dot green-bg"></span>Completed <b>0 (0%)</b></li>
+              <li><span class="dot orange-bg"></span>Pending Review <b>0 (0%)</b></li>
+              <li><span class="dot red-bg"></span>Needs Revision <b>0 (0%)</b></li>
+              <li><span class="dot blue-bg"></span>Draft <b>0 (0%)</b></li>
+            </ul>
+          </div>
+
+          <div class="panel-total">
+            <span>Total</span>
+            <b>0</b>
+          </div>
+        </article>
+
+        <!-- RECENT REPORTS -->
+        <article class="panel table-panel recent-reports">
+          <div class="panel-header">
+            <h3>Recent Reports <span>ⓘ</span></h3>
+            <a href="institution-reports.html">View All Reports</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Report Title</th>
+                  <th>Submitted By</th>
+                  <th>Class</th>
+                  <th>Similarity</th>
+                  <th>Risk Level</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody data-backend-table="recent_reports"></tbody>
+            </table>
+          </div>
+
+          <div class="empty-state">
+            <img src="assets/empty-reports.png" alt="" />
+            <h4>No reports found</h4>
+            <p>Reports will appear here once available.</p>
+          </div>
+        </article>
+
+        <!-- TOP SIMILARITY REPORTS -->
+        <article class="panel table-panel top-similarity">
+          <div class="panel-header">
+            <h3>Top Similarity Reports</h3>
+            <a href="institution-reports.html">View All</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Report Title</th>
+                  <th>Submitted By</th>
+                  <th>Class</th>
+                  <th>Similarity</th>
+                  <th>Risk Level</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody data-backend-table="top_similarity_reports"></tbody>
+            </table>
+          </div>
+
+          <div class="empty-state">
+            <img src="assets/empty-search.png" alt="" />
+            <h4>No data to display</h4>
+            <p>Top similarity reports will appear here.</p>
+          </div>
+        </article>
+
+        <!-- REPORTS BY DEPARTMENT -->
+        <article class="panel department-report-panel">
+          <div class="panel-header">
+            <h3>Reports by Department</h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="empty-chart large-empty-chart">
+            <div class="empty-chart-content">
+              <img src="assets/empty-reports.png" alt="" />
+              <h4>No data available</h4>
+              <p>Department report data will appear here.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORTS BY CLASS -->
+        <article class="panel class-report-panel">
+          <div class="panel-header">
+            <h3>Reports by Class <span>ⓘ</span></h3>
+            <button type="button">This Month ⌄</button>
+          </div>
+
+          <div class="empty-chart large-empty-chart">
+            <div class="empty-chart-content">
+              <img src="assets/empty-search.png" alt="" />
+              <h4>No data available</h4>
+              <p>Class report data will appear here.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT INSIGHTS -->
+        <article class="panel insights-panel">
+          <div class="panel-header">
+            <h3>Report Insights <span>ⓘ</span></h3>
+          </div>
+
+          <ul class="insight-list">
+            <li>
+              <img src="assets/insight-trends-icon.png" alt="" />
+              <span>Track academic integrity trends across your institution.</span>
+            </li>
+
+            <li>
+              <img src="assets/insight-warning-icon.png" alt="" />
+              <span>Identify high-risk submissions and take action early.</span>
+            </li>
+
+            <li>
+              <img src="assets/insight-quality-icon.png" alt="" />
+              <span>Encourage original work and maintain quality standards.</span>
+            </li>
+
+            <li>
+              <img src="assets/insight-bulb-icon.png" alt="" />
+              <span>Use data-driven insights to improve academic outcomes.</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="dashboard-footer">
+        <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

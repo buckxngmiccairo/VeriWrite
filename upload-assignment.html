@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Upload Assignment | VeriWrite</title>
+
+  <link rel="stylesheet" href="upload-assignment.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="student-dashboard.html" class="brand-link">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo" />
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <a href="student-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-label">Submissions</p>
+
+        <a href="upload-assignment.html" class="nav-link active" aria-current="page">
+          <img src="assets/new-submission-icon.png" alt="" />
+          <span>New Submission</span>
+        </a>
+
+        <a href="my-submissions.html" class="nav-link">
+          <img src="assets/my-submissions-icon.png" alt="" />
+          <span>My Submissions</span>
+        </a>
+
+        <a href="integrity-report.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt="" />
+          <span>Reports</span>
+        </a>
+
+        <p class="nav-label">Classes</p>
+
+        <a href="join-class.html" class="nav-link">
+          <img src="assets/join-class-icon.png" alt="" />
+          <span>Join Class</span>
+        </a>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="" />
+          <span>My Classes</span>
+        </a>
+
+        <p class="nav-label">Tools</p>
+
+        <a href="ai-humanizer.html" class="nav-link">
+          <img src="assets/ai-humanizer-icon.png" alt="" />
+          <span>AI Humanizer</span>
+        </a>
+
+        <a href="citation-generator.html" class="nav-link">
+          <img src="assets/citation-icon.png" alt="" />
+          <span>Citation Generator</span>
+        </a>
+
+        <a href="grammar-checker.html" class="nav-link">
+          <img src="assets/grammar-icon.png" alt="" />
+          <span>Grammar Checker</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-link">
+          <img src="assets/profile-icon.png" alt="" />
+          <span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          <span>Settings</span>
+        </a>
+
+        <a href="help-center.html" class="nav-link">
+          <img src="assets/help-icon-navy-blue.png" alt="" />
+          <span>Help &amp; Support</span>
+        </a>
+      </nav>
+
+      <a href="pricing.html" class="upgrade-card">
+        <div class="upgrade-content">
+          <img src="assets/crown-icon.png" alt="" />
+          <div>
+            <h4>Upgrade to Premium</h4>
+            <p>Unlock more features and submission limits.</p>
+          </div>
+        </div>
+        <span class="upgrade-arrow">›</span>
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="page-heading">
+          <div class="page-icon">
+            <img src="assets/upload-icon.png" alt="" />
+          </div>
+
+          <div>
+            <h1>Upload Assignment</h1>
+            <p>Submit your assignment for AI-powered integrity analysis.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="notifications.html" class="notification-btn" aria-label="View notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </a>
+
+          <div class="user-menu">
+            <div class="avatar">UP</div>
+            <div class="user-info">
+              <h4>User Profile</h4>
+              <p>Student</p>
+            </div>
+            <button type="button" class="menu-toggle" aria-label="Open user menu">
+              <img src="assets/drop-down-arrow-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- UPLOAD PAGE -->
+      <section class="upload-page">
+
+        <form
+          class="upload-form"
+          action="/api/student/submissions/create/"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="hidden" name="student_role" value="student" />
+          <input type="hidden" name="analysis_status" value="pending" />
+          <input type="hidden" name="submission_status" value="draft" />
+
+          <div class="upload-grid">
+
+            <!-- LEFT / MAIN COLUMN -->
+            <section class="main-upload-column">
+
+              <!-- STEP 1 -->
+              <article class="panel select-class-panel">
+                <div class="step-heading">
+                  <span>1</span>
+                  <div>
+                    <h2>Select Connected Class</h2>
+                    <p>Choose the class you want to submit this assignment to.</p>
+                  </div>
+                </div>
+
+                <label for="connected-class" class="class-select-card">
+                  <div class="class-icon">
+                    <img src="assets/class-book-icon.png" alt="" />
+                  </div>
+
+                  <div class="class-select-content">
+                    <strong>No connected class selected</strong>
+                    <p>Choose a class after joining one through your lecturer.</p>
+                  </div>
+
+                  <select
+                    id="connected-class"
+                    name="class_id"
+                    required
+                    aria-label="Select connected class"
+                  >
+                    <option value="">Select connected class</option>
+                  </select>
+
+                  <img src="assets/dropdown-arrow-icon.png" alt="" class="select-arrow" />
+                </label>
+
+                <input type="hidden" name="course_id" value="" />
+                <input type="hidden" name="lecturer_id" value="" />
+                <input type="hidden" name="institution_id" value="" />
+              </article>
+
+              <!-- STEP 2 -->
+              <article class="panel upload-file-panel">
+                <div class="step-heading">
+                  <span>2</span>
+                  <div>
+                    <h2>Upload Your Assignment</h2>
+                  </div>
+                </div>
+
+                <label for="assignment-file" class="dropzone">
+                  <input
+                    type="file"
+                    id="assignment-file"
+                    name="assignment_file"
+                    accept=".pdf,.doc,.docx,.txt"
+                    required
+                  />
+
+                  <img src="assets/upload-icon.png" alt="" class="dropzone-icon" />
+
+                  <h3>Drag &amp; drop your file here</h3>
+                  <p>or click to browse</p>
+
+                  <small>Supported files: PDF, DOCX, TXT &nbsp; • &nbsp; Max file size: 25 MB</small>
+
+                  <div class="file-type-row">
+                    <div class="file-type-card">
+                      <img src="assets/pdf-icon.png" alt="" />
+                      <strong>PDF</strong>
+                      <span>(.pdf)</span>
+                    </div>
+
+                    <div class="file-type-card">
+                      <img src="assets/docx-icon.png" alt="" />
+                      <strong>DOCX</strong>
+                      <span>(.docx)</span>
+                    </div>
+
+                    <div class="file-type-card">
+                      <img src="assets/txt-icon.png" alt="" />
+                      <strong>TXT</strong>
+                      <span>(.txt)</span>
+                    </div>
+                  </div>
+                </label>
+
+                <div class="file-status">
+                  <img src="assets/info-icon.png" alt="" />
+                  <p>No file uploaded yet. Upload your first assignment to begin.</p>
+                </div>
+              </article>
+            </section>
+
+            <!-- CENTER DETAILS COLUMN -->
+            <section class="details-column">
+
+              <!-- STEP 3 -->
+              <article class="panel details-panel">
+                <div class="step-heading">
+                  <span>3</span>
+                  <div>
+                    <h2>Assignment Details</h2>
+                    <p>Provide details about your assignment submission.</p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="assignment-title">Assignment Title <span>*</span></label>
+                  <input
+                    type="text"
+                    id="assignment-title"
+                    name="assignment_title"
+                    placeholder="Enter assignment title"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="course-class">Course / Class</label>
+                  <input
+                    type="text"
+                    id="course-class"
+                    name="course_class_preview"
+                    placeholder="Selected class will appear here"
+                    readonly
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="lecturer">Lecturer</label>
+                  <div class="locked-field">
+                    <img src="assets/lock-icon-grey.png" alt="" />
+                    <input
+                      type="text"
+                      id="lecturer"
+                      name="lecturer_preview"
+                      placeholder="Lecturer details will appear here"
+                      readonly
+                    />
+                    <img src="assets/lock-icon-grey.png" alt="" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="institution">Institution</label>
+                  <div class="locked-field">
+                    <img src="assets/lock-icon-grey.png" alt="" />
+                    <input
+                      type="text"
+                      id="institution"
+                      name="institution_preview"
+                      placeholder="Institution will appear here"
+                      readonly
+                    />
+                    <img src="assets/institution-field-icon.png" alt="" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="assignment-description">Description <span>*</span></label>
+                  <textarea
+                    id="assignment-description"
+                    name="assignment_description"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Briefly describe your assignment..."
+                    required
+                  ></textarea>
+                  <p class="character-count">0 / 500 characters</p>
+                </div>
+
+                <div class="two-column-fields">
+                  <div class="form-group">
+                    <label for="submission-type">Submission Type <span>*</span></label>
+                    <select id="submission-type" name="submission_type" required>
+                      <option value="">Select submission type</option>
+                      <option value="draft_check">Draft / Pre-check</option>
+                      <option value="official_submission">Official Class Submission</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="deadline-preview">Deadline <em>(Preview)</em></label>
+                    <div class="locked-field">
+                      <img src="assets/calendar-small-icon.png" alt="" />
+                      <input
+                        type="text"
+                        id="deadline-preview"
+                        name="deadline_preview"
+                        placeholder="Deadline will appear here"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="submission-notes">Notes <em>(Optional)</em></label>
+                  <textarea
+                    id="submission-notes"
+                    name="submission_notes"
+                    rows="3"
+                    maxlength="300"
+                    placeholder="Add any additional notes for your lecturer..."
+                  ></textarea>
+                  <p class="character-count">0 / 300 characters</p>
+                </div>
+              </article>
+            </section>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="right-column">
+
+              <article class="side-card flow-card">
+                <h2>Submission Flow</h2>
+
+                <div class="flow-list">
+                  <div class="flow-item">
+                    <div class="flow-icon">
+                      <img src="assets/upl.png" alt="" />
+                    </div>
+                    <span>1</span>
+                    <div>
+                      <h4>Upload Assignment</h4>
+                      <p>Upload your file and enter details.</p>
+                    </div>
+                  </div>
+
+                  <div class="flow-item">
+                    <div class="flow-icon">
+                      <img src="assets/ai-analysis-icon-green.png" alt="" />
+                    </div>
+                    <span>2</span>
+                    <div>
+                      <h4>AI Analysis</h4>
+                      <p>We analyze your work using advanced AI.</p>
+                    </div>
+                  </div>
+
+                  <div class="flow-item">
+                    <div class="flow-icon">
+                      <img src="assets/report-icon-green.png" alt="" />
+                    </div>
+                    <span>3</span>
+                    <div>
+                      <h4>Report Generated</h4>
+                      <p>Receive detailed report instantly.</p>
+                    </div>
+                  </div>
+
+                  <div class="flow-item">
+                    <div class="flow-icon">
+                      <img src="assets/new-submission-icon-green.png" alt="" />
+                    </div>
+                    <span>4</span>
+                    <div>
+                      <h4>Lecturer Review</h4>
+                      <p>Your lecturer reviews the report.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="side-card notes-card">
+                <div class="side-title">
+                  <img src="assets/info-purple-icon.png" alt="" />
+                  <h2>Important Notes</h2>
+                </div>
+
+                <ul>
+                  <li>
+                    <img src="assets/check-purple-icon.png" alt="" />
+                    <span>Ensure your file is complete and finalized before submission.</span>
+                  </li>
+                  <li>
+                    <img src="assets/check-purple-icon.png" alt="" />
+                    <span>You can’t edit or replace the file after submission.</span>
+                  </li>
+                  <li>
+                    <img src="assets/check-purple-icon.png" alt="" />
+                    <span>Reports are sent directly to your lecturer.</span>
+                  </li>
+                  <li>
+                    <img src="assets/check-purple-icon.png" alt="" />
+                    <span>Keep your login details private and secure.</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="side-card help-card">
+                <div class="side-title">
+                  <img src="assets/support-icon.png" alt="" />
+                  <div>
+                    <h2>Need Help?</h2>
+                    <p>Our support team is here to help you.</p>
+                  </div>
+                </div>
+
+                <a href="help-center.html" class="help-btn">
+                  Help Center
+                  <img src="assets/help-center-icon.png" alt="" />
+                </a>
+              </article>
+            </aside>
+
+          </div>
+
+          <!-- STEP 4 / SUBMISSION SETTINGS -->
+          <article class="panel settings-panel">
+            <div class="step-heading">
+              <span>4</span>
+              <div>
+                <h2>Submission Settings</h2>
+                <p>Choose the analysis options for your submission.</p>
+              </div>
+            </div>
+
+            <div class="settings-options">
+              <label class="setting-option">
+                <div class="setting-icon green-soft">
+                  <img src="assets/check-icon-green.png" alt="" />
+                </div>
+
+                <div>
+                  <h4>Generate AI Report</h4>
+                  <p>Generate a comprehensive AI integrity report.</p>
+                </div>
+
+                <input type="checkbox" name="generate_ai_report" checked />
+                <span class="toggle"></span>
+              </label>
+
+              <label class="setting-option">
+                <div class="setting-icon purple-soft">
+                  <img src="assets/similarity-check-icon.png" alt="" />
+                </div>
+
+                <div>
+                  <h4>Similarity Check</h4>
+                  <p>Check your work against billions of sources.</p>
+                </div>
+
+                <input type="checkbox" name="similarity_check" checked />
+                <span class="toggle purple-toggle"></span>
+              </label>
+
+              <label class="setting-option">
+                <div class="setting-icon orange-soft">
+                  <img src="assets/citation-analysis-icon.png" alt="" />
+                </div>
+
+                <div>
+                  <h4>Citation Analysis</h4>
+                  <p>Analyze citations and references used.</p>
+                </div>
+
+                <input type="checkbox" name="citation_analysis" checked />
+                <span class="toggle orange-toggle"></span>
+              </label>
+            </div>
+
+            <div class="submit-row">
+              <div class="reminder-box">
+                <img src="assets/trusted-icon-thick.png" alt="" />
+                <div>
+                  <h4>Integrity Reminder</h4>
+                  <p>Ensure your work is original and properly cited. Academic integrity is essential to your learning journey.</p>
+                </div>
+              </div>
+
+              <div class="submit-action">
+                <button type="submit" class="submit-btn">
+                  <img src="assets/send-white-icon.png" alt="" />
+                  Submit for Integrity Analysis
+                </button>
+
+                <p>
+                  <img src="assets/lock-small-icon.png" alt="" />
+                  Your submission will be secure and confidential.
+                </p>
+              </div>
+            </div>
+          </article>
+        </form>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+          <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+          <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </footer>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

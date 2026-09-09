@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Join Class | VeriWrite</title>
+
+  <link rel="stylesheet" href="join-class.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <a href="student-dashboard.html" class="brand-link">
+          <img src="assets/veriwrite-logo.png" alt="VeriWrite Logo" class="brand-logo" />
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <a href="student-dashboard.html" class="nav-link">
+          <img src="assets/dashboard-icon.png" alt="" />
+          <span>Dashboard</span>
+        </a>
+
+        <p class="nav-label">Submissions</p>
+
+        <a href="upload-assignment.html" class="nav-link">
+          <img src="assets/new-submission-icon.png" alt="" />
+          <span>New Submission</span>
+        </a>
+
+        <a href="my-submissions.html" class="nav-link">
+          <img src="assets/my-submissions-icon.png" alt="" />
+          <span>My Submissions</span>
+        </a>
+
+        <a href="integrity-report.html" class="nav-link">
+          <img src="assets/reports-icon.png" alt="" />
+          <span>Reports</span>
+        </a>
+
+        <p class="nav-label">Classes</p>
+
+        <a href="join-class.html" class="nav-link active" aria-current="page">
+          <img src="assets/join-class-icon-navy-blue.png" alt="" />
+          <span>Join Class</span>
+        </a>
+
+        <a href="my-classes.html" class="nav-link">
+          <img src="assets/my-classes-icon.png" alt="" />
+          <span>My Classes</span>
+        </a>
+
+        <p class="nav-label">Tools</p>
+
+        <a href="ai-humanizer.html" class="nav-link">
+          <img src="assets/ai-humanizer-icon.png" alt="" />
+          <span>AI Humanizer</span>
+        </a>
+
+        <a href="citation-generator.html" class="nav-link">
+          <img src="assets/citation-icon.png" alt="" />
+          <span>Citation Generator</span>
+        </a>
+
+        <a href="grammar-checker.html" class="nav-link">
+          <img src="assets/grammar-icon.png" alt="" />
+          <span>Grammar Checker</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="profile.html" class="nav-link">
+          <img src="assets/profile-icon.png" alt="" />
+          <span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <img src="assets/settings-icon.png" alt="" />
+          <span>Settings</span>
+        </a>
+
+        <a href="help-center.html" class="nav-link">
+          <img src="assets/help-icon-navy-blue.png" alt="" />
+          <span>Help &amp; Support</span>
+        </a>
+      </nav>
+
+      <a href="pricing.html" class="upgrade-card">
+        <div class="upgrade-content">
+          <img src="assets/crown-icon.png" alt="" />
+          <div>
+            <h4>Upgrade to Premium</h4>
+            <p>Unlock more features and submission limits.</p>
+          </div>
+        </div>
+        <span class="upgrade-arrow">›</span>
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="page-title-block">
+          <h1>Join Class</h1>
+          <p>Join a class using a class code or invite link provided by your lecturer.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="notifications.html" class="notification-btn" aria-label="View notifications">
+            <img src="assets/notification-icon.png" alt="" />
+            <span>0</span>
+          </a>
+
+          <div class="user-menu">
+            <div class="avatar">UP</div>
+            <div class="user-info">
+              <h4>User Profile</h4>
+              <p>Student</p>
+            </div>
+            <button type="button" class="menu-toggle" aria-label="Open user menu">
+              <img src="assets/dropdown-arrow-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="join-page">
+
+        <!-- MAIN JOIN AREA -->
+        <section class="join-main-grid">
+
+          <!-- JOIN WITH CLASS CODE -->
+          <article class="join-card">
+            <div class="card-heading">
+              <div class="heading-icon blue-bg">
+                <img src="assets/join-class-icon-blue.png" alt="" />
+              </div>
+              <div>
+                <h2>Join with Class Code</h2>
+                <p>Enter the unique class code provided by your lecturer.</p>
+              </div>
+            </div>
+
+            <form class="join-form" action="/api/student/classes/join-code/" method="POST">
+              <input type="hidden" name="join_method" value="class_code" />
+              <input type="hidden" name="student_role" value="student" />
+              <input type="hidden" name="preview_required" value="true" />
+
+              <div class="form-group">
+                <label for="class-code">Class Code <span>*</span></label>
+
+                <div class="input-field">
+                  <img src="assets/hash-icon.png" alt="" />
+                  <input
+                    type="text"
+                    id="class-code"
+                    name="class_code"
+                    placeholder="Enter class code (e.g., ABC123)"
+                    required
+                    autocomplete="off"
+                  />
+                  <button type="button" class="field-help" aria-label="Class code help">
+                    <img src="assets/help-icon-grey.png" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="or-divider">
+                <span></span>
+                <strong>OR</strong>
+                <span></span>
+              </div>
+
+              <div class="form-group">
+                <label for="lecturer-email">Lecturer Email <em>(Optional)</em></label>
+
+                <div class="input-field">
+                  <img src="assets/email-field-icon.png" alt="" />
+                  <input
+                    type="email"
+                    id="lecturer-email"
+                    name="lecturer_email"
+                    placeholder="Enter lecturer email (optional backup)"
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="preview-box">
+                <img src="assets/preview-icon-blue.png" alt="" />
+                <div>
+                  <h4>Preview (After Code is Entered)</h4>
+                  <p>Course title, lecturer name, and institution will appear here.</p>
+                </div>
+              </div>
+
+              <button type="submit" class="primary-btn">
+                <img src="assets/join-class-icon-white.png" alt="" />
+                Join Class
+              </button>
+
+              <p class="security-note">
+                <img src="assets/lock-small-icon.png" alt="" />
+                Only valid classes created by verified lecturers can be joined.
+              </p>
+            </form>
+          </article>
+
+          <!-- JOIN WITH INVITE LINK -->
+          <article class="join-card">
+            <div class="card-heading">
+              <div class="heading-icon green-bg">
+                <img src="assets/invite-link-icon.png" alt="" />
+              </div>
+              <div>
+                <h2>Join with Invite Link</h2>
+                <p>Paste the invite link shared by your lecturer.</p>
+              </div>
+            </div>
+
+            <form class="join-form" action="/api/student/classes/join-link/" method="POST">
+              <input type="hidden" name="join_method" value="invite_link" />
+              <input type="hidden" name="student_role" value="student" />
+              <input type="hidden" name="link_verified" value="false" />
+
+              <div class="form-group">
+                <label for="invite-link">Invite Link</label>
+
+                <div class="input-field">
+                  <img src="assets/link-input-icon.png" alt="" />
+                  <input
+                    type="url"
+                    id="invite-link"
+                    name="invite_link"
+                    placeholder="Paste invite link here"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <p class="example-text">Example: https://veriwrite.com/join/abc123xyz</p>
+              </div>
+
+              <button type="submit" class="outline-btn">
+                <img src="assets/link-green-icon.png" alt="" />
+                Join via Link
+              </button>
+
+              <div class="secure-box">
+                <img src="assets/shield-icon-green.png" alt="" />
+                <div>
+                  <h4>Secure &amp; Verified</h4>
+                  <p>All invite links are encrypted and verified to ensure you join the right class.</p>
+                </div>
+              </div>
+            </form>
+          </article>
+
+          <!-- HOW IT WORKS -->
+          <aside class="how-card">
+            <div class="section-title-row">
+              <img src="assets/how-it-works-icon.png" alt="" />
+              <h2>How It Works</h2>
+            </div>
+
+            <div class="process-list">
+              <div class="process-item">
+                <span>1</span>
+                <div class="process-icon">
+                  <img src="assets/email-check-icon.png" alt="" />
+                </div>
+                <div>
+                  <h4>Get Class Code</h4>
+                  <p>Ask your lecturer for the unique class code or invite link.</p>
+                </div>
+              </div>
+
+              <div class="process-item">
+                <span>2</span>
+                <div class="process-icon">
+                  <img src="assets/hash-icon-blue.png" alt="" />
+                </div>
+                <div>
+                  <h4>Enter Code or Link</h4>
+                  <p>Enter the code or paste the invite link in the form.</p>
+                </div>
+              </div>
+
+              <div class="process-item">
+                <span>3</span>
+                <div class="process-icon">
+                  <img src="assets/join-class-icon-blue.png" alt="" />
+                </div>
+                <div>
+                  <h4>Join the Class</h4>
+                  <p>Review the course details and join the class.</p>
+                </div>
+              </div>
+
+              <div class="process-item">
+                <span>4</span>
+                <div class="process-icon">
+                  <img src="assets/start-submitting-icon.png" alt="" />
+                </div>
+                <div>
+                  <h4>Start Submitting</h4>
+                  <p>You’re ready! Submit assignments and receive feedback.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="important-box">
+              <img src="assets/secure-icon.png" alt="" />
+              <div>
+                <h4>Important</h4>
+                <p>You can only join classes created by lecturers from your institution.</p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- LOWER CONTENT -->
+        <section class="lower-grid">
+
+          <!-- CONNECTED CLASSES -->
+          <article class="connected-card">
+            <div class="panel-header">
+              <h2>My Connected Classes</h2>
+              <a href="my-classes.html">View all classes</a>
+            </div>
+
+            <div class="empty-classes">
+              <img src="assets/empty-classes.png" alt="No connected classes" />
+              <h3>You haven’t joined any classes yet.</h3>
+              <p>Use a class code or invite link to connect with your lecturer and start learning.</p>
+
+              <a href="#class-code" class="primary-btn small-btn">
+                <img src="assets/join-class-icon-white.png" alt="" />
+                Join Your First Class
+              </a>
+            </div>
+          </article>
+
+          <!-- SECURITY MATTERS -->
+          <aside class="security-card">
+            <div class="section-title-row">
+              <img src="assets/private-shield-icon.png" alt="" />
+              <h2>Your Security Matters</h2>
+            </div>
+
+            <ul class="security-list">
+              <li>
+                <img src="assets/trusted-icon-thick.png" alt="" />
+                <span>Only verified lecturers can create classes</span>
+              </li>
+              <li>
+                <img src="assets/trusted-icon-thick.png" alt="" />
+                <span>All class codes are unique and secure</span>
+              </li>
+              <li>
+                <img src="assets/trusted-icon-thick.png" alt="" />
+                <span>Your data and submissions are protected</span>
+              </li>
+              <li>
+                <img src="assets/trusted-icon-thick.png" alt="" />
+                <span>We never share your information</span>
+              </li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+          <p>© 2026 VeriWrite by Think Tank Technologies. All rights reserved.</p>
+
+          <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </footer>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>
